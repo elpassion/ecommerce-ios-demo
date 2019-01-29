@@ -13,6 +13,8 @@
 		31442A102200F99F00C8BEBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0E2200F99F00C8BEBE /* LaunchScreen.storyboard */; };
 		318FA1B72201016D00947C40 /* DealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1B62201016D00947C40 /* DealsView.swift */; };
 		318FA1BC220103BF00947C40 /* UIColor+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1BB220103BF00947C40 /* UIColor+Assets.swift */; };
+		318FA1BE2201066800947C40 /* UIFont+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1BD2201066800947C40 /* UIFont+Assets.swift */; };
+		318FA1C02201070000947C40 /* VarelaRound-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 318FA1BF2201070000947C40 /* VarelaRound-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		31442A112200F99F00C8BEBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318FA1B62201016D00947C40 /* DealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsView.swift; sourceTree = "<group>"; };
 		318FA1BB220103BF00947C40 /* UIColor+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Assets.swift"; sourceTree = "<group>"; };
+		318FA1BD2201066800947C40 /* UIFont+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Assets.swift"; sourceTree = "<group>"; };
+		318FA1BF2201070000947C40 /* VarelaRound-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarelaRound-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				31442A112200F99F00C8BEBE /* Info.plist */,
 				31442A0E2200F99F00C8BEBE /* LaunchScreen.storyboard */,
 				318FA1BB220103BF00947C40 /* UIColor+Assets.swift */,
+				318FA1BD2201066800947C40 /* UIFont+Assets.swift */,
+				318FA1BF2201070000947C40 /* VarelaRound-Regular.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -152,6 +158,7 @@
 			files = (
 				31442A102200F99F00C8BEBE /* LaunchScreen.storyboard in Resources */,
 				31442A0D2200F99F00C8BEBE /* Assets.xcassets in Resources */,
+				318FA1C02201070000947C40 /* VarelaRound-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31442A082200F99E00C8BEBE /* DealsViewController.swift in Sources */,
+				318FA1BE2201066800947C40 /* UIFont+Assets.swift in Sources */,
 				318FA1B72201016D00947C40 /* DealsView.swift in Sources */,
 				31442A062200F99E00C8BEBE /* AppDelegate.swift in Sources */,
 				318FA1BC220103BF00947C40 /* UIColor+Assets.swift in Sources */,
