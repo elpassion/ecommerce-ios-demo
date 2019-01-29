@@ -14,4 +14,8 @@ class DealsViewController: UIViewController {
         view = DealsView()
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
 }
