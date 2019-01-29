@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class DealsViewController: UIViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
