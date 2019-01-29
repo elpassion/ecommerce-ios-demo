@@ -15,6 +15,7 @@
 		318FA1BC220103BF00947C40 /* UIColor+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1BB220103BF00947C40 /* UIColor+Assets.swift */; };
 		318FA1BE2201066800947C40 /* UIFont+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1BD2201066800947C40 /* UIFont+Assets.swift */; };
 		318FA1C02201070000947C40 /* VarelaRound-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 318FA1BF2201070000947C40 /* VarelaRound-Regular.ttf */; };
+		318FA1C3220110B800947C40 /* FuncUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1C2220110B800947C40 /* FuncUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		318FA1BB220103BF00947C40 /* UIColor+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Assets.swift"; sourceTree = "<group>"; };
 		318FA1BD2201066800947C40 /* UIFont+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Assets.swift"; sourceTree = "<group>"; };
 		318FA1BF2201070000947C40 /* VarelaRound-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarelaRound-Regular.ttf"; sourceTree = "<group>"; };
+		318FA1C2220110B800947C40 /* FuncUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				318FA1B52201013400947C40 /* Deals */,
 				3188DD3D2200FB1600E33866 /* Application */,
+				318FA1C1220110AC00947C40 /* Helpers */,
 				3188DD3E2200FB2900E33866 /* Resources */,
 			);
 			path = DemoApp;
@@ -95,6 +98,14 @@
 				31442A072200F99E00C8BEBE /* DealsViewController.swift */,
 			);
 			path = Deals;
+			sourceTree = "<group>";
+		};
+		318FA1C1220110AC00947C40 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				318FA1C2220110B800947C40 /* FuncUtils.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 				318FA1B72201016D00947C40 /* DealsView.swift in Sources */,
 				31442A062200F99E00C8BEBE /* AppDelegate.swift in Sources */,
 				318FA1BC220103BF00947C40 /* UIColor+Assets.swift in Sources */,
+				318FA1C3220110B800947C40 /* FuncUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
