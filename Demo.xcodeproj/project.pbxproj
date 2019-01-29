@@ -11,6 +11,7 @@
 		31442A082200F99E00C8BEBE /* DealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31442A072200F99E00C8BEBE /* DealsViewController.swift */; };
 		31442A0D2200F99F00C8BEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0C2200F99F00C8BEBE /* Assets.xcassets */; };
 		31442A102200F99F00C8BEBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0E2200F99F00C8BEBE /* LaunchScreen.storyboard */; };
+		318FA1B72201016D00947C40 /* DealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1B62201016D00947C40 /* DealsView.swift */; };
 		318FA1BC220103BF00947C40 /* UIColor+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1BB220103BF00947C40 /* UIColor+Assets.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 		31442A0C2200F99F00C8BEBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31442A0F2200F99F00C8BEBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31442A112200F99F00C8BEBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		318FA1B62201016D00947C40 /* DealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsView.swift; sourceTree = "<group>"; };
 		318FA1BB220103BF00947C40 /* UIColor+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Assets.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 		318FA1B52201013400947C40 /* Deals */ = {
 			isa = PBXGroup;
 			children = (
+				318FA1B62201016D00947C40 /* DealsView.swift */,
 				31442A072200F99E00C8BEBE /* DealsViewController.swift */,
 			);
 			path = Deals;
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31442A082200F99E00C8BEBE /* DealsViewController.swift in Sources */,
+				318FA1B72201016D00947C40 /* DealsView.swift in Sources */,
 				31442A062200F99E00C8BEBE /* AppDelegate.swift in Sources */,
 				318FA1BC220103BF00947C40 /* UIColor+Assets.swift in Sources */,
 			);

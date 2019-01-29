@@ -11,8 +11,7 @@ class DealsViewController: UIViewController {
     }
 
     override func loadView() {
-        view = UIView(frame: .zero)
-        view.backgroundColor = .white
+        view = DealsView()
     }
 
 }
