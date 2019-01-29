@@ -1,3 +1,4 @@
+// swiftlint:disable object_literal
 import UIKit
 
 extension UIColor {
