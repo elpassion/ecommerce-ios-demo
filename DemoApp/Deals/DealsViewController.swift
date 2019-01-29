@@ -14,8 +14,17 @@ class DealsViewController: UIViewController {
         view = DealsView()
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        dealsView.titleLabel.text = "Today’s deals"
+    }
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+
+    private var dealsView: DealsView! {
+        return view as? DealsView
     }
 
 }
