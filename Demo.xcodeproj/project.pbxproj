@@ -33,6 +33,7 @@
 		318FA1C9220143C500947C40 /* UIEdgeInsets+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1C8220143C500947C40 /* UIEdgeInsets+Helpers.swift */; };
 		31E077962202500B00DB22F4 /* GradientStyle+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E077952202500B00DB22F4 /* GradientStyle+Assets.swift */; };
 		31E077982202531A00DB22F4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E077972202531A00DB22F4 /* GradientView.swift */; };
+		31E0779C2202537300DB22F4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E0779B2202537300DB22F4 /* RoundButton.swift */; };
 		31E0779E220257E600DB22F4 /* SketchShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E0779D220257E600DB22F4 /* SketchShadow.swift */; };
 		31E077A02202580700DB22F4 /* SketchShadow+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E0779F2202580700DB22F4 /* SketchShadow+Assets.swift */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,7 @@
 		318FA1C8220143C500947C40 /* UIEdgeInsets+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Helpers.swift"; sourceTree = "<group>"; };
 		31E077952202500B00DB22F4 /* GradientStyle+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GradientStyle+Assets.swift"; sourceTree = "<group>"; };
 		31E077972202531A00DB22F4 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		31E0779B2202537300DB22F4 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		31E0779D220257E600DB22F4 /* SketchShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchShadow.swift; sourceTree = "<group>"; };
 		31E0779F2202580700DB22F4 /* SketchShadow+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SketchShadow+Assets.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +210,7 @@
 			children = (
 				318FA1C2220110B800947C40 /* FuncUtils.swift */,
 				31E077972202531A00DB22F4 /* GradientView.swift */,
+				31E0779B2202537300DB22F4 /* RoundButton.swift */,
 				317F88EA2201D3CB00EA6D43 /* ScrollPageController.swift */,
 				31E0779D220257E600DB22F4 /* SketchShadow.swift */,
 				318FA1C8220143C500947C40 /* UIEdgeInsets+Helpers.swift */,
@@ -368,6 +371,7 @@
 				316DC18A2201EA3700768658 /* UIScrollView+Viewport.swift in Sources */,
 				31E077962202500B00DB22F4 /* GradientStyle+Assets.swift in Sources */,
 				316DC1962202094900768658 /* ProductCardView+Demo.swift in Sources */,
+				31E0779C2202537300DB22F4 /* RoundButton.swift in Sources */,
 				318FA1C52201160D00947C40 /* UILabel+Style.swift in Sources */,
 				31E077982202531A00DB22F4 /* GradientView.swift in Sources */,
 				318FA1C9220143C500947C40 /* UIEdgeInsets+Helpers.swift in Sources */,
