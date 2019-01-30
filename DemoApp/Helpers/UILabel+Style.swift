@@ -16,4 +16,9 @@ extension UILabel {
         $0.adjustsFontForContentSizeCategory = true
         $0.textColor = UIColor.darkText.withAlphaComponent(0.5)
     }
+    static let roundButtonTitleStyle: (UILabel) -> Void = {
+        $0.font = UIFontMetrics.default.scaledFont(for: .varelaRound(size: 18))
+        $0.adjustsFontForContentSizeCategory = true
+        $0.textColor = .white
+    }
 }
