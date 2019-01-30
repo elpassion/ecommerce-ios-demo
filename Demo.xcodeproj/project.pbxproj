@@ -23,7 +23,7 @@
 		318FA1C3220110B800947C40 /* FuncUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1C2220110B800947C40 /* FuncUtils.swift */; };
 		318FA1C52201160D00947C40 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1C42201160D00947C40 /* UILabel+Style.swift */; };
 		318FA1C72201435800947C40 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1C62201435800947C40 /* ProductCardView.swift */; };
-		318FA1C9220143C500947C40 /* UIEdgeInsets+Horizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1C8220143C500947C40 /* UIEdgeInsets+Horizontal.swift */; };
+		318FA1C9220143C500947C40 /* UIEdgeInsets+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1C8220143C500947C40 /* UIEdgeInsets+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 		318FA1C2220110B800947C40 /* FuncUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncUtils.swift; sourceTree = "<group>"; };
 		318FA1C42201160D00947C40 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		318FA1C62201435800947C40 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
-		318FA1C8220143C500947C40 /* UIEdgeInsets+Horizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Horizontal.swift"; sourceTree = "<group>"; };
+		318FA1C8220143C500947C40 /* UIEdgeInsets+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +179,7 @@
 			children = (
 				318FA1C2220110B800947C40 /* FuncUtils.swift */,
 				317F88EA2201D3CB00EA6D43 /* ScrollPageController.swift */,
-				318FA1C8220143C500947C40 /* UIEdgeInsets+Horizontal.swift */,
+				318FA1C8220143C500947C40 /* UIEdgeInsets+Helpers.swift */,
 				318FA1C42201160D00947C40 /* UILabel+Style.swift */,
 			);
 			path = Helpers;
@@ -329,7 +329,7 @@
 			files = (
 				31442A082200F99E00C8BEBE /* DealsViewController.swift in Sources */,
 				318FA1C52201160D00947C40 /* UILabel+Style.swift in Sources */,
-				318FA1C9220143C500947C40 /* UIEdgeInsets+Horizontal.swift in Sources */,
+				318FA1C9220143C500947C40 /* UIEdgeInsets+Helpers.swift in Sources */,
 				318FA1BE2201066800947C40 /* UIFont+Assets.swift in Sources */,
 				318FA1B72201016D00947C40 /* DealsView.swift in Sources */,
 				31442A062200F99E00C8BEBE /* AppDelegate.swift in Sources */,
