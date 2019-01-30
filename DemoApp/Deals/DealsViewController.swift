@@ -10,6 +10,8 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
         return nil
     }
 
+    // MARK: View
+
     override func loadView() {
         view = DealsView()
     }
@@ -36,6 +38,11 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
         dealsView.scrollView.delegate = self
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        adjustScrollContent()
+    }
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -44,7 +51,19 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
         return view as? DealsView
     }
 
+    private func adjustScrollContent() {
+        guard dealsView.scrollView.contentSize != .zero else { return }
+        let viewportCenterX = dealsView.scrollView.viewport.midX
+        dealsView.productViews
+            .compactMap { $0 as? ProductCardView }
+            .forEach { $0.adjust(forViewportCenterX: viewportCenterX) }
+    }
+
     // MARK: UIScrollViewDelegate
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        adjustScrollContent()
+    }
 
     func scrollViewWillEndDragging(
         _ scrollView: UIScrollView,
