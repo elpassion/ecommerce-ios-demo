@@ -12,6 +12,10 @@
 		31442A0D2200F99F00C8BEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0C2200F99F00C8BEBE /* Assets.xcassets */; };
 		31442A102200F99F00C8BEBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0E2200F99F00C8BEBE /* LaunchScreen.storyboard */; };
 		316DC18A2201EA3700768658 /* UIScrollView+Viewport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316DC1892201EA3700768658 /* UIScrollView+Viewport.swift */; };
+		316DC18E220201D800768658 /* product_surface.png in Resources */ = {isa = PBXBuildFile; fileRef = 316DC18B220201D800768658 /* product_surface.png */; };
+		316DC18F220201D800768658 /* product_oculus.png in Resources */ = {isa = PBXBuildFile; fileRef = 316DC18C220201D800768658 /* product_oculus.png */; };
+		316DC190220201D800768658 /* product_xbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 316DC18D220201D800768658 /* product_xbox.png */; };
+		316DC1922202077200768658 /* UIImage+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316DC1912202077200768658 /* UIImage+Assets.swift */; };
 		317F88E12201D18400EA6D43 /* DemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88E02201D18400EA6D43 /* DemoAppTests.swift */; };
 		317F88EB2201D3CB00EA6D43 /* ScrollPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EA2201D3CB00EA6D43 /* ScrollPageController.swift */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
@@ -45,6 +49,10 @@
 		31442A0F2200F99F00C8BEBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31442A112200F99F00C8BEBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		316DC1892201EA3700768658 /* UIScrollView+Viewport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Viewport.swift"; sourceTree = "<group>"; };
+		316DC18B220201D800768658 /* product_surface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_surface.png; sourceTree = "<group>"; };
+		316DC18C220201D800768658 /* product_oculus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_oculus.png; sourceTree = "<group>"; };
+		316DC18D220201D800768658 /* product_xbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_xbox.png; sourceTree = "<group>"; };
+		316DC1912202077200768658 /* UIImage+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Assets.swift"; sourceTree = "<group>"; };
 		317F88DE2201D18300EA6D43 /* DemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		317F88E02201D18400EA6D43 /* DemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppTests.swift; sourceTree = "<group>"; };
 		317F88E22201D18400EA6D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -159,8 +167,12 @@
 				31442A0C2200F99F00C8BEBE /* Assets.xcassets */,
 				31442A112200F99F00C8BEBE /* Info.plist */,
 				31442A0E2200F99F00C8BEBE /* LaunchScreen.storyboard */,
+				316DC18C220201D800768658 /* product_oculus.png */,
+				316DC18B220201D800768658 /* product_surface.png */,
+				316DC18D220201D800768658 /* product_xbox.png */,
 				318FA1BB220103BF00947C40 /* UIColor+Assets.swift */,
 				318FA1BD2201066800947C40 /* UIFont+Assets.swift */,
+				316DC1912202077200768658 /* UIImage+Assets.swift */,
 				318FA1BF2201070000947C40 /* VarelaRound-Regular.ttf */,
 			);
 			path = Resources;
@@ -271,9 +283,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316DC190220201D800768658 /* product_xbox.png in Resources */,
 				31442A102200F99F00C8BEBE /* LaunchScreen.storyboard in Resources */,
 				31442A0D2200F99F00C8BEBE /* Assets.xcassets in Resources */,
 				318FA1C02201070000947C40 /* VarelaRound-Regular.ttf in Resources */,
+				316DC18E220201D800768658 /* product_surface.png in Resources */,
+				316DC18F220201D800768658 /* product_oculus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +356,7 @@
 				317F88ED2201D49700EA6D43 /* main.swift in Sources */,
 				318FA1C72201435800947C40 /* ProductCardView.swift in Sources */,
 				318FA1C3220110B800947C40 /* FuncUtils.swift in Sources */,
+				316DC1922202077200768658 /* UIImage+Assets.swift in Sources */,
 				317F88EB2201D3CB00EA6D43 /* ScrollPageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
