@@ -1,6 +1,6 @@
 import UIKit
 
-class DealsViewController: UIViewController {
+class DealsViewController: UIViewController, UIScrollViewDelegate {
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -24,6 +24,7 @@ class DealsViewController: UIViewController {
             ProductCardView(),
             ProductCardView()
         ]
+        dealsView.scrollView.delegate = self
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -32,6 +33,19 @@ class DealsViewController: UIViewController {
 
     private var dealsView: DealsView! {
         return view as? DealsView
+    }
+
+    // MARK: UIScrollViewDelegate
+
+    func scrollViewWillEndDragging(
+        _ scrollView: UIScrollView,
+        withVelocity velocity: CGPoint,
+        targetContentOffset: UnsafeMutablePointer<CGPoint>
+    ) {
+        let pagePoints = dealsView.productViews.map { $0.frame.minX }
+        let controller = ScrollPageController(pagePoints: pagePoints)
+        let targetPoint = controller.targetContentOffsetX(current: scrollView.contentOffset.x, velocity: velocity.x)
+        targetContentOffset.pointee.x = targetPoint - scrollView.adjustedContentInset.left
     }
 
 }
