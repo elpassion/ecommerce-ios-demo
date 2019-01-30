@@ -17,6 +17,13 @@ class DealsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dealsView.titleLabel.text = "Today’s deals"
+        dealsView.productViews = [
+            ProductCardView(),
+            ProductCardView(),
+            ProductCardView(),
+            ProductCardView(),
+            ProductCardView()
+        ]
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
