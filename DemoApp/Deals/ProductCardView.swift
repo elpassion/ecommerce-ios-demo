@@ -142,6 +142,7 @@ class ProductCardView: UIView {
     private func setupAnimations() {
         scrollAnimator.addAnimations { [unowned self] in
             self.topBackgroundView.alpha = 0
+            self.imageView.transform = CGAffineTransform(translationX: 0, y: -32)
         }
     }
 
