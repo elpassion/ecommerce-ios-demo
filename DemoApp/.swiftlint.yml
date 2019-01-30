@@ -36,7 +36,6 @@ opt_in_rules:
   - sorted_first_last
   - override_in_extension 
   - yoda_condition
-  - prefixed_toplevel_constant
   - for_where
   - unused_closure_parameter
   - discouraged_optional_boolean
