@@ -17,6 +17,7 @@
 		318FA1C02201070000947C40 /* VarelaRound-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 318FA1BF2201070000947C40 /* VarelaRound-Regular.ttf */; };
 		318FA1C3220110B800947C40 /* FuncUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1C2220110B800947C40 /* FuncUtils.swift */; };
 		318FA1C52201160D00947C40 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1C42201160D00947C40 /* UILabel+Style.swift */; };
+		318FA1C72201435800947C40 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1C62201435800947C40 /* ProductCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		318FA1BF2201070000947C40 /* VarelaRound-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarelaRound-Regular.ttf"; sourceTree = "<group>"; };
 		318FA1C2220110B800947C40 /* FuncUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncUtils.swift; sourceTree = "<group>"; };
 		318FA1C42201160D00947C40 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
+		318FA1C62201435800947C40 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				318FA1B62201016D00947C40 /* DealsView.swift */,
 				31442A072200F99E00C8BEBE /* DealsViewController.swift */,
+				318FA1C62201435800947C40 /* ProductCardView.swift */,
 			);
 			path = Deals;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				318FA1B72201016D00947C40 /* DealsView.swift in Sources */,
 				31442A062200F99E00C8BEBE /* AppDelegate.swift in Sources */,
 				318FA1BC220103BF00947C40 /* UIColor+Assets.swift in Sources */,
+				318FA1C72201435800947C40 /* ProductCardView.swift in Sources */,
 				318FA1C3220110B800947C40 /* FuncUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
