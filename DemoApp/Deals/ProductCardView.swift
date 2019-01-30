@@ -28,6 +28,7 @@ class ProductCardView: UIView {
     let imageView = UIImageView(frame: .zero) |> UIImageView.productStyle
     let nameLabel = UILabel(frame: .zero) |> UILabel.productNameStyle
     let priceLabel = UILabel(frame: .zero) |> UILabel.priceStyle
+    let button = RoundButton()
 
     private let topView = UIView(frame: .zero)
     private let centerView = UIView(frame: .zero)
@@ -43,6 +44,7 @@ class ProductCardView: UIView {
         labelsStackView.addArrangedSubview(nameLabel)
         labelsStackView.addArrangedSubview(priceLabel)
         addSubview(bottomView)
+        bottomView.addSubview(button)
     }
 
     // MARK: Layout
@@ -120,7 +122,16 @@ class ProductCardView: UIView {
             bottomView.leadingAnchor.constraint(equalTo: leadingAnchor),
             bottomView.trailingAnchor.constraint(equalTo: trailingAnchor),
             bottomView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            bottomView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.28)
+            bottomView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.22)
+        ])
+
+        button.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            button.topAnchor.constraint(equalTo: bottomView.topAnchor),
+            button.leadingAnchor.constraint(greaterThanOrEqualTo: bottomView.leadingAnchor),
+            button.trailingAnchor.constraint(lessThanOrEqualTo: bottomView.trailingAnchor),
+            button.bottomAnchor.constraint(lessThanOrEqualTo: bottomView.bottomAnchor),
+            button.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor)
         ])
     }
 

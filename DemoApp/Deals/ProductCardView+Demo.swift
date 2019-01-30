@@ -8,6 +8,7 @@ extension ProductCardView {
         view.updateImageViewLayout()
         view.nameLabel.text = "Oculus Rift"
         view.priceLabel.text = "$1 299"
+        view.button.titleLabel.text = "Show more"
         return view
     }
     static func surface() -> ProductCardView {
@@ -17,6 +18,7 @@ extension ProductCardView {
         view.updateImageViewLayout()
         view.nameLabel.text = "Surface Pro 4"
         view.priceLabel.text = "$1 299"
+        view.button.titleLabel.text = "Show more"
         return view
     }
     static func xbox() -> ProductCardView {
@@ -26,6 +28,7 @@ extension ProductCardView {
         view.updateImageViewLayout()
         view.nameLabel.text = "xBox One"
         view.priceLabel.text = "$699"
+        view.button.titleLabel.text = "Show more"
         return view
     }
 }
