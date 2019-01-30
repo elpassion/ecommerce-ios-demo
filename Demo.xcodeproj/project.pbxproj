@@ -12,8 +12,10 @@
 		31442A0D2200F99F00C8BEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0C2200F99F00C8BEBE /* Assets.xcassets */; };
 		31442A102200F99F00C8BEBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0E2200F99F00C8BEBE /* LaunchScreen.storyboard */; };
 		317F88E12201D18400EA6D43 /* DemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88E02201D18400EA6D43 /* DemoAppTests.swift */; };
+		317F88EB2201D3CB00EA6D43 /* ScrollPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EA2201D3CB00EA6D43 /* ScrollPageController.swift */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
 		317F88F02201D4EB00EA6D43 /* AppDelegateDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EF2201D4EB00EA6D43 /* AppDelegateDouble.swift */; };
+		317F88F32201D6AF00EA6D43 /* ScrollPageControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88F22201D6AF00EA6D43 /* ScrollPageControllerTests.swift */; };
 		318FA1B72201016D00947C40 /* DealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1B62201016D00947C40 /* DealsView.swift */; };
 		318FA1BC220103BF00947C40 /* UIColor+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1BB220103BF00947C40 /* UIColor+Assets.swift */; };
 		318FA1BE2201066800947C40 /* UIFont+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1BD2201066800947C40 /* UIFont+Assets.swift */; };
@@ -44,8 +46,10 @@
 		317F88DE2201D18300EA6D43 /* DemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		317F88E02201D18400EA6D43 /* DemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppTests.swift; sourceTree = "<group>"; };
 		317F88E22201D18400EA6D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		317F88EA2201D3CB00EA6D43 /* ScrollPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollPageController.swift; sourceTree = "<group>"; };
 		317F88EC2201D49700EA6D43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		317F88EF2201D4EB00EA6D43 /* AppDelegateDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateDouble.swift; sourceTree = "<group>"; };
+		317F88F22201D6AF00EA6D43 /* ScrollPageControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPageControllerTests.swift; sourceTree = "<group>"; };
 		318FA1B62201016D00947C40 /* DealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsView.swift; sourceTree = "<group>"; };
 		318FA1BB220103BF00947C40 /* UIColor+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Assets.swift"; sourceTree = "<group>"; };
 		318FA1BD2201066800947C40 /* UIFont+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Assets.swift"; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 		317F88DF2201D18400EA6D43 /* DemoAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				317F88F12201D69F00EA6D43 /* Helpers */,
 				317F88EE2201D4E000EA6D43 /* Application */,
 				317F88E02201D18400EA6D43 /* DemoAppTests.swift */,
 				317F88E82201D20D00EA6D43 /* Resources */,
@@ -127,6 +132,14 @@
 				317F88EF2201D4EB00EA6D43 /* AppDelegateDouble.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		317F88F12201D69F00EA6D43 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				317F88F22201D6AF00EA6D43 /* ScrollPageControllerTests.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		3188DD3D2200FB1600E33866 /* Application */ = {
@@ -165,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				318FA1C2220110B800947C40 /* FuncUtils.swift */,
+				317F88EA2201D3CB00EA6D43 /* ScrollPageController.swift */,
 				318FA1C8220143C500947C40 /* UIEdgeInsets+Horizontal.swift */,
 				318FA1C42201160D00947C40 /* UILabel+Style.swift */,
 			);
@@ -323,6 +337,7 @@
 				317F88ED2201D49700EA6D43 /* main.swift in Sources */,
 				318FA1C72201435800947C40 /* ProductCardView.swift in Sources */,
 				318FA1C3220110B800947C40 /* FuncUtils.swift in Sources */,
+				317F88EB2201D3CB00EA6D43 /* ScrollPageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317F88F32201D6AF00EA6D43 /* ScrollPageControllerTests.swift in Sources */,
 				317F88E12201D18400EA6D43 /* DemoAppTests.swift in Sources */,
 				317F88F02201D4EB00EA6D43 /* AppDelegateDouble.swift in Sources */,
 			);
