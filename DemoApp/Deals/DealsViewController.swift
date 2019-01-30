@@ -17,13 +17,22 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         dealsView.titleLabel.text = "Today’s deals"
+
+        let productCardView1 = ProductCardView()
+        productCardView1.topBackgroundView.backgroundColor = .blackProduct
+
+        let productCardView2 = ProductCardView()
+        productCardView2.topBackgroundView.backgroundColor = .blueProduct
+
+        let productCardView3 = ProductCardView()
+        productCardView3.topBackgroundView.backgroundColor = .greenProduct
+
         dealsView.productViews = [
-            ProductCardView(),
-            ProductCardView(),
-            ProductCardView(),
-            ProductCardView(),
-            ProductCardView()
+            productCardView1,
+            productCardView2,
+            productCardView3
         ]
+
         dealsView.scrollView.delegate = self
     }
 
