@@ -31,6 +31,8 @@
 		318FA1C52201160D00947C40 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1C42201160D00947C40 /* UILabel+Style.swift */; };
 		318FA1C72201435800947C40 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1C62201435800947C40 /* ProductCardView.swift */; };
 		318FA1C9220143C500947C40 /* UIEdgeInsets+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FA1C8220143C500947C40 /* UIEdgeInsets+Helpers.swift */; };
+		31E077962202500B00DB22F4 /* GradientStyle+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E077952202500B00DB22F4 /* GradientStyle+Assets.swift */; };
+		31E077982202531A00DB22F4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E077972202531A00DB22F4 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		318FA1C42201160D00947C40 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		318FA1C62201435800947C40 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
 		318FA1C8220143C500947C40 /* UIEdgeInsets+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Helpers.swift"; sourceTree = "<group>"; };
+		31E077952202500B00DB22F4 /* GradientStyle+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GradientStyle+Assets.swift"; sourceTree = "<group>"; };
+		31E077972202531A00DB22F4 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				31442A0C2200F99F00C8BEBE /* Assets.xcassets */,
+				31E077952202500B00DB22F4 /* GradientStyle+Assets.swift */,
 				31442A112200F99F00C8BEBE /* Info.plist */,
 				31442A0E2200F99F00C8BEBE /* LaunchScreen.storyboard */,
 				316DC18C220201D800768658 /* product_oculus.png */,
@@ -197,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				318FA1C2220110B800947C40 /* FuncUtils.swift */,
+				31E077972202531A00DB22F4 /* GradientView.swift */,
 				317F88EA2201D3CB00EA6D43 /* ScrollPageController.swift */,
 				318FA1C8220143C500947C40 /* UIEdgeInsets+Helpers.swift */,
 				316DC1932202084400768658 /* UIImageView+Style.swift */,
@@ -353,8 +359,10 @@
 			files = (
 				31442A082200F99E00C8BEBE /* DealsViewController.swift in Sources */,
 				316DC18A2201EA3700768658 /* UIScrollView+Viewport.swift in Sources */,
+				31E077962202500B00DB22F4 /* GradientStyle+Assets.swift in Sources */,
 				316DC1962202094900768658 /* ProductCardView+Demo.swift in Sources */,
 				318FA1C52201160D00947C40 /* UILabel+Style.swift in Sources */,
+				31E077982202531A00DB22F4 /* GradientView.swift in Sources */,
 				318FA1C9220143C500947C40 /* UIEdgeInsets+Helpers.swift in Sources */,
 				318FA1BE2201066800947C40 /* UIFont+Assets.swift in Sources */,
 				318FA1B72201016D00947C40 /* DealsView.swift in Sources */,
