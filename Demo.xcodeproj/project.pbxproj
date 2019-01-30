@@ -11,6 +11,7 @@
 		31442A082200F99E00C8BEBE /* DealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31442A072200F99E00C8BEBE /* DealsViewController.swift */; };
 		31442A0D2200F99F00C8BEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0C2200F99F00C8BEBE /* Assets.xcassets */; };
 		31442A102200F99F00C8BEBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0E2200F99F00C8BEBE /* LaunchScreen.storyboard */; };
+		316DC18A2201EA3700768658 /* UIScrollView+Viewport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316DC1892201EA3700768658 /* UIScrollView+Viewport.swift */; };
 		317F88E12201D18400EA6D43 /* DemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88E02201D18400EA6D43 /* DemoAppTests.swift */; };
 		317F88EB2201D3CB00EA6D43 /* ScrollPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EA2201D3CB00EA6D43 /* ScrollPageController.swift */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
@@ -43,6 +44,7 @@
 		31442A0C2200F99F00C8BEBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31442A0F2200F99F00C8BEBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31442A112200F99F00C8BEBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		316DC1892201EA3700768658 /* UIScrollView+Viewport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Viewport.swift"; sourceTree = "<group>"; };
 		317F88DE2201D18300EA6D43 /* DemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		317F88E02201D18400EA6D43 /* DemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppTests.swift; sourceTree = "<group>"; };
 		317F88E22201D18400EA6D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				317F88EA2201D3CB00EA6D43 /* ScrollPageController.swift */,
 				318FA1C8220143C500947C40 /* UIEdgeInsets+Helpers.swift */,
 				318FA1C42201160D00947C40 /* UILabel+Style.swift */,
+				316DC1892201EA3700768658 /* UIScrollView+Viewport.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31442A082200F99E00C8BEBE /* DealsViewController.swift in Sources */,
+				316DC18A2201EA3700768658 /* UIScrollView+Viewport.swift in Sources */,
 				318FA1C52201160D00947C40 /* UILabel+Style.swift in Sources */,
 				318FA1C9220143C500947C40 /* UIEdgeInsets+Helpers.swift in Sources */,
 				318FA1BE2201066800947C40 /* UIFont+Assets.swift in Sources */,
