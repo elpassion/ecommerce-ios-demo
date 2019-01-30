@@ -25,9 +25,11 @@ class ProductCardView: UIView {
     // MARK: Subviews
 
     let topBackgroundView = UIView(frame: .zero)
+    let imageView = UIImageView(frame: .zero) |> UIImageView.productStyle
 
     private func setupSubviews() {
         addSubview(topBackgroundView)
+        addSubview(imageView)
     }
 
     // MARK: Layout
@@ -39,6 +41,13 @@ class ProductCardView: UIView {
             topBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor),
             topBackgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
             topBackgroundView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.39)
+        ])
+
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            imageView.centerYAnchor.constraint(equalTo: topBackgroundView.bottomAnchor, constant: -10)
         ])
     }
 
