@@ -17,6 +17,7 @@
 		316DC190220201D800768658 /* product_xbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 316DC18D220201D800768658 /* product_xbox.png */; };
 		316DC1922202077200768658 /* UIImage+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316DC1912202077200768658 /* UIImage+Assets.swift */; };
 		316DC1942202084400768658 /* UIImageView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316DC1932202084400768658 /* UIImageView+Style.swift */; };
+		316DC1962202094900768658 /* ProductCardView+Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316DC1952202094900768658 /* ProductCardView+Demo.swift */; };
 		317F88E12201D18400EA6D43 /* DemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88E02201D18400EA6D43 /* DemoAppTests.swift */; };
 		317F88EB2201D3CB00EA6D43 /* ScrollPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EA2201D3CB00EA6D43 /* ScrollPageController.swift */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
@@ -55,6 +56,7 @@
 		316DC18D220201D800768658 /* product_xbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_xbox.png; sourceTree = "<group>"; };
 		316DC1912202077200768658 /* UIImage+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Assets.swift"; sourceTree = "<group>"; };
 		316DC1932202084400768658 /* UIImageView+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Style.swift"; sourceTree = "<group>"; };
+		316DC1952202094900768658 /* ProductCardView+Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductCardView+Demo.swift"; sourceTree = "<group>"; };
 		317F88DE2201D18300EA6D43 /* DemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		317F88E02201D18400EA6D43 /* DemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppTests.swift; sourceTree = "<group>"; };
 		317F88E22201D18400EA6D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				318FA1B62201016D00947C40 /* DealsView.swift */,
 				31442A072200F99E00C8BEBE /* DealsViewController.swift */,
 				318FA1C62201435800947C40 /* ProductCardView.swift */,
+				316DC1952202094900768658 /* ProductCardView+Demo.swift */,
 			);
 			path = Deals;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			files = (
 				31442A082200F99E00C8BEBE /* DealsViewController.swift in Sources */,
 				316DC18A2201EA3700768658 /* UIScrollView+Viewport.swift in Sources */,
+				316DC1962202094900768658 /* ProductCardView+Demo.swift in Sources */,
 				318FA1C52201160D00947C40 /* UILabel+Style.swift in Sources */,
 				318FA1C9220143C500947C40 /* UIEdgeInsets+Helpers.swift in Sources */,
 				318FA1BE2201066800947C40 /* UIFont+Assets.swift in Sources */,
