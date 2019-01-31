@@ -5,7 +5,7 @@
 
 ![Preview](preview.gif)
 
-Based on [Dribbble shot by Matt Koziorowski for EL Passion](https://dribbble.com/shots/3116611-E-commerce-Today-s-deals-interaction)
+> Based on [Dribbble shot by Matt Koziorowski](https://dribbble.com/shots/3116611-E-commerce-Today-s-deals-interaction) for [EL Passion](https://www.elpassion.com)
 
 ## Setup
 
