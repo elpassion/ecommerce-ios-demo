@@ -10,6 +10,13 @@
 		312942F12203A88800AEE95E /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942EC2203A85100AEE95E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		312942F22203A88800AEE95E /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942ED2203A85100AEE95E /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		312942F42203A94200AEE95E /* DemoAppSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312942F32203A94200AEE95E /* DemoAppSpec.swift */; };
+		312943042203AC0200AEE95E /* EcommerceDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312942FB2203AC0100AEE95E /* EcommerceDemo.framework */; };
+		3129430B2203AC0200AEE95E /* EcommerceDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129430A2203AC0200AEE95E /* EcommerceDemoTests.swift */; };
+		3129430D2203AC0200AEE95E /* EcommerceDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = 312942FD2203AC0100AEE95E /* EcommerceDemo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		312943112203AC0200AEE95E /* EcommerceDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942FB2203AC0100AEE95E /* EcommerceDemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3129431C2203AF4C00AEE95E /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942EC2203A85100AEE95E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3129431D2203AF4C00AEE95E /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942ED2203A85100AEE95E /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		312943212203B00E00AEE95E /* EcommerceDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943202203B00E00AEE95E /* EcommerceDemo.swift */; };
 		31442A062200F99E00C8BEBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31442A052200F99E00C8BEBE /* AppDelegate.swift */; };
 		31442A082200F99E00C8BEBE /* DealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31442A072200F99E00C8BEBE /* DealsViewController.swift */; };
 		31442A0D2200F99F00C8BEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0C2200F99F00C8BEBE /* Assets.xcassets */; };
@@ -42,6 +49,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		312943052203AC0200AEE95E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 314429FA2200F99E00C8BEBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 312942FA2203AC0100AEE95E;
+			remoteInfo = EcommerceDemo;
+		};
+		312943072203AC0200AEE95E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 314429FA2200F99E00C8BEBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31442A012200F99E00C8BEBE;
+			remoteInfo = DemoApp;
+		};
+		3129430E2203AC0200AEE95E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 314429FA2200F99E00C8BEBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 312942FA2203AC0100AEE95E;
+			remoteInfo = EcommerceDemo;
+		};
 		317F88E32201D18400EA6D43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 314429FA2200F99E00C8BEBE /* Project object */;
@@ -64,12 +92,42 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		312943152203AC0200AEE95E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				312943112203AC0200AEE95E /* EcommerceDemo.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3129431B2203AF3900AEE95E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3129431C2203AF4C00AEE95E /* Nimble.framework in Embed Frameworks */,
+				3129431D2203AF4C00AEE95E /* Quick.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		312942EC2203A85100AEE95E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		312942ED2203A85100AEE95E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
 		312942F32203A94200AEE95E /* DemoAppSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppSpec.swift; sourceTree = "<group>"; };
+		312942FB2203AC0100AEE95E /* EcommerceDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EcommerceDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		312942FD2203AC0100AEE95E /* EcommerceDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcommerceDemo.h; sourceTree = "<group>"; };
+		312942FE2203AC0100AEE95E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		312943032203AC0200AEE95E /* EcommerceDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcommerceDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3129430A2203AC0200AEE95E /* EcommerceDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceDemoTests.swift; sourceTree = "<group>"; };
+		3129430C2203AC0200AEE95E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		312943202203B00E00AEE95E /* EcommerceDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceDemo.swift; sourceTree = "<group>"; };
 		31442A022200F99E00C8BEBE /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31442A052200F99E00C8BEBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31442A072200F99E00C8BEBE /* DealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewController.swift; sourceTree = "<group>"; };
@@ -106,10 +164,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		314429FF2200F99E00C8BEBE /* Frameworks */ = {
+		312942F82203AC0100AEE95E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		312943002203AC0200AEE95E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				312943042203AC0200AEE95E /* EcommerceDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,11 +191,48 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		312942FC2203AC0100AEE95E /* EcommerceDemo */ = {
+			isa = PBXGroup;
+			children = (
+				312943192203ADBA00AEE95E /* Supporting Files */,
+			);
+			path = EcommerceDemo;
+			sourceTree = "<group>";
+		};
+		312943092203AC0200AEE95E /* EcommerceDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3129431A2203AE0F00AEE95E /* Supporting Files */,
+			);
+			path = EcommerceDemoTests;
+			sourceTree = "<group>";
+		};
+		312943192203ADBA00AEE95E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				312942FD2203AC0100AEE95E /* EcommerceDemo.h */,
+				312943202203B00E00AEE95E /* EcommerceDemo.swift */,
+				312942FE2203AC0100AEE95E /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3129431A2203AE0F00AEE95E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3129430A2203AC0200AEE95E /* EcommerceDemoTests.swift */,
+				3129430C2203AC0200AEE95E /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		314429F92200F99E00C8BEBE = {
 			isa = PBXGroup;
 			children = (
 				31442A042200F99E00C8BEBE /* DemoApp */,
 				317F88DF2201D18400EA6D43 /* DemoAppTests */,
+				312942FC2203AC0100AEE95E /* EcommerceDemo */,
+				312943092203AC0200AEE95E /* EcommerceDemoTests */,
 				312942EB2203A82300AEE95E /* Frameworks */,
 				31442A032200F99E00C8BEBE /* Products */,
 			);
@@ -140,6 +243,8 @@
 			children = (
 				31442A022200F99E00C8BEBE /* DemoApp.app */,
 				317F88DE2201D18300EA6D43 /* DemoAppTests.xctest */,
+				312942FB2203AC0100AEE95E /* EcommerceDemo.framework */,
+				312943032203AC0200AEE95E /* EcommerceDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -248,19 +353,71 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		312942F62203AC0100AEE95E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3129430D2203AC0200AEE95E /* EcommerceDemo.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		312942FA2203AC0100AEE95E /* EcommerceDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 312943122203AC0200AEE95E /* Build configuration list for PBXNativeTarget "EcommerceDemo" */;
+			buildPhases = (
+				3129431E2203AF6A00AEE95E /* Run SwiftLint */,
+				312942F62203AC0100AEE95E /* Headers */,
+				312942F72203AC0100AEE95E /* Sources */,
+				312942F82203AC0100AEE95E /* Frameworks */,
+				312942F92203AC0100AEE95E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EcommerceDemo;
+			productName = EcommerceDemo;
+			productReference = 312942FB2203AC0100AEE95E /* EcommerceDemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		312943022203AC0200AEE95E /* EcommerceDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 312943162203AC0200AEE95E /* Build configuration list for PBXNativeTarget "EcommerceDemoTests" */;
+			buildPhases = (
+				3129431F2203AF9600AEE95E /* Run SwiftLint */,
+				312942FF2203AC0200AEE95E /* Sources */,
+				312943002203AC0200AEE95E /* Frameworks */,
+				312943012203AC0200AEE95E /* Resources */,
+				3129431B2203AF3900AEE95E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				312943062203AC0200AEE95E /* PBXTargetDependency */,
+				312943082203AC0200AEE95E /* PBXTargetDependency */,
+			);
+			name = EcommerceDemoTests;
+			productName = EcommerceDemoTests;
+			productReference = 312943032203AC0200AEE95E /* EcommerceDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		31442A012200F99E00C8BEBE /* DemoApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31442A142200F99F00C8BEBE /* Build configuration list for PBXNativeTarget "DemoApp" */;
 			buildPhases = (
 				318FA1B42200FCD500947C40 /* Run SwiftLint */,
 				314429FE2200F99E00C8BEBE /* Sources */,
-				314429FF2200F99E00C8BEBE /* Frameworks */,
 				31442A002200F99E00C8BEBE /* Resources */,
+				312943152203AC0200AEE95E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3129430F2203AC0200AEE95E /* PBXTargetDependency */,
 			);
 			name = DemoApp;
 			productName = DemoApp;
@@ -293,8 +450,16 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = Darrarski;
+				ORGANIZATIONNAME = "EL Passion";
 				TargetAttributes = {
+					312942FA2203AC0100AEE95E = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					312943022203AC0200AEE95E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 31442A012200F99E00C8BEBE;
+					};
 					31442A012200F99E00C8BEBE = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -319,11 +484,27 @@
 			targets = (
 				31442A012200F99E00C8BEBE /* DemoApp */,
 				317F88DD2201D18300EA6D43 /* DemoAppTests */,
+				312942FA2203AC0100AEE95E /* EcommerceDemo */,
+				312943022203AC0200AEE95E /* EcommerceDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		312942F92203AC0100AEE95E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		312943012203AC0200AEE95E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		31442A002200F99E00C8BEBE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,6 +521,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3129431E2203AF6A00AEE95E /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nif ! which swiftlint > /dev/null; then\n  echo \"error: SwiftLint is not installed. Visit http://github.com/realm/SwiftLint to learn more.\"\n  exit 1\nfi\n\ncd $PRODUCT_NAME\nswiftlint\n";
+		};
+		3129431F2203AF9600AEE95E /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nif ! which swiftlint > /dev/null; then\n  echo \"error: SwiftLint is not installed. Visit http://github.com/realm/SwiftLint to learn more.\"\n  exit 1\nfi\n\ncd $PRODUCT_NAME\nswiftlint\n";
+		};
 		317F88E92201D29D00EA6D43 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +596,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		312942F72203AC0100AEE95E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				312943212203B00E00AEE95E /* EcommerceDemo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		312942FF2203AC0200AEE95E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3129430B2203AC0200AEE95E /* EcommerceDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		314429FE2200F99E00C8BEBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -420,6 +653,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		312943062203AC0200AEE95E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 312942FA2203AC0100AEE95E /* EcommerceDemo */;
+			targetProxy = 312943052203AC0200AEE95E /* PBXContainerItemProxy */;
+		};
+		312943082203AC0200AEE95E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31442A012200F99E00C8BEBE /* DemoApp */;
+			targetProxy = 312943072203AC0200AEE95E /* PBXContainerItemProxy */;
+		};
+		3129430F2203AC0200AEE95E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 312942FA2203AC0100AEE95E /* EcommerceDemo */;
+			targetProxy = 3129430E2203AC0200AEE95E /* PBXContainerItemProxy */;
+		};
 		317F88E42201D18400EA6D43 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 31442A012200F99E00C8BEBE /* DemoApp */;
@@ -439,6 +687,89 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		312943132203AC0200AEE95E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "EcommerceDemo/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.elpassion.EcommerceDemo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		312943142203AC0200AEE95E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "EcommerceDemo/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.elpassion.EcommerceDemo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		312943172203AC0200AEE95E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "EcommerceDemoTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.elpassion.EcommerceDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoApp.app/DemoApp";
+			};
+			name = Debug;
+		};
+		312943182203AC0200AEE95E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "EcommerceDemoTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pl.elpassion.EcommerceDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoApp.app/DemoApp";
+			};
+			name = Release;
+		};
 		31442A122200F99F00C8BEBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -560,6 +891,7 @@
 		31442A152200F99F00C8BEBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DemoApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -576,6 +908,7 @@
 		31442A162200F99F00C8BEBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DemoApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -636,6 +969,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		312943122203AC0200AEE95E /* Build configuration list for PBXNativeTarget "EcommerceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				312943132203AC0200AEE95E /* Debug */,
+				312943142203AC0200AEE95E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		312943162203AC0200AEE95E /* Build configuration list for PBXNativeTarget "EcommerceDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				312943172203AC0200AEE95E /* Debug */,
+				312943182203AC0200AEE95E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		314429FD2200F99E00C8BEBE /* Build configuration list for PBXProject "Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -19,7 +19,7 @@ To setup the project, run `setup.sh` in Terminal.
 
 ## Run
 
-Open `Demo.xcodeproj` and run `DemoApp` scheme in choosen simulator. If you want to run the app on a real device, you need to update code signing configuration first.
+Open `Demo.xcodeproj` and run `EcommerceDemo` scheme in choosen simulator. If you want to run demo on a real device, you need to update code signing configuration first.
 
 ## License
 
