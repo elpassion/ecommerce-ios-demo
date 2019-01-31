@@ -1,5 +1,5 @@
 import XCTest
-@testable import DemoApp
+@testable import EcommerceDemo
 
 class ScrollPageControllerTests: XCTestCase {
 

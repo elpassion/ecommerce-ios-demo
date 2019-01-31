@@ -1,8 +1,8 @@
 import Quick
 import Nimble
-@testable import DemoApp
+@testable import EcommerceDemo
 
-class DemoAppSpec: QuickSpec {
+class EcommerceDemoSpec: QuickSpec {
     override func spec() {
         describe("test") {
             it("should pass") {
