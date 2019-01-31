@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312942F12203A88800AEE95E /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942EC2203A85100AEE95E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		312942F22203A88800AEE95E /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942ED2203A85100AEE95E /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		312942F42203A94200AEE95E /* DemoAppSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312942F32203A94200AEE95E /* DemoAppSpec.swift */; };
 		31442A062200F99E00C8BEBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31442A052200F99E00C8BEBE /* AppDelegate.swift */; };
 		31442A082200F99E00C8BEBE /* DealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31442A072200F99E00C8BEBE /* DealsViewController.swift */; };
 		31442A0D2200F99F00C8BEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0C2200F99F00C8BEBE /* Assets.xcassets */; };
@@ -48,7 +51,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		312942F02203A87300AEE95E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				312942F12203A88800AEE95E /* Nimble.framework in Embed Frameworks */,
+				312942F22203A88800AEE95E /* Quick.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		312942EC2203A85100AEE95E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
+		312942ED2203A85100AEE95E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
+		312942F32203A94200AEE95E /* DemoAppSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppSpec.swift; sourceTree = "<group>"; };
 		31442A022200F99E00C8BEBE /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31442A052200F99E00C8BEBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31442A072200F99E00C8BEBE /* DealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewController.swift; sourceTree = "<group>"; };
@@ -92,21 +113,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		317F88DB2201D18300EA6D43 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		312942EB2203A82300AEE95E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				312942EC2203A85100AEE95E /* Nimble.framework */,
+				312942ED2203A85100AEE95E /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		314429F92200F99E00C8BEBE = {
 			isa = PBXGroup;
 			children = (
 				31442A042200F99E00C8BEBE /* DemoApp */,
 				317F88DF2201D18400EA6D43 /* DemoAppTests */,
+				312942EB2203A82300AEE95E /* Frameworks */,
 				31442A032200F99E00C8BEBE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,9 +158,10 @@
 		317F88DF2201D18400EA6D43 /* DemoAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				317F88F12201D69F00EA6D43 /* Helpers */,
 				317F88EE2201D4E000EA6D43 /* Application */,
+				312942F32203A94200AEE95E /* DemoAppSpec.swift */,
 				317F88E02201D18400EA6D43 /* DemoAppTests.swift */,
+				317F88F12201D69F00EA6D43 /* Helpers */,
 				317F88E82201D20D00EA6D43 /* Resources */,
 			);
 			path = DemoAppTests;
@@ -248,8 +273,7 @@
 			buildPhases = (
 				317F88E92201D29D00EA6D43 /* Run SwiftLint */,
 				317F88DA2201D18300EA6D43 /* Sources */,
-				317F88DB2201D18300EA6D43 /* Frameworks */,
-				317F88DC2201D18300EA6D43 /* Resources */,
+				312942F02203A87300AEE95E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,13 +334,6 @@
 				318FA1C02201070000947C40 /* VarelaRound-Regular.ttf in Resources */,
 				316DC18E220201D800768658 /* product_surface.png in Resources */,
 				316DC18F220201D800768658 /* product_oculus.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		317F88DC2201D18300EA6D43 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				317F88F32201D6AF00EA6D43 /* ScrollPageControllerTests.swift in Sources */,
+				312942F42203A94200AEE95E /* DemoAppSpec.swift in Sources */,
 				317F88E12201D18400EA6D43 /* DemoAppTests.swift in Sources */,
 				317F88F02201D4EB00EA6D43 /* AppDelegateDouble.swift in Sources */,
 			);
@@ -575,6 +593,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DemoAppTests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -593,6 +615,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DemoAppTests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
