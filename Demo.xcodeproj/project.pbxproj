@@ -50,6 +50,7 @@
 		315E28E4220478A900C3BA19 /* SnapshotTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 315E28E32204789A00C3BA19 /* SnapshotTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		315E28E62204791E00C3BA19 /* NotNilExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28E52204791E00C3BA19 /* NotNilExpectation.swift */; };
 		315E28E8220479A600C3BA19 /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28E7220479A600C3BA19 /* UIView+TestHelpers.swift */; };
+		315E28EA22047FE900C3BA19 /* ProductCardViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28E922047FE900C3BA19 /* ProductCardViewSpec.swift */; };
 		315E28EC2204803E00C3BA19 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28EB2204803E00C3BA19 /* UIView+Layout.swift */; };
 		315E28EE220494F600C3BA19 /* LayoutGuideCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28ED220494F600C3BA19 /* LayoutGuideCompatible.swift */; };
 		315E28F022049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28EF22049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift */; };
@@ -156,6 +157,7 @@
 		315E28E32204789A00C3BA19 /* SnapshotTesting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapshotTesting.framework; path = Carthage/Build/iOS/SnapshotTesting.framework; sourceTree = "<group>"; };
 		315E28E52204791E00C3BA19 /* NotNilExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotNilExpectation.swift; sourceTree = "<group>"; };
 		315E28E7220479A600C3BA19 /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
+		315E28E922047FE900C3BA19 /* ProductCardViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardViewSpec.swift; sourceTree = "<group>"; };
 		315E28EB2204803E00C3BA19 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		315E28ED220494F600C3BA19 /* LayoutGuideCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutGuideCompatible.swift; sourceTree = "<group>"; };
 		315E28EF22049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutGuideCompatible+Layout.swift"; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				315E28CF220469F200C3BA19 /* ProductCardViewControllerSpec.swift */,
+				315E28E922047FE900C3BA19 /* ProductCardViewSpec.swift */,
 			);
 			path = ProductCard;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				315E28E8220479A600C3BA19 /* UIView+TestHelpers.swift in Sources */,
 				315E28E2220476AB00C3BA19 /* DealsViewControllerSpec.swift in Sources */,
 				315E28E02204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift in Sources */,
+				315E28EA22047FE900C3BA19 /* ProductCardViewSpec.swift in Sources */,
 				315E28C82203C58900C3BA19 /* ScrollPageControllerSpec.swift in Sources */,
 				315E28D0220469F200C3BA19 /* ProductCardViewControllerSpec.swift in Sources */,
 				315E28E62204791E00C3BA19 /* NotNilExpectation.swift in Sources */,
