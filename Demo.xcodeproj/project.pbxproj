@@ -49,6 +49,7 @@
 		315E28DD2204749C00C3BA19 /* DealsViewControllerCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28DC2204749C00C3BA19 /* DealsViewControllerCreating.swift */; };
 		315E28E02204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28DF2204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift */; };
 		315E28E2220476AB00C3BA19 /* DealsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28E1220476AB00C3BA19 /* DealsViewControllerSpec.swift */; };
+		315E28E62204791E00C3BA19 /* NotNilExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28E52204791E00C3BA19 /* NotNilExpectation.swift */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -150,6 +151,7 @@
 		315E28DC2204749C00C3BA19 /* DealsViewControllerCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewControllerCreating.swift; sourceTree = "<group>"; };
 		315E28DF2204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewControllerCreatingDouble.swift; sourceTree = "<group>"; };
 		315E28E1220476AB00C3BA19 /* DealsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewControllerSpec.swift; sourceTree = "<group>"; };
+		315E28E52204791E00C3BA19 /* NotNilExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotNilExpectation.swift; sourceTree = "<group>"; };
 		317F88EC2201D49700EA6D43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -280,6 +282,7 @@
 		312943562203B25F00AEE95E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				315E28E52204791E00C3BA19 /* NotNilExpectation.swift */,
 				315E28C72203C58900C3BA19 /* ScrollPageControllerSpec.swift */,
 			);
 			path = Helpers;
@@ -623,6 +626,7 @@
 				315E28C82203C58900C3BA19 /* ScrollPageControllerSpec.swift in Sources */,
 				3129430B2203AC0200AEE95E /* EcommerceDemoTests.swift in Sources */,
 				315E28D0220469F200C3BA19 /* ProductCardViewControllerSpec.swift in Sources */,
+				315E28E62204791E00C3BA19 /* NotNilExpectation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
