@@ -42,6 +42,7 @@
 		312943642203BFA000AEE95E /* RegisterFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943632203BFA000AEE95E /* RegisterFonts.swift */; };
 		31442A0D2200F99F00C8BEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0C2200F99F00C8BEBE /* Assets.xcassets */; };
 		31442A102200F99F00C8BEBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0E2200F99F00C8BEBE /* LaunchScreen.storyboard */; };
+		315E28C62203C39C00C3BA19 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28C52203C39C00C3BA19 /* AppDelegateSpec.swift */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		31442A0C2200F99F00C8BEBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31442A0F2200F99F00C8BEBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31442A112200F99F00C8BEBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		315E28C52203C39C00C3BA19 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		317F88EC2201D49700EA6D43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				3129435A2203B2D100AEE95E /* AppDelegateDouble.swift */,
+				315E28C52203C39C00C3BA19 /* AppDelegateSpec.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				312943592203B2AE00AEE95E /* EcommerceDemoSpec.swift in Sources */,
 				3129435D2203B2DD00AEE95E /* ScrollPageControllerTests.swift in Sources */,
 				3129435B2203B2D100AEE95E /* AppDelegateDouble.swift in Sources */,
+				315E28C62203C39C00C3BA19 /* AppDelegateSpec.swift in Sources */,
 				3129430B2203AC0200AEE95E /* EcommerceDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
