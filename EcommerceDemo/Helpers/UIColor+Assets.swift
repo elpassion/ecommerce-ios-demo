@@ -7,4 +7,6 @@ extension UIColor {
     static let blackProduct = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 1)
     static let blueProduct = UIColor(red: 0.28, green: 0.65, blue: 0.97, alpha: 1)
     static let greenProduct = UIColor(red: 0.19, green: 0.57, blue: 0.05, alpha: 1)
+    static let tabBarItem = UIColor.white
+    static let tabBarItemSelected = UIColor(red: 0.992, green: 0.38, blue: 0.004, alpha: 1)
 }
