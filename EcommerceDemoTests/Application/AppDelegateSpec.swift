@@ -11,10 +11,17 @@ class AppDelegateSpec: QuickSpec {
                 sut = AppDelegate()
             }
 
+            it("should have correct root view controller factory") {
+                expect(sut.rootViewController()).to(beAnInstanceOf(DealsViewController.self))
+            }
+
             context("app did finish launching") {
+                var rootViewController: UIViewController!
                 var result: Bool!
 
                 beforeEach {
+                    rootViewController = UIViewController()
+                    sut.rootViewController = { rootViewController }
                     result = sut.application(UIApplication.shared, didFinishLaunchingWithOptions: nil)
                 }
 
@@ -38,7 +45,7 @@ class AppDelegateSpec: QuickSpec {
                     }
 
                     it("should have correct root view controller") {
-                        expect(window?.rootViewController).to(beAnInstanceOf(DealsViewController.self))
+                        expect(window?.rootViewController) === rootViewController
                     }
 
                     it("should be a visible key window") {
