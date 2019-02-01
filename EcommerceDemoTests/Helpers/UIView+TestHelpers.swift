@@ -1,7 +1,7 @@
 import UIKit
 
 extension UIView {
-    func constrained(size: CGSize) -> UIView {
+    func constrained(to size: CGSize) -> UIView {
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             widthAnchor.constraint(equalToConstant: size.width),

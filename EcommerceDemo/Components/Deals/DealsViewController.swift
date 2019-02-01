@@ -40,9 +40,9 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
     private func adjustScrollContent() {
         guard dealsView.scrollView.contentSize != .zero else { return }
         let viewportCenterX = dealsView.scrollView.viewport.midX
-        dealsView.productViews
-            .compactMap { $0 as? ProductCardView }
-            .forEach { $0.adjust(forViewportCenterX: viewportCenterX) }
+        productCardViewControllers.forEach {
+            $0.distanceFromCenter = $0.view.frame.midX - viewportCenterX
+        }
     }
 
     // MARK: UIScrollViewDelegate

@@ -11,6 +11,10 @@ class ProductCardViewController: UIViewController {
         return nil
     }
 
+    var distanceFromCenter: CGFloat = 0 {
+        didSet { view.setNeedsLayout() }
+    }
+
     // MARK: View
 
     override func loadView() {
@@ -29,6 +33,13 @@ class ProductCardViewController: UIViewController {
 
     private var productCardView: ProductCardView! {
         return view as? ProductCardView
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let progress = min(1, max(-1, distanceFromCenter / view.bounds.width))
+        productCardView.topBackgroundView.alpha = 1 - abs(progress * 0.25)
+        productCardView.imageView.transform = CGAffineTransform(translationX: 0, y: -12 * abs(progress))
     }
 
     // MARK: Private

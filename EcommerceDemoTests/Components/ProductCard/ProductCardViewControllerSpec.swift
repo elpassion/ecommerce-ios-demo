@@ -21,9 +21,11 @@ class ProductCardViewControllerSpec: QuickSpec {
 
                 describe("product card view") {
                     var productCardView: ProductCardView?
+                    var size: CGSize!
 
                     beforeEach {
                         productCardView = sut.view as? ProductCardView
+                        size = CGSize(width: 295, height: 427)
                     }
 
                     it("should not be nil") {
@@ -40,8 +42,34 @@ class ProductCardViewControllerSpec: QuickSpec {
 
                     it("should have correct snapshot") {
                         expectNotNil(productCardView).then {
-                            let view = aView(with: $0).constrained(size: CGSize(width: 295, height: 427))
+                            let view = aView(with: $0).constrained(to: size)
                             assertSnapshot(matching: view, as: .image, named: "surface")
+                        }
+                    }
+
+                    context("move left") {
+                        beforeEach {
+                            sut.distanceFromCenter = -size.width
+                        }
+
+                        it("should have correct snapshot") {
+                            expectNotNil(productCardView).then {
+                                let view = aView(with: $0).constrained(to: size)
+                                assertSnapshot(matching: view, as: .image, named: "surface_left")
+                            }
+                        }
+                    }
+
+                    context("move right") {
+                        beforeEach {
+                            sut.distanceFromCenter = size.width
+                        }
+
+                        it("should have correct snapshot") {
+                            expectNotNil(productCardView).then {
+                                let view = aView(with: $0).constrained(to: size)
+                                assertSnapshot(matching: view, as: .image, named: "surface_right")
+                            }
                         }
                     }
                 }

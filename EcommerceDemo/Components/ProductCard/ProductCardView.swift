@@ -9,17 +9,10 @@ class ProductCardView: UIView {
         layer.cornerRadius = 8
         setupSubviews()
         setupLayout()
-        setupAnimations()
     }
 
     required init?(coder aDecoder: NSCoder) {
         return nil
-    }
-
-    func adjust(forViewportCenterX viewportCenterX: CGFloat) {
-        let distanceFromViewportCenterX = abs(frame.midX - viewportCenterX)
-        let scrollAnimationProgress = min(1, max(0, distanceFromViewportCenterX / (bounds.width * 3)))
-        scrollAnimator.fractionComplete = scrollAnimationProgress
     }
 
     // MARK: Subviews
@@ -85,17 +78,6 @@ class ProductCardView: UIView {
         button.layoutPinTop(to: bottomView.topAnchor)
         button.layoutCenterHorizontally(in: bottomView, margin: 20)
         button.layoutPinBottom(lessThan: bottomView.bottomAnchor)
-    }
-
-    // MARK: Animations
-
-    private let scrollAnimator = UIViewPropertyAnimator(duration: 1, curve: .linear)
-
-    private func setupAnimations() {
-        scrollAnimator.addAnimations { [unowned self] in
-            self.topBackgroundView.alpha = 0
-            self.imageView.transform = CGAffineTransform(translationX: 0, y: -32)
-        }
     }
 
 }
