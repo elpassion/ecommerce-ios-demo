@@ -59,10 +59,15 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
         withVelocity velocity: CGPoint,
         targetContentOffset: UnsafeMutablePointer<CGPoint>
     ) {
-        let pagePoints = dealsView.productViews.map { $0.frame.minX }
-        let controller = ScrollPageController(pagePoints: pagePoints)
-        let targetPoint = controller.targetContentOffsetX(current: scrollView.contentOffset.x, velocity: velocity.x)
-        targetContentOffset.pointee.x = targetPoint - scrollView.adjustedContentInset.left
+        let offset = scrollView.contentOffset.x
+        let pageOffsets = dealsView.productViews.map { $0.frame.minX }
+        if let pageOffset = scrollPageController.pageOffset(for: offset, velocity: velocity.x, in: pageOffsets) {
+            targetContentOffset.pointee.x = pageOffset - scrollView.adjustedContentInset.left
+        }
     }
+
+    // MARK: Private
+
+    private let scrollPageController = ScrollPageController()
 
 }
