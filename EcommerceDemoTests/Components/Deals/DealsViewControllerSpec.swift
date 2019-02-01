@@ -1,5 +1,6 @@
 import Quick
 import Nimble
+import SnapshotTesting
 @testable import EcommerceDemo
 
 class DealsViewControllerSpec: QuickSpec {
@@ -20,6 +21,18 @@ class DealsViewControllerSpec: QuickSpec {
 
                 it("should not be nil") {
                     expect(sut).notTo(beNil())
+                }
+
+                context("load view") {
+                    beforeEach {
+                        sut?.view.frame = CGRect(x: 0, y: 0, width: 375, height: 812)
+                    }
+
+                    it("should have correct snapshot") {
+                        expectNotNil(sut).then {
+                            assertSnapshot(matching: $0, as: .image(on: .iPhoneX))
+                        }
+                    }
                 }
             }
         }

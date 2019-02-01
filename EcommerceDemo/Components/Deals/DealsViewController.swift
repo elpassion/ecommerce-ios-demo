@@ -37,14 +37,6 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
         return view as? DealsView
     }
 
-    private func adjustScrollContent() {
-        guard dealsView.scrollView.contentSize != .zero else { return }
-        let viewportCenterX = dealsView.scrollView.viewport.midX
-        productCardViewControllers.forEach {
-            $0.distanceFromCenter = $0.view.frame.midX - viewportCenterX
-        }
-    }
-
     // MARK: UIScrollViewDelegate
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -74,6 +66,14 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
             dealsView.productViews = productCardViewControllers.map { $0.view }
             productCardViewControllers.forEach { $0.didMove(toParent: self) }
             oldValue.forEach { $0.removeFromParent() }
+        }
+    }
+
+    private func adjustScrollContent() {
+        guard dealsView.scrollView.contentSize != .zero else { return }
+        let viewportCenterX = dealsView.scrollView.viewport.midX
+        productCardViewControllers.forEach {
+            $0.distanceFromCenter = $0.view.frame.midX - viewportCenterX
         }
     }
 
