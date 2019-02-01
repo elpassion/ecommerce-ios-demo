@@ -1,5 +1,6 @@
 import Quick
 import Nimble
+import SnapshotTesting
 @testable import EcommerceDemo
 
 class ProductCardViewControllerSpec: QuickSpec {
@@ -35,6 +36,13 @@ class ProductCardViewControllerSpec: QuickSpec {
                         expect(productCardView?.nameLabel.text) == product.name
                         expect(productCardView?.priceLabel.text) == product.price
                         expect(productCardView?.button.titleLabel.text) == "Show more"
+                    }
+
+                    it("should have correct snapshot") {
+                        expectNotNil(productCardView).then {
+                            let view = aView(with: $0).constrained(size: CGSize(width: 295, height: 427))
+                            assertSnapshot(matching: view, as: .image, named: "surface")
+                        }
                     }
                 }
             }
