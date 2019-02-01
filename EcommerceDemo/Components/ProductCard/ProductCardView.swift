@@ -63,76 +63,28 @@ class ProductCardView: UIView {
     private var imageViewHeightConstraint: NSLayoutConstraint?
 
     private func setupLayout() {
-        setupTopViewLayout()
-        setupCenterViewLayout()
-        setupBottomViewLayout()
-    }
-
-    private func setupTopViewLayout() {
-        topView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            topView.topAnchor.constraint(equalTo: topAnchor),
-            topView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            topView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            topView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5)
+        layoutFillVerically(subviews: [
+            (view: topView, heightMultiplier: 0.5),
+            (view: centerView, heightMultiplier: nil),
+            (view: bottomView, heightMultiplier: 0.22)
         ])
 
-        topBackgroundView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            topBackgroundView.topAnchor.constraint(equalTo: topView.topAnchor),
-            topBackgroundView.leadingAnchor.constraint(equalTo: topView.leadingAnchor),
-            topBackgroundView.trailingAnchor.constraint(equalTo: topView.trailingAnchor),
-            topBackgroundView.heightAnchor.constraint(equalTo: topView.heightAnchor, multiplier: 0.77)
-        ])
+        topBackgroundView.layoutPinTop(to: topView.topAnchor)
+        topBackgroundView.layoutFillHorizontally(topView)
+        topBackgroundView.layoutPinHeight(to: topView.heightAnchor, multiplier: 0.77)
 
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: topView.leadingAnchor, constant: 20),
-            imageView.trailingAnchor.constraint(equalTo: topView.trailingAnchor, constant: -20),
-            imageView.bottomAnchor.constraint(equalTo: topView.bottomAnchor)
-        ])
-    }
-
-    private func setupCenterViewLayout() {
-        centerView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            centerView.topAnchor.constraint(equalTo: topView.bottomAnchor),
-            centerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            centerView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
+        imageView.layoutFillHorizontally(topView, leadingMargin: 20, trailingMargin: 20)
+        imageView.layoutPinBottom(to: topView.bottomAnchor)
 
         labelsStackView.axis = .vertical
         labelsStackView.alignment = .center
         labelsStackView.spacing = 8
-        labelsStackView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            labelsStackView.topAnchor.constraint(greaterThanOrEqualTo: centerView.topAnchor),
-            labelsStackView.leadingAnchor.constraint(greaterThanOrEqualTo: centerView.leadingAnchor, constant: 20),
-            labelsStackView.trailingAnchor.constraint(lessThanOrEqualTo: centerView.trailingAnchor, constant: -20),
-            labelsStackView.bottomAnchor.constraint(lessThanOrEqualTo: centerView.bottomAnchor),
-            labelsStackView.centerXAnchor.constraint(equalTo: centerView.centerXAnchor),
-            labelsStackView.centerYAnchor.constraint(equalTo: centerView.centerYAnchor)
-        ])
-    }
+        labelsStackView.layoutCenterHorizontally(in: centerView, margin: 20)
+        labelsStackView.layoutCenterVertically(in: centerView)
 
-    private func setupBottomViewLayout() {
-        bottomView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            bottomView.topAnchor.constraint(equalTo: centerView.bottomAnchor),
-            bottomView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            bottomView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            bottomView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            bottomView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.22)
-        ])
-
-        button.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            button.topAnchor.constraint(equalTo: bottomView.topAnchor),
-            button.leadingAnchor.constraint(greaterThanOrEqualTo: bottomView.leadingAnchor),
-            button.trailingAnchor.constraint(lessThanOrEqualTo: bottomView.trailingAnchor),
-            button.bottomAnchor.constraint(lessThanOrEqualTo: bottomView.bottomAnchor),
-            button.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor)
-        ])
+        button.layoutPinTop(to: bottomView.topAnchor)
+        button.layoutCenterHorizontally(in: bottomView, margin: 20)
+        button.layoutPinBottom(lessThan: bottomView.bottomAnchor)
     }
 
     // MARK: Animations

@@ -50,6 +50,9 @@
 		315E28E4220478A900C3BA19 /* SnapshotTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 315E28E32204789A00C3BA19 /* SnapshotTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		315E28E62204791E00C3BA19 /* NotNilExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28E52204791E00C3BA19 /* NotNilExpectation.swift */; };
 		315E28E8220479A600C3BA19 /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28E7220479A600C3BA19 /* UIView+TestHelpers.swift */; };
+		315E28EC2204803E00C3BA19 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28EB2204803E00C3BA19 /* UIView+Layout.swift */; };
+		315E28EE220494F600C3BA19 /* LayoutGuideCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28ED220494F600C3BA19 /* LayoutGuideCompatible.swift */; };
+		315E28F022049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28EF22049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +156,9 @@
 		315E28E32204789A00C3BA19 /* SnapshotTesting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapshotTesting.framework; path = Carthage/Build/iOS/SnapshotTesting.framework; sourceTree = "<group>"; };
 		315E28E52204791E00C3BA19 /* NotNilExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotNilExpectation.swift; sourceTree = "<group>"; };
 		315E28E7220479A600C3BA19 /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
+		315E28EB2204803E00C3BA19 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		315E28ED220494F600C3BA19 /* LayoutGuideCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutGuideCompatible.swift; sourceTree = "<group>"; };
+		315E28EF22049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutGuideCompatible+Layout.swift"; sourceTree = "<group>"; };
 		317F88EC2201D49700EA6D43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -244,6 +250,8 @@
 				312943352203B0E500AEE95E /* FuncUtils.swift */,
 				312943442203B13E00AEE95E /* GradientStyle+Assets.swift */,
 				312943372203B0E600AEE95E /* GradientView.swift */,
+				315E28ED220494F600C3BA19 /* LayoutGuideCompatible.swift */,
+				315E28EF22049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift */,
 				312943302203B0E500AEE95E /* RoundButton.swift */,
 				312943362203B0E600AEE95E /* ScrollPageController.swift */,
 				3129432F2203B0E500AEE95E /* SketchShadow.swift */,
@@ -255,6 +263,7 @@
 				312943332203B0E500AEE95E /* UIImageView+Style.swift */,
 				312943322203B0E500AEE95E /* UILabel+Style.swift */,
 				312943342203B0E500AEE95E /* UIScrollView+Viewport.swift */,
+				315E28EB2204803E00C3BA19 /* UIView+Layout.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -597,8 +606,10 @@
 				312943402203B0E600AEE95E /* GradientView.swift in Sources */,
 				315E28D322046A6200C3BA19 /* Product.swift in Sources */,
 				3129434D2203B13E00AEE95E /* GradientStyle+Assets.swift in Sources */,
+				315E28EC2204803E00C3BA19 /* UIView+Layout.swift in Sources */,
 				3129433D2203B0E600AEE95E /* UIScrollView+Viewport.swift in Sources */,
 				3129434F2203B13E00AEE95E /* SketchShadow+Assets.swift in Sources */,
+				315E28EE220494F600C3BA19 /* LayoutGuideCompatible.swift in Sources */,
 				3129433E2203B0E600AEE95E /* FuncUtils.swift in Sources */,
 				315E28CC220469BB00C3BA19 /* ProductCardViewController.swift in Sources */,
 				312943392203B0E600AEE95E /* RoundButton.swift in Sources */,
@@ -607,6 +618,7 @@
 				3129433C2203B0E600AEE95E /* UIImageView+Style.swift in Sources */,
 				3129432A2203B0C500AEE95E /* DealsView.swift in Sources */,
 				312943382203B0E600AEE95E /* SketchShadow.swift in Sources */,
+				315E28F022049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift in Sources */,
 				312943612203BD7400AEE95E /* Bundle.swift in Sources */,
 				3129432D2203B0C500AEE95E /* DealsViewController.swift in Sources */,
 				3129433B2203B0E600AEE95E /* UILabel+Style.swift in Sources */,

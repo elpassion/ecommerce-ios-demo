@@ -33,21 +33,8 @@ class RoundButton: UIControl {
     }
 
     private func setupLayout() {
-        background.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            background.topAnchor.constraint(equalTo: topAnchor),
-            background.leadingAnchor.constraint(equalTo: leadingAnchor),
-            background.trailingAnchor.constraint(equalTo: trailingAnchor),
-            background.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
-
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
-            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
-        ])
+        background.layoutFill(self)
+        titleLabel.layoutFill(self, margins: UIEdgeInsets(top: 16, left: 30, bottom: 16, right: 30))
     }
 
 }
