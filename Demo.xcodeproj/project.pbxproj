@@ -60,6 +60,7 @@
 		315E29002204C29A00C3BA19 /* GradientStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28FF2204C29A00C3BA19 /* GradientStyle.swift */; };
 		315E29062204C39000C3BA19 /* GradientViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E29052204C39000C3BA19 /* GradientViewSpec.swift */; };
 		315E29092204C69000C3BA19 /* RoundButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E29082204C69000C3BA19 /* RoundButtonSpec.swift */; };
+		315E290C2204C7A200C3BA19 /* SketchShadowSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E290B2204C7A200C3BA19 /* SketchShadowSpec.swift */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +174,7 @@
 		315E28FF2204C29A00C3BA19 /* GradientStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientStyle.swift; sourceTree = "<group>"; };
 		315E29052204C39000C3BA19 /* GradientViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewSpec.swift; sourceTree = "<group>"; };
 		315E29082204C69000C3BA19 /* RoundButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonSpec.swift; sourceTree = "<group>"; };
+		315E290B2204C7A200C3BA19 /* SketchShadowSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchShadowSpec.swift; sourceTree = "<group>"; };
 		317F88EC2201D49700EA6D43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -370,6 +372,7 @@
 				315E28CE220469E500C3BA19 /* ProductCard */,
 				315E29072204C68000C3BA19 /* RoundButton */,
 				315E29032204C34800C3BA19 /* ScrollPage */,
+				315E290A2204C78E00C3BA19 /* SketchShadow */,
 				315E28F42204B07200C3BA19 /* TabBar */,
 			);
 			path = Components;
@@ -472,6 +475,14 @@
 				315E29082204C69000C3BA19 /* RoundButtonSpec.swift */,
 			);
 			path = RoundButton;
+			sourceTree = "<group>";
+		};
+		315E290A2204C78E00C3BA19 /* SketchShadow */ = {
+			isa = PBXGroup;
+			children = (
+				315E290B2204C7A200C3BA19 /* SketchShadowSpec.swift */,
+			);
+			path = SketchShadow;
 			sourceTree = "<group>";
 		};
 		3188DD3E2200FB2900E33866 /* Resources */ = {
@@ -734,6 +745,7 @@
 				315E28E02204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift in Sources */,
 				315E28EA22047FE900C3BA19 /* ProductCardViewSpec.swift in Sources */,
 				315E29062204C39000C3BA19 /* GradientViewSpec.swift in Sources */,
+				315E290C2204C7A200C3BA19 /* SketchShadowSpec.swift in Sources */,
 				315E28C82203C58900C3BA19 /* ScrollPageControllerSpec.swift in Sources */,
 				315E28F62204B07F00C3BA19 /* TabBarViewSpec.swift in Sources */,
 				315E28D0220469F200C3BA19 /* ProductCardViewControllerSpec.swift in Sources */,
