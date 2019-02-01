@@ -22,10 +22,4 @@ extension GradientDirection {
             endPoint: CGPoint(x: 1, y: 0.5)
         )
     }
-    static var vertical: GradientDirection {
-        return GradientDirection(
-            startPoint: CGPoint(x: 0.5, y: 0),
-            endPoint: CGPoint(x: 0.5, y: 1)
-        )
-    }
 }
