@@ -11,17 +11,17 @@ class AppDelegateSpec: QuickSpec {
                 sut = AppDelegate()
             }
 
-            it("should have correct root view controller factory") {
-                expect(sut.rootViewController()).to(beAnInstanceOf(DealsViewController.self))
+            it("should have correct view controller factory") {
+                expect(sut.viewControllerFactory).to(beAnInstanceOf(DealsViewControllerFactory.self))
             }
 
             context("app did finish launching") {
-                var rootViewController: UIViewController!
+                var viewControllerFactory: DealsViewControllerCreatingDouble!
                 var result: Bool!
 
                 beforeEach {
-                    rootViewController = UIViewController()
-                    sut.rootViewController = { rootViewController }
+                    viewControllerFactory = DealsViewControllerCreatingDouble()
+                    sut.viewControllerFactory = viewControllerFactory
                     result = sut.application(UIApplication.shared, didFinishLaunchingWithOptions: nil)
                 }
 
@@ -45,7 +45,7 @@ class AppDelegateSpec: QuickSpec {
                     }
 
                     it("should have correct root view controller") {
-                        expect(window?.rootViewController) === rootViewController
+                        expect(window?.rootViewController) === viewControllerFactory.viewController
                     }
 
                     it("should be a visible key window") {

@@ -2,7 +2,8 @@ import UIKit
 
 class DealsViewController: UIViewController, UIScrollViewDelegate {
 
-    init() {
+    init(products: [Product]) {
+        self.products = products
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -19,12 +20,8 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         dealsView.titleLabel.text = "Today’s deals"
-        dealsView.productViews = [
-            ProductCardView.oculus(),
-            ProductCardView.surface(),
-            ProductCardView.xbox()
-        ]
         dealsView.scrollView.delegate = self
+        productCardViewControllers = products.map { ProductCardViewController(product: $0) }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -68,6 +65,16 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
 
     // MARK: Private
 
+    private let products: [Product]
     private let scrollPageController = ScrollPageController()
+
+    private var productCardViewControllers = [ProductCardViewController]() {
+        didSet {
+            productCardViewControllers.forEach { addChild($0) }
+            dealsView.productViews = productCardViewControllers.map { $0.view }
+            productCardViewControllers.forEach { $0.didMove(toParent: self) }
+            oldValue.forEach { $0.removeFromParent() }
+        }
+    }
 
 }

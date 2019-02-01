@@ -15,7 +15,6 @@
 		312943242203B09300AEE95E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943232203B09300AEE95E /* AppDelegate.swift */; };
 		3129432A2203B0C500AEE95E /* DealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943262203B0C500AEE95E /* DealsView.swift */; };
 		3129432B2203B0C500AEE95E /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943272203B0C500AEE95E /* ProductCardView.swift */; };
-		3129432C2203B0C500AEE95E /* ProductCardView+Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943282203B0C500AEE95E /* ProductCardView+Demo.swift */; };
 		3129432D2203B0C500AEE95E /* DealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943292203B0C500AEE95E /* DealsViewController.swift */; };
 		312943382203B0E600AEE95E /* SketchShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129432F2203B0E500AEE95E /* SketchShadow.swift */; };
 		312943392203B0E600AEE95E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943302203B0E500AEE95E /* RoundButton.swift */; };
@@ -46,6 +45,9 @@
 		315E28CC220469BB00C3BA19 /* ProductCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28CB220469BB00C3BA19 /* ProductCardViewController.swift */; };
 		315E28D0220469F200C3BA19 /* ProductCardViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28CF220469F200C3BA19 /* ProductCardViewControllerSpec.swift */; };
 		315E28D322046A6200C3BA19 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28D222046A6200C3BA19 /* Product.swift */; };
+		315E28DB2204745300C3BA19 /* DealsViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28DA2204745300C3BA19 /* DealsViewControllerFactory.swift */; };
+		315E28DD2204749C00C3BA19 /* DealsViewControllerCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28DC2204749C00C3BA19 /* DealsViewControllerCreating.swift */; };
+		315E28E02204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28DF2204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,7 +113,6 @@
 		312943232203B09300AEE95E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		312943262203B0C500AEE95E /* DealsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsView.swift; sourceTree = "<group>"; };
 		312943272203B0C500AEE95E /* ProductCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
-		312943282203B0C500AEE95E /* ProductCardView+Demo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProductCardView+Demo.swift"; sourceTree = "<group>"; };
 		312943292203B0C500AEE95E /* DealsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsViewController.swift; sourceTree = "<group>"; };
 		3129432F2203B0E500AEE95E /* SketchShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SketchShadow.swift; sourceTree = "<group>"; };
 		312943302203B0E500AEE95E /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -144,6 +145,9 @@
 		315E28CB220469BB00C3BA19 /* ProductCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardViewController.swift; sourceTree = "<group>"; };
 		315E28CF220469F200C3BA19 /* ProductCardViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardViewControllerSpec.swift; sourceTree = "<group>"; };
 		315E28D222046A6200C3BA19 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		315E28DA2204745300C3BA19 /* DealsViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewControllerFactory.swift; sourceTree = "<group>"; };
+		315E28DC2204749C00C3BA19 /* DealsViewControllerCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewControllerCreating.swift; sourceTree = "<group>"; };
+		315E28DF2204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewControllerCreatingDouble.swift; sourceTree = "<group>"; };
 		317F88EC2201D49700EA6D43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +227,8 @@
 			children = (
 				312943262203B0C500AEE95E /* DealsView.swift */,
 				312943292203B0C500AEE95E /* DealsViewController.swift */,
+				315E28DC2204749C00C3BA19 /* DealsViewControllerCreating.swift */,
+				315E28DA2204745300C3BA19 /* DealsViewControllerFactory.swift */,
 			);
 			path = Deals;
 			sourceTree = "<group>";
@@ -321,7 +327,6 @@
 			isa = PBXGroup;
 			children = (
 				312943272203B0C500AEE95E /* ProductCardView.swift */,
-				312943282203B0C500AEE95E /* ProductCardView+Demo.swift */,
 				315E28CB220469BB00C3BA19 /* ProductCardViewController.swift */,
 			);
 			path = ProductCard;
@@ -330,6 +335,7 @@
 		315E28CD220469DD00C3BA19 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				315E28DE2204751000C3BA19 /* Deals */,
 				315E28CE220469E500C3BA19 /* ProductCard */,
 			);
 			path = Components;
@@ -349,6 +355,14 @@
 				315E28D222046A6200C3BA19 /* Product.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		315E28DE2204751000C3BA19 /* Deals */ = {
+			isa = PBXGroup;
+			children = (
+				315E28DF2204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift */,
+			);
+			path = Deals;
 			sourceTree = "<group>";
 		};
 		3188DD3E2200FB2900E33866 /* Resources */ = {
@@ -570,6 +584,7 @@
 			files = (
 				3129433A2203B0E600AEE95E /* UIEdgeInsets+Helpers.swift in Sources */,
 				3129434C2203B13E00AEE95E /* UIFont+Assets.swift in Sources */,
+				315E28DB2204745300C3BA19 /* DealsViewControllerFactory.swift in Sources */,
 				312943522203B13E00AEE95E /* UIColor+Assets.swift in Sources */,
 				3129433F2203B0E600AEE95E /* ScrollPageController.swift in Sources */,
 				312943402203B0E600AEE95E /* GradientView.swift in Sources */,
@@ -581,13 +596,13 @@
 				315E28CC220469BB00C3BA19 /* ProductCardViewController.swift in Sources */,
 				312943392203B0E600AEE95E /* RoundButton.swift in Sources */,
 				312943242203B09300AEE95E /* AppDelegate.swift in Sources */,
+				315E28DD2204749C00C3BA19 /* DealsViewControllerCreating.swift in Sources */,
 				3129433C2203B0E600AEE95E /* UIImageView+Style.swift in Sources */,
 				3129432A2203B0C500AEE95E /* DealsView.swift in Sources */,
 				312943382203B0E600AEE95E /* SketchShadow.swift in Sources */,
 				312943612203BD7400AEE95E /* Bundle.swift in Sources */,
 				3129432D2203B0C500AEE95E /* DealsViewController.swift in Sources */,
 				3129433B2203B0E600AEE95E /* UILabel+Style.swift in Sources */,
-				3129432C2203B0C500AEE95E /* ProductCardView+Demo.swift in Sources */,
 				3129432B2203B0C500AEE95E /* ProductCardView.swift in Sources */,
 				312943502203B13E00AEE95E /* UIImage+Assets.swift in Sources */,
 			);
@@ -600,6 +615,7 @@
 				312943592203B2AE00AEE95E /* EcommerceDemoSpec.swift in Sources */,
 				3129435B2203B2D100AEE95E /* AppDelegateDouble.swift in Sources */,
 				315E28C62203C39C00C3BA19 /* AppDelegateSpec.swift in Sources */,
+				315E28E02204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift in Sources */,
 				315E28C82203C58900C3BA19 /* ScrollPageControllerSpec.swift in Sources */,
 				3129430B2203AC0200AEE95E /* EcommerceDemoTests.swift in Sources */,
 				315E28D0220469F200C3BA19 /* ProductCardViewControllerSpec.swift in Sources */,

@@ -2,7 +2,10 @@ import UIKit
 
 public class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    public var rootViewController: () -> UIViewController = { DealsViewController() }
+    var viewControllerFactory: DealsViewControllerCreating = DealsViewControllerFactory()
+
+    // MARK: UIApplicationDelegate
+
     public var window: UIWindow?
 
     public func application(
@@ -10,7 +13,7 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = rootViewController()
+        window?.rootViewController = viewControllerFactory.create()
         window?.makeKeyAndVisible()
         return true
     }
