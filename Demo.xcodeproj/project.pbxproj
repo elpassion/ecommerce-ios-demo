@@ -165,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				312943222203B08700AEE95E /* Application */,
-				312943252203B0A000AEE95E /* Deals */,
+				315E28C922045D8000C3BA19 /* Components */,
 				3129432E2203B0CA00AEE95E /* Helpers */,
 				312943412203B10B00AEE95E /* Resources */,
 				312943192203ADBA00AEE95E /* Supporting Files */,
@@ -215,8 +215,6 @@
 			children = (
 				312943262203B0C500AEE95E /* DealsView.swift */,
 				312943292203B0C500AEE95E /* DealsViewController.swift */,
-				312943272203B0C500AEE95E /* ProductCardView.swift */,
-				312943282203B0C500AEE95E /* ProductCardView+Demo.swift */,
 			);
 			path = Deals;
 			sourceTree = "<group>";
@@ -300,6 +298,24 @@
 				3188DD3E2200FB2900E33866 /* Resources */,
 			);
 			path = DemoApp;
+			sourceTree = "<group>";
+		};
+		315E28C922045D8000C3BA19 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				312943252203B0A000AEE95E /* Deals */,
+				315E28CA22045DA500C3BA19 /* ProductCard */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		315E28CA22045DA500C3BA19 /* ProductCard */ = {
+			isa = PBXGroup;
+			children = (
+				312943272203B0C500AEE95E /* ProductCardView.swift */,
+				312943282203B0C500AEE95E /* ProductCardView+Demo.swift */,
+			);
+			path = ProductCard;
 			sourceTree = "<group>";
 		};
 		3188DD3E2200FB2900E33866 /* Resources */ = {
