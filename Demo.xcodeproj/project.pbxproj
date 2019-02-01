@@ -48,6 +48,7 @@
 		315E28DB2204745300C3BA19 /* DealsViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28DA2204745300C3BA19 /* DealsViewControllerFactory.swift */; };
 		315E28DD2204749C00C3BA19 /* DealsViewControllerCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28DC2204749C00C3BA19 /* DealsViewControllerCreating.swift */; };
 		315E28E02204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28DF2204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift */; };
+		315E28E2220476AB00C3BA19 /* DealsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28E1220476AB00C3BA19 /* DealsViewControllerSpec.swift */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +149,7 @@
 		315E28DA2204745300C3BA19 /* DealsViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewControllerFactory.swift; sourceTree = "<group>"; };
 		315E28DC2204749C00C3BA19 /* DealsViewControllerCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewControllerCreating.swift; sourceTree = "<group>"; };
 		315E28DF2204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewControllerCreatingDouble.swift; sourceTree = "<group>"; };
+		315E28E1220476AB00C3BA19 /* DealsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewControllerSpec.swift; sourceTree = "<group>"; };
 		317F88EC2201D49700EA6D43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -361,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				315E28DF2204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift */,
+				315E28E1220476AB00C3BA19 /* DealsViewControllerSpec.swift */,
 			);
 			path = Deals;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				312943592203B2AE00AEE95E /* EcommerceDemoSpec.swift in Sources */,
 				3129435B2203B2D100AEE95E /* AppDelegateDouble.swift in Sources */,
 				315E28C62203C39C00C3BA19 /* AppDelegateSpec.swift in Sources */,
+				315E28E2220476AB00C3BA19 /* DealsViewControllerSpec.swift in Sources */,
 				315E28E02204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift in Sources */,
 				315E28C82203C58900C3BA19 /* ScrollPageControllerSpec.swift in Sources */,
 				3129430B2203AC0200AEE95E /* EcommerceDemoTests.swift in Sources */,
