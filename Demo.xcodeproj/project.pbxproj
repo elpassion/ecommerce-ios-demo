@@ -49,6 +49,7 @@
 		315E28DD2204749C00C3BA19 /* DealsViewControllerCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28DC2204749C00C3BA19 /* DealsViewControllerCreating.swift */; };
 		315E28E02204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28DF2204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift */; };
 		315E28E2220476AB00C3BA19 /* DealsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28E1220476AB00C3BA19 /* DealsViewControllerSpec.swift */; };
+		315E28E4220478A900C3BA19 /* SnapshotTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 315E28E32204789A00C3BA19 /* SnapshotTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		315E28E62204791E00C3BA19 /* NotNilExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28E52204791E00C3BA19 /* NotNilExpectation.swift */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				315E28E4220478A900C3BA19 /* SnapshotTesting.framework in Embed Frameworks */,
 				3129431C2203AF4C00AEE95E /* Nimble.framework in Embed Frameworks */,
 				3129431D2203AF4C00AEE95E /* Quick.framework in Embed Frameworks */,
 			);
@@ -151,6 +153,7 @@
 		315E28DC2204749C00C3BA19 /* DealsViewControllerCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewControllerCreating.swift; sourceTree = "<group>"; };
 		315E28DF2204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewControllerCreatingDouble.swift; sourceTree = "<group>"; };
 		315E28E1220476AB00C3BA19 /* DealsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewControllerSpec.swift; sourceTree = "<group>"; };
+		315E28E32204789A00C3BA19 /* SnapshotTesting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapshotTesting.framework; path = Carthage/Build/iOS/SnapshotTesting.framework; sourceTree = "<group>"; };
 		315E28E52204791E00C3BA19 /* NotNilExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotNilExpectation.swift; sourceTree = "<group>"; };
 		317F88EC2201D49700EA6D43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +174,7 @@
 			children = (
 				312942EC2203A85100AEE95E /* Nimble.framework */,
 				312942ED2203A85100AEE95E /* Quick.framework */,
+				315E28E32204789A00C3BA19 /* SnapshotTesting.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
