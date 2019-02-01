@@ -43,6 +43,8 @@
 		31442A102200F99F00C8BEBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0E2200F99F00C8BEBE /* LaunchScreen.storyboard */; };
 		315E28C62203C39C00C3BA19 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28C52203C39C00C3BA19 /* AppDelegateSpec.swift */; };
 		315E28C82203C58900C3BA19 /* ScrollPageControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28C72203C58900C3BA19 /* ScrollPageControllerSpec.swift */; };
+		315E28CC220469BB00C3BA19 /* ProductCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28CB220469BB00C3BA19 /* ProductCardViewController.swift */; };
+		315E28D0220469F200C3BA19 /* ProductCardViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28CF220469F200C3BA19 /* ProductCardViewControllerSpec.swift */; };
 		315E28D322046A6200C3BA19 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28D222046A6200C3BA19 /* Product.swift */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
 /* End PBXBuildFile section */
@@ -139,6 +141,8 @@
 		31442A112200F99F00C8BEBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		315E28C52203C39C00C3BA19 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		315E28C72203C58900C3BA19 /* ScrollPageControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPageControllerSpec.swift; sourceTree = "<group>"; };
+		315E28CB220469BB00C3BA19 /* ProductCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardViewController.swift; sourceTree = "<group>"; };
+		315E28CF220469F200C3BA19 /* ProductCardViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardViewControllerSpec.swift; sourceTree = "<group>"; };
 		315E28D222046A6200C3BA19 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		317F88EC2201D49700EA6D43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				312943552203B24100AEE95E /* Application */,
+				315E28CD220469DD00C3BA19 /* Components */,
 				312943562203B25F00AEE95E /* Helpers */,
 				3129431A2203AE0F00AEE95E /* Supporting Files */,
 			);
@@ -317,6 +322,23 @@
 			children = (
 				312943272203B0C500AEE95E /* ProductCardView.swift */,
 				312943282203B0C500AEE95E /* ProductCardView+Demo.swift */,
+				315E28CB220469BB00C3BA19 /* ProductCardViewController.swift */,
+			);
+			path = ProductCard;
+			sourceTree = "<group>";
+		};
+		315E28CD220469DD00C3BA19 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				315E28CE220469E500C3BA19 /* ProductCard */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		315E28CE220469E500C3BA19 /* ProductCard */ = {
+			isa = PBXGroup;
+			children = (
+				315E28CF220469F200C3BA19 /* ProductCardViewControllerSpec.swift */,
 			);
 			path = ProductCard;
 			sourceTree = "<group>";
@@ -556,6 +578,7 @@
 				3129433D2203B0E600AEE95E /* UIScrollView+Viewport.swift in Sources */,
 				3129434F2203B13E00AEE95E /* SketchShadow+Assets.swift in Sources */,
 				3129433E2203B0E600AEE95E /* FuncUtils.swift in Sources */,
+				315E28CC220469BB00C3BA19 /* ProductCardViewController.swift in Sources */,
 				312943392203B0E600AEE95E /* RoundButton.swift in Sources */,
 				312943242203B09300AEE95E /* AppDelegate.swift in Sources */,
 				3129433C2203B0E600AEE95E /* UIImageView+Style.swift in Sources */,
@@ -579,6 +602,7 @@
 				315E28C62203C39C00C3BA19 /* AppDelegateSpec.swift in Sources */,
 				315E28C82203C58900C3BA19 /* ScrollPageControllerSpec.swift in Sources */,
 				3129430B2203AC0200AEE95E /* EcommerceDemoTests.swift in Sources */,
+				315E28D0220469F200C3BA19 /* ProductCardViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
