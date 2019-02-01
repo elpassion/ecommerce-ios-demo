@@ -58,6 +58,7 @@
 		315E28F62204B07F00C3BA19 /* TabBarViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28F52204B07F00C3BA19 /* TabBarViewSpec.swift */; };
 		315E28FC2204B1A500C3BA19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 315E28FB2204B1A500C3BA19 /* Assets.xcassets */; };
 		315E29002204C29A00C3BA19 /* GradientStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28FF2204C29A00C3BA19 /* GradientStyle.swift */; };
+		315E29062204C39000C3BA19 /* GradientViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E29052204C39000C3BA19 /* GradientViewSpec.swift */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +170,7 @@
 		315E28F52204B07F00C3BA19 /* TabBarViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewSpec.swift; sourceTree = "<group>"; };
 		315E28FB2204B1A500C3BA19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		315E28FF2204C29A00C3BA19 /* GradientStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientStyle.swift; sourceTree = "<group>"; };
+		315E29052204C39000C3BA19 /* GradientViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewSpec.swift; sourceTree = "<group>"; };
 		317F88EC2201D49700EA6D43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -362,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				315E28DE2204751000C3BA19 /* Deals */,
+				315E29042204C38600C3BA19 /* Gradient */,
 				315E28CE220469E500C3BA19 /* ProductCard */,
 				315E29032204C34800C3BA19 /* ScrollPage */,
 				315E28F42204B07200C3BA19 /* TabBar */,
@@ -450,6 +453,14 @@
 				315E28C72203C58900C3BA19 /* ScrollPageControllerSpec.swift */,
 			);
 			path = ScrollPage;
+			sourceTree = "<group>";
+		};
+		315E29042204C38600C3BA19 /* Gradient */ = {
+			isa = PBXGroup;
+			children = (
+				315E29052204C39000C3BA19 /* GradientViewSpec.swift */,
+			);
+			path = Gradient;
 			sourceTree = "<group>";
 		};
 		3188DD3E2200FB2900E33866 /* Resources */ = {
@@ -711,6 +722,7 @@
 				315E28E2220476AB00C3BA19 /* DealsViewControllerSpec.swift in Sources */,
 				315E28E02204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift in Sources */,
 				315E28EA22047FE900C3BA19 /* ProductCardViewSpec.swift in Sources */,
+				315E29062204C39000C3BA19 /* GradientViewSpec.swift in Sources */,
 				315E28C82203C58900C3BA19 /* ScrollPageControllerSpec.swift in Sources */,
 				315E28F62204B07F00C3BA19 /* TabBarViewSpec.swift in Sources */,
 				315E28D0220469F200C3BA19 /* ProductCardViewControllerSpec.swift in Sources */,
