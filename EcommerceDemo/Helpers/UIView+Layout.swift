@@ -54,9 +54,19 @@ extension UIView {
         centerYAnchor.constraint(equalTo: centerY).isActive = true
     }
 
+    func layoutPinHeight(to height: CGFloat) {
+        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalToConstant: height).isActive = true
+    }
+
     func layoutPinHeight(to height: NSLayoutDimension, multiplier: CGFloat = 1, delta: CGFloat = 0) {
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalTo: height, multiplier: multiplier, constant: delta).isActive = true
+    }
+
+    func layoutPinWidth(to width: CGFloat) {
+        translatesAutoresizingMaskIntoConstraints = false
+        widthAnchor.constraint(equalToConstant: width).isActive = true
     }
 
     func layoutPinWidth(to width: NSLayoutDimension, multiplier: CGFloat = 1, delta: CGFloat = 0) {

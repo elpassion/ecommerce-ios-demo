@@ -54,6 +54,8 @@
 		315E28EC2204803E00C3BA19 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28EB2204803E00C3BA19 /* UIView+Layout.swift */; };
 		315E28EE220494F600C3BA19 /* LayoutGuideCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28ED220494F600C3BA19 /* LayoutGuideCompatible.swift */; };
 		315E28F022049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28EF22049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift */; };
+		315E28F32204B03E00C3BA19 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28F22204B03E00C3BA19 /* TabBarView.swift */; };
+		315E28F62204B07F00C3BA19 /* TabBarViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28F52204B07F00C3BA19 /* TabBarViewSpec.swift */; };
 		315E28FC2204B1A500C3BA19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 315E28FB2204B1A500C3BA19 /* Assets.xcassets */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
 /* End PBXBuildFile section */
@@ -162,6 +164,8 @@
 		315E28EB2204803E00C3BA19 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		315E28ED220494F600C3BA19 /* LayoutGuideCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutGuideCompatible.swift; sourceTree = "<group>"; };
 		315E28EF22049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutGuideCompatible+Layout.swift"; sourceTree = "<group>"; };
+		315E28F22204B03E00C3BA19 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		315E28F52204B07F00C3BA19 /* TabBarViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewSpec.swift; sourceTree = "<group>"; };
 		315E28FB2204B1A500C3BA19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		317F88EC2201D49700EA6D43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -339,6 +343,7 @@
 			children = (
 				312943252203B0A000AEE95E /* Deals */,
 				315E28CA22045DA500C3BA19 /* ProductCard */,
+				315E28F12204B03200C3BA19 /* TabBar */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -357,6 +362,7 @@
 			children = (
 				315E28DE2204751000C3BA19 /* Deals */,
 				315E28CE220469E500C3BA19 /* ProductCard */,
+				315E28F42204B07200C3BA19 /* TabBar */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -385,6 +391,22 @@
 				315E28E1220476AB00C3BA19 /* DealsViewControllerSpec.swift */,
 			);
 			path = Deals;
+			sourceTree = "<group>";
+		};
+		315E28F12204B03200C3BA19 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				315E28F22204B03E00C3BA19 /* TabBarView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		315E28F42204B07200C3BA19 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				315E28F52204B07F00C3BA19 /* TabBarViewSpec.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		3188DD3E2200FB2900E33866 /* Resources */ = {
@@ -605,6 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				315E28F32204B03E00C3BA19 /* TabBarView.swift in Sources */,
 				3129433A2203B0E600AEE95E /* UIEdgeInsets+Helpers.swift in Sources */,
 				3129434C2203B13E00AEE95E /* UIFont+Assets.swift in Sources */,
 				315E28DB2204745300C3BA19 /* DealsViewControllerFactory.swift in Sources */,
@@ -645,6 +668,7 @@
 				315E28E02204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift in Sources */,
 				315E28EA22047FE900C3BA19 /* ProductCardViewSpec.swift in Sources */,
 				315E28C82203C58900C3BA19 /* ScrollPageControllerSpec.swift in Sources */,
+				315E28F62204B07F00C3BA19 /* TabBarViewSpec.swift in Sources */,
 				315E28D0220469F200C3BA19 /* ProductCardViewControllerSpec.swift in Sources */,
 				315E28E62204791E00C3BA19 /* NotNilExpectation.swift in Sources */,
 			);

@@ -30,6 +30,7 @@ class DealsView: UIView {
     let scrollView = UIScrollView(frame: .zero)
 
     private let stackView = UIStackView(arrangedSubviews: [])
+    private let tabBarView = TabBarView()
 
     private func setupSubviews() {
         addSubview(titleLabel)
@@ -37,6 +38,7 @@ class DealsView: UIView {
         scrollView.decelerationRate = .fast
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.addSubview(stackView)
+        addSubview(tabBarView)
     }
 
     // MARK: Layout
@@ -48,7 +50,6 @@ class DealsView: UIView {
         scrollView.contentInset = UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 40)
         scrollView.layoutPinTop(to: titleLabel.bottomAnchor, margin: 44)
         scrollView.layoutFillHorizontally(self)
-        scrollView.layoutPinBottom(to: safeAreaLayoutGuide.bottomAnchor, margin: 78)
 
         stackView.axis = .horizontal
         stackView.alignment = .fill
@@ -56,6 +57,10 @@ class DealsView: UIView {
         stackView.spacing = 24
         stackView.layoutFill(scrollView)
         stackView.layoutPinHeight(to: scrollView.heightAnchor)
+
+        tabBarView.layoutPinTop(to: scrollView.bottomAnchor, margin: 78)
+        tabBarView.layoutFillHorizontally(self)
+        tabBarView.layoutPinBottom(to: safeAreaLayoutGuide.bottomAnchor)
     }
 
     private func setupLayout(cardView view: UIView) {
