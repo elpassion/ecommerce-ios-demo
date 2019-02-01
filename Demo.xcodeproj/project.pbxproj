@@ -54,6 +54,7 @@
 		315E28EC2204803E00C3BA19 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28EB2204803E00C3BA19 /* UIView+Layout.swift */; };
 		315E28EE220494F600C3BA19 /* LayoutGuideCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28ED220494F600C3BA19 /* LayoutGuideCompatible.swift */; };
 		315E28F022049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28EF22049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift */; };
+		315E28FC2204B1A500C3BA19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 315E28FB2204B1A500C3BA19 /* Assets.xcassets */; };
 		317F88ED2201D49700EA6D43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F88EC2201D49700EA6D43 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +162,7 @@
 		315E28EB2204803E00C3BA19 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		315E28ED220494F600C3BA19 /* LayoutGuideCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutGuideCompatible.swift; sourceTree = "<group>"; };
 		315E28EF22049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutGuideCompatible+Layout.swift"; sourceTree = "<group>"; };
+		315E28FB2204B1A500C3BA19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		317F88EC2201D49700EA6D43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -273,6 +275,7 @@
 		312943412203B10B00AEE95E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				315E28FB2204B1A500C3BA19 /* Assets.xcassets */,
 				312943452203B13E00AEE95E /* product_oculus.png */,
 				312943422203B13E00AEE95E /* product_surface.png */,
 				3129434A2203B13E00AEE95E /* product_xbox.png */,
@@ -518,6 +521,7 @@
 				3129434E2203B13E00AEE95E /* product_oculus.png in Resources */,
 				3129434B2203B13E00AEE95E /* product_surface.png in Resources */,
 				312943512203B13E00AEE95E /* VarelaRound-Regular.ttf in Resources */,
+				315E28FC2204B1A500C3BA19 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
