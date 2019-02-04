@@ -22,6 +22,7 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
         dealsView.titleLabel.text = "Today’s deals"
         dealsView.scrollView.delegate = self
         productCardViewControllers = products.map { ProductCardViewController(product: $0) }
+        dealsView.pageControl.isUserInteractionEnabled = false
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -41,6 +42,10 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         adjustScrollContent()
+        let offset = scrollView.contentOffset.x
+        if let pageFraction = scrollPageController.pageFraction(for: offset, in: pageOffsets) {
+            dealsView.pageControl.currentPage = Int(round(pageFraction))
+        }
     }
 
     func scrollViewWillEndDragging(
@@ -63,6 +68,8 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
         didSet {
             productCardViewControllers.forEach { addChild($0) }
             dealsView.productViews = productCardViewControllers.map { $0.view }
+            dealsView.pageControl.numberOfPages = productCardViewControllers.count
+            dealsView.pageControl.currentPage = 0
             productCardViewControllers.forEach { $0.didMove(toParent: self) }
             oldValue.forEach { $0.removeFromParent() }
         }
