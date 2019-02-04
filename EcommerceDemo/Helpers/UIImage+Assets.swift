@@ -23,4 +23,7 @@ extension UIImage {
     static var iconProfile: UIImage {
         return UIImage(named: "icon_profile", in: bundle, compatibleWith: nil)!
     }
+    static var iconX: UIImage {
+        return UIImage(named: "icon_x", in: bundle, compatibleWith: nil)!
+    }
 }
