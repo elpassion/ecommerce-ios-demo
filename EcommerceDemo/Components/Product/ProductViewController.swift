@@ -17,6 +17,15 @@ class ProductViewController: UIViewController {
         view = ProductView()
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        productView.backgroundColor = product.color
+    }
+
+    private var productView: ProductView! {
+        return view as? ProductView
+    }
+
     // MARK: Private
 
     private let product: Product
