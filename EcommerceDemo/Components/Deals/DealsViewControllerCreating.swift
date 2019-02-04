@@ -1,5 +1,5 @@
 import UIKit
 
 protocol DealsViewControllerCreating {
-    func create() -> UIViewController
+    func create(with products: [Product]) -> UIViewController
 }

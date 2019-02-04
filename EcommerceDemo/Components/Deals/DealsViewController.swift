@@ -2,8 +2,8 @@ import UIKit
 
 class DealsViewController: UIViewController, UIScrollViewDelegate {
 
-    init(products: [Product]) {
-        self.products = products
+    init(cardViewControllers: [ProductCardViewController]) {
+        self.cardViewControllers = cardViewControllers
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -19,10 +19,16 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         dealsView.titleLabel.text = "Today’s deals"
         dealsView.scrollView.delegate = self
-        productCardViewControllers = products.map { ProductCardViewController(product: $0) }
         dealsView.pageControl.isUserInteractionEnabled = false
+        dealsView.pageControl.numberOfPages = cardViewControllers.count
+        dealsView.pageControl.currentPage = 0
+
+        cardViewControllers.forEach { addChild($0) }
+        dealsView.productViews = cardViewControllers.map { $0.view }
+        cardViewControllers.forEach { $0.didMove(toParent: self) }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -61,19 +67,8 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
 
     // MARK: Private
 
-    private let products: [Product]
+    private let cardViewControllers: [ProductCardViewController]
     private let scrollPageController = ScrollPageController()
-
-    private var productCardViewControllers = [ProductCardViewController]() {
-        didSet {
-            productCardViewControllers.forEach { addChild($0) }
-            dealsView.productViews = productCardViewControllers.map { $0.view }
-            dealsView.pageControl.numberOfPages = productCardViewControllers.count
-            dealsView.pageControl.currentPage = 0
-            productCardViewControllers.forEach { $0.didMove(toParent: self) }
-            oldValue.forEach { $0.removeFromParent() }
-        }
-    }
 
     private var pageOffsets: [CGFloat] {
         return dealsView.productViews.map { $0.frame.minX - dealsView.scrollView.adjustedContentInset.left }
@@ -82,7 +77,7 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
     private func adjustScrollContent() {
         guard dealsView.scrollView.contentSize != .zero else { return }
         let viewportCenterX = dealsView.scrollView.viewport.midX
-        productCardViewControllers.forEach {
+        cardViewControllers.forEach {
             $0.distanceFromCenter = $0.view.frame.midX - viewportCenterX
         }
     }

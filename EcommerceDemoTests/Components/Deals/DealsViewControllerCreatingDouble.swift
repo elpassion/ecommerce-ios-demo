@@ -1,10 +1,16 @@
 import UIKit
 @testable import EcommerceDemo
 
-struct DealsViewControllerCreatingDouble: DealsViewControllerCreating {
-    var viewController = UIViewController()
+class DealsViewControllerCreatingDouble: DealsViewControllerCreating {
 
-    func create() -> UIViewController {
-        return viewController
+    private(set) var didCreateWithProducts: [Product]?
+    var createdViewController = UIViewController()
+
+    // MARK: DealsViewControllerCreating
+
+    func create(with products: [Product]) -> UIViewController {
+        didCreateWithProducts = products
+        return createdViewController
     }
+
 }

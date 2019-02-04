@@ -14,9 +14,11 @@ class DealsViewControllerSpec: QuickSpec {
 
             context("create") {
                 var sut: DealsViewController?
+                var products: [Product]!
 
                 beforeEach {
-                    sut = factory.create() as? DealsViewController
+                    products = [.oculus, .surface, .xbox]
+                    sut = factory.create(with: products) as? DealsViewController
                 }
 
                 it("should not be nil") {

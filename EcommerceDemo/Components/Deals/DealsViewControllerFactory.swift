@@ -1,7 +1,13 @@
 import UIKit
 
 struct DealsViewControllerFactory: DealsViewControllerCreating {
-    func create() -> UIViewController {
-        return DealsViewController(products: [.oculus, .surface, .xbox])
+
+    var cardViewControllerFactory: ProductCardViewControllerCreating = ProductCardViewControllerFactory()
+
+    func create(with produtcs: [Product]) -> UIViewController {
+        return DealsViewController(
+            cardViewControllers: produtcs.map { cardViewControllerFactory.create(with: $0) }
+        )
     }
+
 }

@@ -44,8 +44,13 @@ class AppDelegateSpec: QuickSpec {
                         expect(window?.frame) == UIScreen.main.bounds
                     }
 
+                    it("should create root view controller with correct products") {
+                        expect(viewControllerFactory.didCreateWithProducts?.map { $0.name })
+                            == ([.oculus, .surface, .xbox] as [Product]).map { $0.name }
+                    }
+
                     it("should have correct root view controller") {
-                        expect(window?.rootViewController) === viewControllerFactory.viewController
+                        expect(window?.rootViewController) === viewControllerFactory.createdViewController
                     }
 
                     it("should be a visible key window") {
