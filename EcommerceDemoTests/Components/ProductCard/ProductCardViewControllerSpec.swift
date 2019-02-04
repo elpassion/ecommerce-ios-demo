@@ -5,70 +5,78 @@ import SnapshotTesting
 
 class ProductCardViewControllerSpec: QuickSpec {
     override func spec() {
-        describe("ProductCardViewController") {
-            var sut: ProductCardViewController!
-            var product: Product!
+        describe("factory") {
+            var factory: ProductCardViewControllerFactory!
 
             beforeEach {
-                product = .surface
-                sut = ProductCardViewController(product: product)
+                factory = ProductCardViewControllerFactory()
             }
 
-            context("load view") {
+            context("create") {
+                var sut: ProductCardViewController!
+                var product: Product!
+
                 beforeEach {
-                    _ = sut.view
+                    product = .surface
+                    sut = factory.create(with: product)
                 }
 
-                describe("product card view") {
-                    var productCardView: ProductCardView?
-                    var size: CGSize!
-
+                context("load view") {
                     beforeEach {
-                        productCardView = sut.view as? ProductCardView
-                        size = CGSize(width: 295, height: 427)
+                        _ = sut.view
                     }
 
-                    it("should not be nil") {
-                        expect(productCardView).notTo(beNil())
-                    }
+                    describe("product card view") {
+                        var productCardView: ProductCardView?
+                        var size: CGSize!
 
-                    it("should be correctly configured") {
-                        expect(productCardView?.topBackgroundView.backgroundColor) == product.color
-                        expect(productCardView?.imageView.image) == product.image
-                        expect(productCardView?.nameLabel.text) == product.name
-                        expect(productCardView?.priceLabel.text) == product.price
-                        expect(productCardView?.button.titleLabel.text) == "Show more"
-                    }
-
-                    it("should have correct snapshot") {
-                        expectNotNil(productCardView).then {
-                            let view = aView(with: $0).constrained(to: size)
-                            assertSnapshot(matching: view, as: .image, named: "surface")
-                        }
-                    }
-
-                    context("move left") {
                         beforeEach {
-                            sut.distanceFromCenter = -size.width
+                            productCardView = sut.view as? ProductCardView
+                            size = CGSize(width: 295, height: 427)
+                        }
+
+                        it("should not be nil") {
+                            expect(productCardView).notTo(beNil())
+                        }
+
+                        it("should be correctly configured") {
+                            expect(productCardView?.topBackgroundView.backgroundColor) == product.color
+                            expect(productCardView?.imageView.image) == product.image
+                            expect(productCardView?.nameLabel.text) == product.name
+                            expect(productCardView?.priceLabel.text) == product.price
+                            expect(productCardView?.button.titleLabel.text) == "Show more"
                         }
 
                         it("should have correct snapshot") {
                             expectNotNil(productCardView).then {
                                 let view = aView(with: $0).constrained(to: size)
-                                assertSnapshot(matching: view, as: .image, named: "surface_left")
+                                assertSnapshot(matching: view, as: .image, named: "surface")
                             }
                         }
-                    }
 
-                    context("move right") {
-                        beforeEach {
-                            sut.distanceFromCenter = size.width
+                        context("move left") {
+                            beforeEach {
+                                sut.distanceFromCenter = -size.width
+                            }
+
+                            it("should have correct snapshot") {
+                                expectNotNil(productCardView).then {
+                                    let view = aView(with: $0).constrained(to: size)
+                                    assertSnapshot(matching: view, as: .image, named: "surface_left")
+                                }
+                            }
                         }
 
-                        it("should have correct snapshot") {
-                            expectNotNil(productCardView).then {
-                                let view = aView(with: $0).constrained(to: size)
-                                assertSnapshot(matching: view, as: .image, named: "surface_right")
+                        context("move right") {
+                            beforeEach {
+                                sut.distanceFromCenter = size.width
+                            }
+
+                            it("should have correct snapshot") {
+                                expectNotNil(productCardView).then {
+                                    let view = aView(with: $0).constrained(to: size)
+                                    assertSnapshot(matching: view, as: .image, named: "surface_right")
+                                }
                             }
                         }
                     }
@@ -76,7 +84,7 @@ class ProductCardViewControllerSpec: QuickSpec {
             }
         }
 
-        context("with coder") {
+        describe("with coder") {
             it("should be nil") {
                 expect(ProductCardViewController(coder: NSCoder())).to(beNil())
             }
