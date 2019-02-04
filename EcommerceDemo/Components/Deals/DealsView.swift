@@ -28,6 +28,7 @@ class DealsView: UIView {
     }
 
     let scrollView = UIScrollView(frame: .zero)
+    let pageControl = UIPageControl(frame: .zero) |> UIPageControl.defaultStyle
 
     private let stackView = UIStackView(arrangedSubviews: [])
     private let tabBarView = TabBarView()
@@ -38,6 +39,7 @@ class DealsView: UIView {
         scrollView.decelerationRate = .fast
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.addSubview(stackView)
+        addSubview(pageControl)
         addSubview(tabBarView)
     }
 
@@ -57,6 +59,9 @@ class DealsView: UIView {
         stackView.spacing = 24
         stackView.layoutFill(scrollView)
         stackView.layoutPinHeight(to: scrollView.heightAnchor)
+
+        pageControl.layoutPinTop(to: scrollView.bottomAnchor, margin: 20)
+        pageControl.layoutCenterHorizontally(in: self)
 
         tabBarView.layoutPinTop(to: scrollView.bottomAnchor, margin: 78)
         tabBarView.layoutFillHorizontally(self)
