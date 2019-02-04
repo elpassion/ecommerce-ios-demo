@@ -7,9 +7,12 @@ class ProductViewControllerSpec: QuickSpec {
     override func spec() {
         describe("factory") {
             var factory: ProductViewControllerFactory!
+            var dismisser: ProductDismissingDouble!
 
             beforeEach {
+                dismisser = ProductDismissingDouble()
                 factory = ProductViewControllerFactory()
+                factory.dismisser = dismisser
             }
 
             context("create") {
@@ -29,6 +32,17 @@ class ProductViewControllerSpec: QuickSpec {
                     it("should have correct snapshot") {
                         expectNotNil(sut).then {
                             assertSnapshot(matching: $0, as: .image(on: .iPhoneX))
+                        }
+                    }
+
+                    context("tap close button") {
+                        beforeEach {
+                            let view = sut?.view as? ProductView
+                            view?.closeButton.sendActions(for: .touchUpInside)
+                        }
+
+                        it("should dismiss self") {
+                            expect(dismisser.didDismissViewController) === sut
                         }
                     }
                 }

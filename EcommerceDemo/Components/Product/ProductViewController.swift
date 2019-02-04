@@ -21,10 +21,16 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         productView.backgroundColor = product.color
+        productView.closeButton.addTarget(self, action: #selector(closeButtonAction), for: .touchUpInside)
     }
 
     private var productView: ProductView! {
         return view as? ProductView
+    }
+
+    @objc
+    private func closeButtonAction() {
+        dismisser.dismiss(productViewController: self)
     }
 
     // MARK: Private
