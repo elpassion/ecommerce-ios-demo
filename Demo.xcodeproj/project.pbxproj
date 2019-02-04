@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		311E58A12208702C00F48140 /* UIPageControl+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58A02208702C00F48140 /* UIPageControl+Style.swift */; };
+		311E58A42208E9F800F48140 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58A32208E9F800F48140 /* ProductViewController.swift */; };
+		311E58A62208EA0300F48140 /* ProductViewControllerCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58A52208EA0300F48140 /* ProductViewControllerCreating.swift */; };
+		311E58A82208EA0E00F48140 /* ProductViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58A72208EA0E00F48140 /* ProductViewControllerFactory.swift */; };
+		311E58AA2208EA7500F48140 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58A92208EA7500F48140 /* ProductView.swift */; };
+		311E58AD2208EB1500F48140 /* ProductViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58AC2208EB1500F48140 /* ProductViewSpec.swift */; };
+		311E58AF2208EB4300F48140 /* ProductViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58AE2208EB4300F48140 /* ProductViewControllerSpec.swift */; };
 		3129430D2203AC0200AEE95E /* EcommerceDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = 312942FD2203AC0100AEE95E /* EcommerceDemo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		312943112203AC0200AEE95E /* EcommerceDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942FB2203AC0100AEE95E /* EcommerceDemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3129431C2203AF4C00AEE95E /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942EC2203A85100AEE95E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -118,6 +124,12 @@
 
 /* Begin PBXFileReference section */
 		311E58A02208702C00F48140 /* UIPageControl+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPageControl+Style.swift"; sourceTree = "<group>"; };
+		311E58A32208E9F800F48140 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		311E58A52208EA0300F48140 /* ProductViewControllerCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewControllerCreating.swift; sourceTree = "<group>"; };
+		311E58A72208EA0E00F48140 /* ProductViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewControllerFactory.swift; sourceTree = "<group>"; };
+		311E58A92208EA7500F48140 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		311E58AC2208EB1500F48140 /* ProductViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewSpec.swift; sourceTree = "<group>"; };
+		311E58AE2208EB4300F48140 /* ProductViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewControllerSpec.swift; sourceTree = "<group>"; };
 		312942EC2203A85100AEE95E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		312942ED2203A85100AEE95E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
 		312942FB2203AC0100AEE95E /* EcommerceDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EcommerceDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +203,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		311E58A22208E9E700F48140 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				311E58A92208EA7500F48140 /* ProductView.swift */,
+				311E58A32208E9F800F48140 /* ProductViewController.swift */,
+				311E58A52208EA0300F48140 /* ProductViewControllerCreating.swift */,
+				311E58A72208EA0E00F48140 /* ProductViewControllerFactory.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		311E58AB2208EB0600F48140 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				311E58AE2208EB4300F48140 /* ProductViewControllerSpec.swift */,
+				311E58AC2208EB1500F48140 /* ProductViewSpec.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
 		312942EB2203A82300AEE95E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +381,7 @@
 			children = (
 				312943252203B0A000AEE95E /* Deals */,
 				315E28FE2204C27600C3BA19 /* Gradient */,
+				311E58A22208E9E700F48140 /* Product */,
 				315E28CA22045DA500C3BA19 /* ProductCard */,
 				315E28FD2204C26500C3BA19 /* RoundButton */,
 				315E29022204C30200C3BA19 /* ScrollPage */,
@@ -372,6 +405,7 @@
 			children = (
 				315E28DE2204751000C3BA19 /* Deals */,
 				315E29042204C38600C3BA19 /* Gradient */,
+				311E58AB2208EB0600F48140 /* Product */,
 				315E28CE220469E500C3BA19 /* ProductCard */,
 				315E29072204C68000C3BA19 /* RoundButton */,
 				315E29032204C34800C3BA19 /* ScrollPage */,
@@ -713,8 +747,10 @@
 				312943522203B13E00AEE95E /* UIColor+Assets.swift in Sources */,
 				3129433F2203B0E600AEE95E /* ScrollPageController.swift in Sources */,
 				312943402203B0E600AEE95E /* GradientView.swift in Sources */,
+				311E58AA2208EA7500F48140 /* ProductView.swift in Sources */,
 				315E28D322046A6200C3BA19 /* Product.swift in Sources */,
 				3129434D2203B13E00AEE95E /* GradientStyle+Assets.swift in Sources */,
+				311E58A82208EA0E00F48140 /* ProductViewControllerFactory.swift in Sources */,
 				315E28EC2204803E00C3BA19 /* UIView+Layout.swift in Sources */,
 				3129433D2203B0E600AEE95E /* UIScrollView+Viewport.swift in Sources */,
 				3129434F2203B13E00AEE95E /* SketchShadow+Assets.swift in Sources */,
@@ -724,12 +760,14 @@
 				312943392203B0E600AEE95E /* RoundButton.swift in Sources */,
 				312943242203B09300AEE95E /* AppDelegate.swift in Sources */,
 				315E29002204C29A00C3BA19 /* GradientStyle.swift in Sources */,
+				311E58A42208E9F800F48140 /* ProductViewController.swift in Sources */,
 				315E28DD2204749C00C3BA19 /* DealsViewControllerCreating.swift in Sources */,
 				3129433C2203B0E600AEE95E /* UIImageView+Style.swift in Sources */,
 				3129432A2203B0C500AEE95E /* DealsView.swift in Sources */,
 				312943382203B0E600AEE95E /* SketchShadow.swift in Sources */,
 				315E28F022049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift in Sources */,
 				312943612203BD7400AEE95E /* Bundle.swift in Sources */,
+				311E58A62208EA0300F48140 /* ProductViewControllerCreating.swift in Sources */,
 				3129432D2203B0C500AEE95E /* DealsViewController.swift in Sources */,
 				311E58A12208702C00F48140 /* UIPageControl+Style.swift in Sources */,
 				3129433B2203B0E600AEE95E /* UILabel+Style.swift in Sources */,
@@ -745,6 +783,7 @@
 				3129435B2203B2D100AEE95E /* AppDelegateDouble.swift in Sources */,
 				315E28C62203C39C00C3BA19 /* AppDelegateSpec.swift in Sources */,
 				315E28E8220479A600C3BA19 /* UIView+TestHelpers.swift in Sources */,
+				311E58AD2208EB1500F48140 /* ProductViewSpec.swift in Sources */,
 				315E28E2220476AB00C3BA19 /* DealsViewControllerSpec.swift in Sources */,
 				315E28E02204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift in Sources */,
 				315E28EA22047FE900C3BA19 /* ProductCardViewSpec.swift in Sources */,
@@ -753,6 +792,7 @@
 				315E28C82203C58900C3BA19 /* ScrollPageControllerSpec.swift in Sources */,
 				315E28F62204B07F00C3BA19 /* TabBarViewSpec.swift in Sources */,
 				315E28D0220469F200C3BA19 /* ProductCardViewControllerSpec.swift in Sources */,
+				311E58AF2208EB4300F48140 /* ProductViewControllerSpec.swift in Sources */,
 				315E28E62204791E00C3BA19 /* NotNilExpectation.swift in Sources */,
 				315E29092204C69000C3BA19 /* RoundButtonSpec.swift in Sources */,
 			);
