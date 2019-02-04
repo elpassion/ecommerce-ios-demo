@@ -7,9 +7,12 @@ class ProductCardViewControllerSpec: QuickSpec {
     override func spec() {
         describe("factory") {
             var factory: ProductCardViewControllerFactory!
+            var presenter: ProductPresentingDouble!
 
             beforeEach {
+                presenter = ProductPresentingDouble()
                 factory = ProductCardViewControllerFactory()
+                factory.presenter = presenter
             }
 
             context("create") {
@@ -77,6 +80,17 @@ class ProductCardViewControllerSpec: QuickSpec {
                                     let view = aView(with: $0).constrained(to: size)
                                     assertSnapshot(matching: view, as: .image, named: "surface_right")
                                 }
+                            }
+                        }
+
+                        context("tap button") {
+                            beforeEach {
+                                productCardView?.button.sendActions(for: .touchUpInside)
+                            }
+
+                            it("should present product") {
+                                expect(presenter.didPresentProduct?.name) == product.name
+                                expect(presenter.didPresentFrom) === sut
                             }
                         }
                     }

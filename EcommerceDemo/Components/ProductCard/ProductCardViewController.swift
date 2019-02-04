@@ -30,6 +30,7 @@ class ProductCardViewController: UIViewController {
         productCardView.nameLabel.text = product.name
         productCardView.priceLabel.text = product.price
         productCardView.button.titleLabel.text = "Show more"
+        productCardView.button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
 
     private var productCardView: ProductCardView! {
@@ -44,6 +45,11 @@ class ProductCardViewController: UIViewController {
         imageViewTransform = imageViewTransform.translatedBy(x: 32 * progress, y: 0)
         imageViewTransform = imageViewTransform.rotated(by: -9 / 360 * CGFloat.pi * progress)
         productCardView.imageView.transform = imageViewTransform
+    }
+
+    @objc
+    private func buttonAction() {
+        presenter.present(product, from: self)
     }
 
     // MARK: Private
