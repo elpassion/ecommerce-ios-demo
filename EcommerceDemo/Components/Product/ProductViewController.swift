@@ -2,8 +2,9 @@ import UIKit
 
 class ProductViewController: UIViewController {
 
-    init(product: Product) {
+    init(product: Product, dismisser: ProductDismissing) {
         self.product = product
+        self.dismisser = dismisser
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -29,5 +30,6 @@ class ProductViewController: UIViewController {
     // MARK: Private
 
     private let product: Product
+    private let dismisser: ProductDismissing
 
 }
