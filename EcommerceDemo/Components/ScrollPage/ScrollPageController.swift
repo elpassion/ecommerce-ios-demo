@@ -1,6 +1,7 @@
 import UIKit
 
 struct ScrollPageController {
+
     func pageOffset(for offset: CGFloat, velocity: CGFloat, in pageOffsets: [CGFloat]) -> CGFloat? {
         let pages = pageOffsets.enumerated().reduce([Int: CGFloat]()) {
             var dict = $0
@@ -18,4 +19,19 @@ struct ScrollPageController {
         }
         return pages[pageOffsets.index(after: page.key)] ?? page.value
     }
+
+    func pageFraction(for offset: CGFloat, in pageOffsets: [CGFloat]) -> CGFloat? {
+        let pages = pageOffsets.sorted().enumerated()
+        if let index = pages.first(where: { $0.1 == offset })?.0 {
+            return CGFloat(index)
+        }
+        guard let nextOffset = pages.first(where: { $0.1 >= offset })?.1 else {
+            return pages.map { $0.0 }.last.map { CGFloat($0) }
+        }
+        guard let (prevIdx, prevOffset) = pages.reversed().first(where: { $0.1 <= offset }) else {
+            return pages.map { $0.0 }.first.map { CGFloat($0) }
+        }
+        return CGFloat(prevIdx) + (offset - prevOffset) / (nextOffset - prevOffset)
+    }
+
 }
