@@ -12,14 +12,8 @@ class ProductCardViewSpec: QuickSpec {
                 sut = ProductCardView()
             }
 
-            context("update image view layout") {
-                beforeEach {
-                    sut.updateImageViewLayout()
-                }
-
-                it("should have correct snapshot") {
-                    assertSnapshot(matching: aView(with: sut), as: .image, named: "empty")
-                }
+            it("should have correct snapshot") {
+                assertSnapshot(matching: aView(with: sut), as: .image, named: "empty")
             }
         }
 

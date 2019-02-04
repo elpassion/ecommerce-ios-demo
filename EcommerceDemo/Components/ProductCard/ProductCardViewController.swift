@@ -25,8 +25,7 @@ class ProductCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         productCardView.topBackgroundView.backgroundColor = product.color
-        productCardView.imageView.image = product.image
-        productCardView.updateImageViewLayout()
+        productCardView.imageContainer.image = product.image
         productCardView.nameLabel.text = product.name
         productCardView.priceLabel.text = product.price
         productCardView.button.titleLabel.text = "Show more"
@@ -44,7 +43,7 @@ class ProductCardViewController: UIViewController {
         var imageViewTransform = CGAffineTransform.identity
         imageViewTransform = imageViewTransform.translatedBy(x: 32 * progress, y: 0)
         imageViewTransform = imageViewTransform.rotated(by: -9 / 360 * CGFloat.pi * progress)
-        productCardView.imageView.transform = imageViewTransform
+        productCardView.imageContainer.imageView.transform = imageViewTransform
     }
 
     @objc

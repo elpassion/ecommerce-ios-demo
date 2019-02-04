@@ -18,7 +18,7 @@ class ProductCardView: UIView {
     // MARK: Subviews
 
     let topBackgroundView = UIView(frame: .zero)
-    let imageView = UIImageView(frame: .zero) |> UIImageView.productStyle
+    let imageContainer = ImageContainer()
     let nameLabel = UILabel(frame: .zero) |> UILabel.productNameStyle
     let priceLabel = UILabel(frame: .zero) |> UILabel.priceStyle
     let button = RoundButton()
@@ -31,7 +31,7 @@ class ProductCardView: UIView {
     private func setupSubviews() {
         addSubview(topView)
         topView.addSubview(topBackgroundView)
-        topView.addSubview(imageView)
+        topView.addSubview(imageContainer)
         addSubview(centerView)
         centerView.addSubview(labelsStackView)
         labelsStackView.addArrangedSubview(nameLabel)
@@ -41,19 +41,6 @@ class ProductCardView: UIView {
     }
 
     // MARK: Layout
-
-    func updateImageViewLayout() {
-        guard let image = imageView.image, image.size.width > 0 else { return }
-        let aspectRatio = image.size.height / image.size.width
-        imageViewHeightConstraint?.isActive = false
-        imageViewHeightConstraint = imageView.heightAnchor.constraint(
-            equalTo: imageView.widthAnchor,
-            multiplier: aspectRatio
-        )
-        imageViewHeightConstraint?.isActive = true
-    }
-
-    private var imageViewHeightConstraint: NSLayoutConstraint?
 
     private func setupLayout() {
         layoutFillVerically(subviews: [
@@ -66,8 +53,8 @@ class ProductCardView: UIView {
         topBackgroundView.layoutFillHorizontally(topView)
         topBackgroundView.layoutPinHeight(to: topView.heightAnchor, multiplier: 0.77)
 
-        imageView.layoutFillHorizontally(topView, leadingMargin: 20, trailingMargin: 20)
-        imageView.layoutPinBottom(to: topView.bottomAnchor)
+        imageContainer.layoutFillHorizontally(topView, leadingMargin: 20, trailingMargin: 20)
+        imageContainer.layoutPinBottom(to: topView.bottomAnchor)
 
         labelsStackView.axis = .vertical
         labelsStackView.alignment = .center

@@ -26,6 +26,7 @@
 		311E58C32208FC8D00F48140 /* ProductPresentingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C22208FC8D00F48140 /* ProductPresentingDouble.swift */; };
 		311E58C52208FDA700F48140 /* ProductDismissingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C42208FDA700F48140 /* ProductDismissingDouble.swift */; };
 		311E58C7220902EB00F48140 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C6220902EB00F48140 /* UIButton+Style.swift */; };
+		311E58CA220903EA00F48140 /* ImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C9220903EA00F48140 /* ImageContainer.swift */; };
 		3129430D2203AC0200AEE95E /* EcommerceDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = 312942FD2203AC0100AEE95E /* EcommerceDemo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		312943112203AC0200AEE95E /* EcommerceDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942FB2203AC0100AEE95E /* EcommerceDemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3129431C2203AF4C00AEE95E /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942EC2203A85100AEE95E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -38,7 +39,6 @@
 		312943392203B0E600AEE95E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943302203B0E500AEE95E /* RoundButton.swift */; };
 		3129433A2203B0E600AEE95E /* UIEdgeInsets+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943312203B0E500AEE95E /* UIEdgeInsets+Helpers.swift */; };
 		3129433B2203B0E600AEE95E /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943322203B0E500AEE95E /* UILabel+Style.swift */; };
-		3129433C2203B0E600AEE95E /* UIImageView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943332203B0E500AEE95E /* UIImageView+Style.swift */; };
 		3129433D2203B0E600AEE95E /* UIScrollView+Viewport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943342203B0E500AEE95E /* UIScrollView+Viewport.swift */; };
 		3129433E2203B0E600AEE95E /* FuncUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943352203B0E500AEE95E /* FuncUtils.swift */; };
 		3129433F2203B0E600AEE95E /* ScrollPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943362203B0E600AEE95E /* ScrollPageController.swift */; };
@@ -154,6 +154,7 @@
 		311E58C22208FC8D00F48140 /* ProductPresentingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresentingDouble.swift; sourceTree = "<group>"; };
 		311E58C42208FDA700F48140 /* ProductDismissingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDismissingDouble.swift; sourceTree = "<group>"; };
 		311E58C6220902EB00F48140 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
+		311E58C9220903EA00F48140 /* ImageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainer.swift; sourceTree = "<group>"; };
 		312942EC2203A85100AEE95E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		312942ED2203A85100AEE95E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
 		312942FB2203AC0100AEE95E /* EcommerceDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EcommerceDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,7 +170,6 @@
 		312943302203B0E500AEE95E /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		312943312203B0E500AEE95E /* UIEdgeInsets+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Helpers.swift"; sourceTree = "<group>"; };
 		312943322203B0E500AEE95E /* UILabel+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
-		312943332203B0E500AEE95E /* UIImageView+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Style.swift"; sourceTree = "<group>"; };
 		312943342203B0E500AEE95E /* UIScrollView+Viewport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Viewport.swift"; sourceTree = "<group>"; };
 		312943352203B0E500AEE95E /* FuncUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncUtils.swift; sourceTree = "<group>"; };
 		312943362203B0E600AEE95E /* ScrollPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollPageController.swift; sourceTree = "<group>"; };
@@ -256,6 +256,14 @@
 			path = Product;
 			sourceTree = "<group>";
 		};
+		311E58C8220903DF00F48140 /* ImageContainer */ = {
+			isa = PBXGroup;
+			children = (
+				311E58C9220903EA00F48140 /* ImageContainer.swift */,
+			);
+			path = ImageContainer;
+			sourceTree = "<group>";
+		};
 		312942EB2203A82300AEE95E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,7 +348,6 @@
 				312943312203B0E500AEE95E /* UIEdgeInsets+Helpers.swift */,
 				312943432203B13E00AEE95E /* UIFont+Assets.swift */,
 				312943472203B13E00AEE95E /* UIImage+Assets.swift */,
-				312943332203B0E500AEE95E /* UIImageView+Style.swift */,
 				312943322203B0E500AEE95E /* UILabel+Style.swift */,
 				311E58A02208702C00F48140 /* UIPageControl+Style.swift */,
 				312943342203B0E500AEE95E /* UIScrollView+Viewport.swift */,
@@ -415,6 +422,7 @@
 			children = (
 				312943252203B0A000AEE95E /* Deals */,
 				315E28FE2204C27600C3BA19 /* Gradient */,
+				311E58C8220903DF00F48140 /* ImageContainer */,
 				311E58A22208E9E700F48140 /* Product */,
 				315E28CA22045DA500C3BA19 /* ProductCard */,
 				315E28FD2204C26500C3BA19 /* RoundButton */,
@@ -778,6 +786,7 @@
 			files = (
 				315E28F32204B03E00C3BA19 /* TabBarView.swift in Sources */,
 				3129433A2203B0E600AEE95E /* UIEdgeInsets+Helpers.swift in Sources */,
+				311E58CA220903EA00F48140 /* ImageContainer.swift in Sources */,
 				3129434C2203B13E00AEE95E /* UIFont+Assets.swift in Sources */,
 				315E28DB2204745300C3BA19 /* DealsViewControllerFactory.swift in Sources */,
 				312943522203B13E00AEE95E /* UIColor+Assets.swift in Sources */,
@@ -801,7 +810,6 @@
 				315E29002204C29A00C3BA19 /* GradientStyle.swift in Sources */,
 				311E58A42208E9F800F48140 /* ProductViewController.swift in Sources */,
 				315E28DD2204749C00C3BA19 /* DealsViewControllerCreating.swift in Sources */,
-				3129433C2203B0E600AEE95E /* UIImageView+Style.swift in Sources */,
 				311E58BB2208F14200F48140 /* ProductCardViewControllerFactory.swift in Sources */,
 				3129432A2203B0C500AEE95E /* DealsView.swift in Sources */,
 				312943382203B0E600AEE95E /* SketchShadow.swift in Sources */,

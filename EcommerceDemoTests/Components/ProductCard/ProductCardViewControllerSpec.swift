@@ -44,7 +44,7 @@ class ProductCardViewControllerSpec: QuickSpec {
 
                         it("should be correctly configured") {
                             expect(productCardView?.topBackgroundView.backgroundColor) == product.color
-                            expect(productCardView?.imageView.image) == product.image
+                            expect(productCardView?.imageContainer.image) == product.image
                             expect(productCardView?.nameLabel.text) == product.name
                             expect(productCardView?.priceLabel.text) == product.price
                             expect(productCardView?.button.titleLabel.text) == "Show more"
