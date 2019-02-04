@@ -23,6 +23,7 @@
 		311E58BD2208F82100F48140 /* ProductPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58BC2208F82100F48140 /* ProductPresenterSpec.swift */; };
 		311E58BF2208F82C00F48140 /* ProductDismisserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58BE2208F82C00F48140 /* ProductDismisserSpec.swift */; };
 		311E58C12208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C02208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift */; };
+		311E58C32208FC8D00F48140 /* ProductPresentingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C22208FC8D00F48140 /* ProductPresentingDouble.swift */; };
 		3129430D2203AC0200AEE95E /* EcommerceDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = 312942FD2203AC0100AEE95E /* EcommerceDemo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		312943112203AC0200AEE95E /* EcommerceDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942FB2203AC0100AEE95E /* EcommerceDemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3129431C2203AF4C00AEE95E /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942EC2203A85100AEE95E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -148,6 +149,7 @@
 		311E58BC2208F82100F48140 /* ProductPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenterSpec.swift; sourceTree = "<group>"; };
 		311E58BE2208F82C00F48140 /* ProductDismisserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDismisserSpec.swift; sourceTree = "<group>"; };
 		311E58C02208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewControllerCreatingDouble.swift; sourceTree = "<group>"; };
+		311E58C22208FC8D00F48140 /* ProductPresentingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresentingDouble.swift; sourceTree = "<group>"; };
 		312942EC2203A85100AEE95E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		312942ED2203A85100AEE95E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
 		312942FB2203AC0100AEE95E /* EcommerceDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EcommerceDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +243,7 @@
 			children = (
 				311E58BE2208F82C00F48140 /* ProductDismisserSpec.swift */,
 				311E58BC2208F82100F48140 /* ProductPresenterSpec.swift */,
+				311E58C22208FC8D00F48140 /* ProductPresentingDouble.swift */,
 				311E58C02208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift */,
 				311E58AE2208EB4300F48140 /* ProductViewControllerSpec.swift */,
 				311E58AC2208EB1500F48140 /* ProductViewSpec.swift */,
@@ -813,6 +816,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				311E58C32208FC8D00F48140 /* ProductPresentingDouble.swift in Sources */,
 				3129435B2203B2D100AEE95E /* AppDelegateDouble.swift in Sources */,
 				315E28C62203C39C00C3BA19 /* AppDelegateSpec.swift in Sources */,
 				311E58C12208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift in Sources */,
