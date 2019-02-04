@@ -25,6 +25,7 @@
 		311E58C12208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C02208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift */; };
 		311E58C32208FC8D00F48140 /* ProductPresentingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C22208FC8D00F48140 /* ProductPresentingDouble.swift */; };
 		311E58C52208FDA700F48140 /* ProductDismissingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C42208FDA700F48140 /* ProductDismissingDouble.swift */; };
+		311E58C7220902EB00F48140 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C6220902EB00F48140 /* UIButton+Style.swift */; };
 		3129430D2203AC0200AEE95E /* EcommerceDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = 312942FD2203AC0100AEE95E /* EcommerceDemo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		312943112203AC0200AEE95E /* EcommerceDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942FB2203AC0100AEE95E /* EcommerceDemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3129431C2203AF4C00AEE95E /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942EC2203A85100AEE95E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -152,6 +153,7 @@
 		311E58C02208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewControllerCreatingDouble.swift; sourceTree = "<group>"; };
 		311E58C22208FC8D00F48140 /* ProductPresentingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresentingDouble.swift; sourceTree = "<group>"; };
 		311E58C42208FDA700F48140 /* ProductDismissingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDismissingDouble.swift; sourceTree = "<group>"; };
+		311E58C6220902EB00F48140 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		312942EC2203A85100AEE95E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		312942ED2203A85100AEE95E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
 		312942FB2203AC0100AEE95E /* EcommerceDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EcommerceDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -333,6 +335,7 @@
 				315E28ED220494F600C3BA19 /* LayoutGuideCompatible.swift */,
 				315E28EF22049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift */,
 				312943462203B13E00AEE95E /* SketchShadow+Assets.swift */,
+				311E58C6220902EB00F48140 /* UIButton+Style.swift */,
 				312943492203B13E00AEE95E /* UIColor+Assets.swift */,
 				312943312203B0E500AEE95E /* UIEdgeInsets+Helpers.swift */,
 				312943432203B13E00AEE95E /* UIFont+Assets.swift */,
@@ -786,6 +789,7 @@
 				3129434D2203B13E00AEE95E /* GradientStyle+Assets.swift in Sources */,
 				311E58A82208EA0E00F48140 /* ProductViewControllerFactory.swift in Sources */,
 				315E28EC2204803E00C3BA19 /* UIView+Layout.swift in Sources */,
+				311E58C7220902EB00F48140 /* UIButton+Style.swift in Sources */,
 				311E58B92208F13400F48140 /* ProductCardViewControllerCreating.swift in Sources */,
 				3129433D2203B0E600AEE95E /* UIScrollView+Viewport.swift in Sources */,
 				3129434F2203B13E00AEE95E /* SketchShadow+Assets.swift in Sources */,

@@ -14,10 +14,9 @@ class ProductView: UIView {
 
     // MARK: Subviews
 
-    let closeButton = UIButton(frame: .zero)
+    let closeButton = UIButton(frame: .zero) |> UIButton.closeStyle
 
     private func setupSubviews() {
-        closeButton.setImage(UIImage.iconX, for: .normal)
         addSubview(closeButton)
     }
 
@@ -26,8 +25,6 @@ class ProductView: UIView {
     private func setupLayout() {
         closeButton.layoutPinTop(to: safeAreaLayoutGuide.topAnchor, margin: 10)
         closeButton.layoutPinLeading(to: safeAreaLayoutGuide.leadingAnchor, margin: 6)
-        closeButton.layoutPinWidth(to: 44)
-        closeButton.layoutPinHeight(to: 44)
     }
 
 }
