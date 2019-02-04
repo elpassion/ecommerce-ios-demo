@@ -14,8 +14,11 @@
 		311E58AA2208EA7500F48140 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58A92208EA7500F48140 /* ProductView.swift */; };
 		311E58AD2208EB1500F48140 /* ProductViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58AC2208EB1500F48140 /* ProductViewSpec.swift */; };
 		311E58AF2208EB4300F48140 /* ProductViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58AE2208EB4300F48140 /* ProductViewControllerSpec.swift */; };
+		311E58B12208EFE300F48140 /* ProductPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58B02208EFE300F48140 /* ProductPresenting.swift */; };
+		311E58B32208F02500F48140 /* ProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58B22208F02500F48140 /* ProductPresenter.swift */; };
 		311E58B92208F13400F48140 /* ProductCardViewControllerCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58B82208F13400F48140 /* ProductCardViewControllerCreating.swift */; };
 		311E58BB2208F14200F48140 /* ProductCardViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58BA2208F14200F48140 /* ProductCardViewControllerFactory.swift */; };
+		311E58BD2208F82100F48140 /* ProductPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58BC2208F82100F48140 /* ProductPresenterSpec.swift */; };
 		311E58C12208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C02208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift */; };
 		3129430D2203AC0200AEE95E /* EcommerceDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = 312942FD2203AC0100AEE95E /* EcommerceDemo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		312943112203AC0200AEE95E /* EcommerceDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942FB2203AC0100AEE95E /* EcommerceDemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -133,8 +136,11 @@
 		311E58A92208EA7500F48140 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		311E58AC2208EB1500F48140 /* ProductViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewSpec.swift; sourceTree = "<group>"; };
 		311E58AE2208EB4300F48140 /* ProductViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewControllerSpec.swift; sourceTree = "<group>"; };
+		311E58B02208EFE300F48140 /* ProductPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenting.swift; sourceTree = "<group>"; };
+		311E58B22208F02500F48140 /* ProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenter.swift; sourceTree = "<group>"; };
 		311E58B82208F13400F48140 /* ProductCardViewControllerCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardViewControllerCreating.swift; sourceTree = "<group>"; };
 		311E58BA2208F14200F48140 /* ProductCardViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardViewControllerFactory.swift; sourceTree = "<group>"; };
+		311E58BC2208F82100F48140 /* ProductPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenterSpec.swift; sourceTree = "<group>"; };
 		311E58C02208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewControllerCreatingDouble.swift; sourceTree = "<group>"; };
 		312942EC2203A85100AEE95E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		312942ED2203A85100AEE95E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
@@ -212,6 +218,8 @@
 		311E58A22208E9E700F48140 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				311E58B22208F02500F48140 /* ProductPresenter.swift */,
+				311E58B02208EFE300F48140 /* ProductPresenting.swift */,
 				311E58A92208EA7500F48140 /* ProductView.swift */,
 				311E58A32208E9F800F48140 /* ProductViewController.swift */,
 				311E58A52208EA0300F48140 /* ProductViewControllerCreating.swift */,
@@ -223,6 +231,7 @@
 		311E58AB2208EB0600F48140 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				311E58BC2208F82100F48140 /* ProductPresenterSpec.swift */,
 				311E58C02208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift */,
 				311E58AE2208EB4300F48140 /* ProductViewControllerSpec.swift */,
 				311E58AC2208EB1500F48140 /* ProductViewSpec.swift */,
@@ -783,7 +792,9 @@
 				311E58A12208702C00F48140 /* UIPageControl+Style.swift in Sources */,
 				3129433B2203B0E600AEE95E /* UILabel+Style.swift in Sources */,
 				3129432B2203B0C500AEE95E /* ProductCardView.swift in Sources */,
+				311E58B12208EFE300F48140 /* ProductPresenting.swift in Sources */,
 				312943502203B13E00AEE95E /* UIImage+Assets.swift in Sources */,
+				311E58B32208F02500F48140 /* ProductPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,6 +812,7 @@
 				315E28EA22047FE900C3BA19 /* ProductCardViewSpec.swift in Sources */,
 				315E29062204C39000C3BA19 /* GradientViewSpec.swift in Sources */,
 				315E290C2204C7A200C3BA19 /* SketchShadowSpec.swift in Sources */,
+				311E58BD2208F82100F48140 /* ProductPresenterSpec.swift in Sources */,
 				315E28C82203C58900C3BA19 /* ScrollPageControllerSpec.swift in Sources */,
 				315E28F62204B07F00C3BA19 /* TabBarViewSpec.swift in Sources */,
 				315E28D0220469F200C3BA19 /* ProductCardViewControllerSpec.swift in Sources */,
