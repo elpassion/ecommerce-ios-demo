@@ -49,9 +49,8 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
         targetContentOffset: UnsafeMutablePointer<CGPoint>
     ) {
         let offset = scrollView.contentOffset.x + scrollView.adjustedContentInset.left
-        let pageOffsets = dealsView.productViews.map { $0.frame.minX }
-        if let pageOffset = scrollPageController.pageOffset(for: offset, velocity: velocity.x, in: pageOffsets) {
-            targetContentOffset.pointee.x = pageOffset - scrollView.adjustedContentInset.left
+        if let page = scrollPageController.page(for: offset, velocity: velocity.x, in: pageOffsets) {
+            targetContentOffset.pointee.x = page.offset - scrollView.adjustedContentInset.left
         }
     }
 
@@ -67,6 +66,10 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
             productCardViewControllers.forEach { $0.didMove(toParent: self) }
             oldValue.forEach { $0.removeFromParent() }
         }
+    }
+
+    private var pageOffsets: [CGFloat] {
+        return dealsView.productViews.map { $0.frame.minX }
     }
 
     private func adjustScrollContent() {

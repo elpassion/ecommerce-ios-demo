@@ -12,9 +12,9 @@ class ScrollPageControllerSpec: QuickSpec {
             }
 
             it("should return nil when no pages") {
-                expect(sut.pageOffset(for: 1, velocity: 0, in: [])).to(beNil())
-                expect(sut.pageOffset(for: 2, velocity: 2, in: [])).to(beNil())
-                expect(sut.pageOffset(for: 3, velocity: -2, in: [])).to(beNil())
+                expect(sut.page(for: 1, velocity: 0, in: [])).to(beNil())
+                expect(sut.page(for: 2, velocity: 2, in: [])).to(beNil())
+                expect(sut.page(for: 3, velocity: -2, in: [])).to(beNil())
             }
 
             describe("three pages") {
@@ -32,11 +32,11 @@ class ScrollPageControllerSpec: QuickSpec {
                     }
 
                     it("should return closest page offset") {
-                        expect(sut.pageOffset(for: -1000, velocity: velocity, in: pagePoints)) == pagePoints[0]
-                        expect(sut.pageOffset(for: 0, velocity: velocity, in: pagePoints)) == pagePoints[0]
-                        expect(sut.pageOffset(for: 49, velocity: velocity, in: pagePoints)) == pagePoints[0]
-                        expect(sut.pageOffset(for: 51, velocity: velocity, in: pagePoints)) == pagePoints[1]
-                        expect(sut.pageOffset(for: 1000, velocity: velocity, in: pagePoints)) == pagePoints[2]
+                        expect(sut.page(for: -1000, velocity: velocity, in: pagePoints)) == (0, pagePoints[0])
+                        expect(sut.page(for: 0, velocity: velocity, in: pagePoints)) == (0, pagePoints[0])
+                        expect(sut.page(for: 49, velocity: velocity, in: pagePoints)) == (0, pagePoints[0])
+                        expect(sut.page(for: 51, velocity: velocity, in: pagePoints)) == (1, pagePoints[1])
+                        expect(sut.page(for: 1000, velocity: velocity, in: pagePoints)) == (2, pagePoints[2])
                     }
                 }
 
@@ -48,11 +48,11 @@ class ScrollPageControllerSpec: QuickSpec {
                     }
 
                     it("should return next page offset") {
-                        expect(sut.pageOffset(for: -1000, velocity: velocity, in: pagePoints)) == pagePoints[1]
-                        expect(sut.pageOffset(for: 0, velocity: velocity, in: pagePoints)) == pagePoints[1]
-                        expect(sut.pageOffset(for: 49, velocity: velocity, in: pagePoints)) == pagePoints[1]
-                        expect(sut.pageOffset(for: 51, velocity: velocity, in: pagePoints)) == pagePoints[2]
-                        expect(sut.pageOffset(for: 1000, velocity: velocity, in: pagePoints)) == pagePoints[2]
+                        expect(sut.page(for: -1000, velocity: velocity, in: pagePoints)) == (1, pagePoints[1])
+                        expect(sut.page(for: 0, velocity: velocity, in: pagePoints)) == (1, pagePoints[1])
+                        expect(sut.page(for: 49, velocity: velocity, in: pagePoints)) == (1, pagePoints[1])
+                        expect(sut.page(for: 51, velocity: velocity, in: pagePoints)) == (2, pagePoints[2])
+                        expect(sut.page(for: 1000, velocity: velocity, in: pagePoints)) == (2, pagePoints[2])
                     }
                 }
 
@@ -64,14 +64,31 @@ class ScrollPageControllerSpec: QuickSpec {
                     }
 
                     it("should return previous page offset") {
-                        expect(sut.pageOffset(for: -1000, velocity: velocity, in: pagePoints)) == pagePoints[0]
-                        expect(sut.pageOffset(for: 0, velocity: velocity, in: pagePoints)) == pagePoints[0]
-                        expect(sut.pageOffset(for: 49, velocity: velocity, in: pagePoints)) == pagePoints[0]
-                        expect(sut.pageOffset(for: 51, velocity: velocity, in: pagePoints)) == pagePoints[0]
-                        expect(sut.pageOffset(for: 1000, velocity: velocity, in: pagePoints)) == pagePoints[1]
+                        expect(sut.page(for: -1000, velocity: velocity, in: pagePoints)) == (0, pagePoints[0])
+                        expect(sut.page(for: 0, velocity: velocity, in: pagePoints)) == (0, pagePoints[0])
+                        expect(sut.page(for: 49, velocity: velocity, in: pagePoints)) == (0, pagePoints[0])
+                        expect(sut.page(for: 51, velocity: velocity, in: pagePoints)) == (0, pagePoints[0])
+                        expect(sut.page(for: 1000, velocity: velocity, in: pagePoints)) == (1, pagePoints[1])
                     }
                 }
             }
         }
     }
+}
+
+private func equal(_ expected: ScrollPageController.Page) -> Predicate<ScrollPageController.Page> {
+    return Predicate.simple("equal <\(expected)>") { expression in
+        switch try expression.evaluate() {
+        case .some(let actual) where actual.index == expected.index && actual.offset == expected.offset:
+            return .matches
+        case .some:
+            return .doesNotMatch
+        case .none:
+            return .fail
+        }
+    }
+}
+
+private func == (lhs: Expectation<ScrollPageController.Page>, rhs: ScrollPageController.Page) {
+    return lhs.to(equal(rhs))
 }
