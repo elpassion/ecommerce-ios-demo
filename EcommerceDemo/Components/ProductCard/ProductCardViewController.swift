@@ -2,8 +2,9 @@ import UIKit
 
 class ProductCardViewController: UIViewController {
 
-    init(product: Product) {
+    init(product: Product, presenter: ProductPresenting) {
         self.product = product
+        self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -48,5 +49,6 @@ class ProductCardViewController: UIViewController {
     // MARK: Private
 
     private let product: Product
+    private let presenter: ProductPresenting
 
 }
