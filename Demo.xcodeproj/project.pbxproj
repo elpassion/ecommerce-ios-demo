@@ -16,9 +16,12 @@
 		311E58AF2208EB4300F48140 /* ProductViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58AE2208EB4300F48140 /* ProductViewControllerSpec.swift */; };
 		311E58B12208EFE300F48140 /* ProductPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58B02208EFE300F48140 /* ProductPresenting.swift */; };
 		311E58B32208F02500F48140 /* ProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58B22208F02500F48140 /* ProductPresenter.swift */; };
+		311E58B52208F0A500F48140 /* ProductDismissing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58B42208F0A500F48140 /* ProductDismissing.swift */; };
+		311E58B72208F0B000F48140 /* ProductDismisser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58B62208F0B000F48140 /* ProductDismisser.swift */; };
 		311E58B92208F13400F48140 /* ProductCardViewControllerCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58B82208F13400F48140 /* ProductCardViewControllerCreating.swift */; };
 		311E58BB2208F14200F48140 /* ProductCardViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58BA2208F14200F48140 /* ProductCardViewControllerFactory.swift */; };
 		311E58BD2208F82100F48140 /* ProductPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58BC2208F82100F48140 /* ProductPresenterSpec.swift */; };
+		311E58BF2208F82C00F48140 /* ProductDismisserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58BE2208F82C00F48140 /* ProductDismisserSpec.swift */; };
 		311E58C12208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C02208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift */; };
 		3129430D2203AC0200AEE95E /* EcommerceDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = 312942FD2203AC0100AEE95E /* EcommerceDemo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		312943112203AC0200AEE95E /* EcommerceDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942FB2203AC0100AEE95E /* EcommerceDemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -138,9 +141,12 @@
 		311E58AE2208EB4300F48140 /* ProductViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewControllerSpec.swift; sourceTree = "<group>"; };
 		311E58B02208EFE300F48140 /* ProductPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenting.swift; sourceTree = "<group>"; };
 		311E58B22208F02500F48140 /* ProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenter.swift; sourceTree = "<group>"; };
+		311E58B42208F0A500F48140 /* ProductDismissing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDismissing.swift; sourceTree = "<group>"; };
+		311E58B62208F0B000F48140 /* ProductDismisser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDismisser.swift; sourceTree = "<group>"; };
 		311E58B82208F13400F48140 /* ProductCardViewControllerCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardViewControllerCreating.swift; sourceTree = "<group>"; };
 		311E58BA2208F14200F48140 /* ProductCardViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardViewControllerFactory.swift; sourceTree = "<group>"; };
 		311E58BC2208F82100F48140 /* ProductPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenterSpec.swift; sourceTree = "<group>"; };
+		311E58BE2208F82C00F48140 /* ProductDismisserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDismisserSpec.swift; sourceTree = "<group>"; };
 		311E58C02208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewControllerCreatingDouble.swift; sourceTree = "<group>"; };
 		312942EC2203A85100AEE95E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		312942ED2203A85100AEE95E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
@@ -218,6 +224,8 @@
 		311E58A22208E9E700F48140 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				311E58B62208F0B000F48140 /* ProductDismisser.swift */,
+				311E58B42208F0A500F48140 /* ProductDismissing.swift */,
 				311E58B22208F02500F48140 /* ProductPresenter.swift */,
 				311E58B02208EFE300F48140 /* ProductPresenting.swift */,
 				311E58A92208EA7500F48140 /* ProductView.swift */,
@@ -231,6 +239,7 @@
 		311E58AB2208EB0600F48140 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				311E58BE2208F82C00F48140 /* ProductDismisserSpec.swift */,
 				311E58BC2208F82100F48140 /* ProductPresenterSpec.swift */,
 				311E58C02208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift */,
 				311E58AE2208EB4300F48140 /* ProductViewControllerSpec.swift */,
@@ -767,6 +776,7 @@
 				312943402203B0E600AEE95E /* GradientView.swift in Sources */,
 				311E58AA2208EA7500F48140 /* ProductView.swift in Sources */,
 				315E28D322046A6200C3BA19 /* Product.swift in Sources */,
+				311E58B52208F0A500F48140 /* ProductDismissing.swift in Sources */,
 				3129434D2203B13E00AEE95E /* GradientStyle+Assets.swift in Sources */,
 				311E58A82208EA0E00F48140 /* ProductViewControllerFactory.swift in Sources */,
 				315E28EC2204803E00C3BA19 /* UIView+Layout.swift in Sources */,
@@ -785,6 +795,7 @@
 				311E58BB2208F14200F48140 /* ProductCardViewControllerFactory.swift in Sources */,
 				3129432A2203B0C500AEE95E /* DealsView.swift in Sources */,
 				312943382203B0E600AEE95E /* SketchShadow.swift in Sources */,
+				311E58B72208F0B000F48140 /* ProductDismisser.swift in Sources */,
 				315E28F022049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift in Sources */,
 				312943612203BD7400AEE95E /* Bundle.swift in Sources */,
 				311E58A62208EA0300F48140 /* ProductViewControllerCreating.swift in Sources */,
@@ -806,6 +817,7 @@
 				315E28C62203C39C00C3BA19 /* AppDelegateSpec.swift in Sources */,
 				311E58C12208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift in Sources */,
 				315E28E8220479A600C3BA19 /* UIView+TestHelpers.swift in Sources */,
+				311E58BF2208F82C00F48140 /* ProductDismisserSpec.swift in Sources */,
 				311E58AD2208EB1500F48140 /* ProductViewSpec.swift in Sources */,
 				315E28E2220476AB00C3BA19 /* DealsViewControllerSpec.swift in Sources */,
 				315E28E02204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift in Sources */,
