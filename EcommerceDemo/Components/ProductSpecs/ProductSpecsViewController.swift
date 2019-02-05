@@ -30,7 +30,7 @@ class ProductSpecsViewController: UIViewController {
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.setCustomSpacing(8, after: stackView.arrangedSubviews[0])
-        stackView.setCustomSpacing(3, after: stackView.arrangedSubviews[1])
+        stackView.setCustomSpacing(4, after: stackView.arrangedSubviews[1])
         return stackView
     }
 

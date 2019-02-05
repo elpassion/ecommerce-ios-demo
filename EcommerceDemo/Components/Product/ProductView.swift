@@ -57,8 +57,8 @@ class ProductView: UIView {
         imageContainer.layoutFillHorizontally(topView, leadingMargin: 20, trailingMargin: 20)
         imageContainer.layoutPinBottom(to: topView.bottomAnchor)
 
-        nameLabel.layoutPinTop(to: topView.bottomAnchor, margin: 18)
-        nameLabel.layoutCenterHorizontally(in: scrollView, margin: 20)
+        nameLabel.layoutPinTop(to: topView.bottomAnchor, margin: 15)
+        nameLabel.layoutCenterHorizontally(in: scrollView, margin: 25)
 
         specsView.layoutPinTop(to: nameLabel.bottomAnchor, margin: 20)
         specsView.layoutFillHorizontally(scrollView, leadingMargin: 20, trailingMargin: 20)

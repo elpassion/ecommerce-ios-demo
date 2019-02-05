@@ -22,7 +22,7 @@ extension UILabel {
         $0.textColor = .white
     }
     static let specNameStyle: (UILabel) -> Void = {
-        $0.font = UIFontMetrics.default.scaledFont(for: .varelaRound(size: 15))
+        $0.font = UIFontMetrics.default.scaledFont(for: .varelaRound(size: 14))
         $0.adjustsFontForContentSizeCategory = true
         $0.textColor = .darkText
     }
