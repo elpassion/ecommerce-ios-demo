@@ -19,6 +19,7 @@ class ProductView: UIView {
     let closeButton = UIBarButtonItem.close
     let scrollView = UIScrollView(frame: .zero)
     let imageContainer = ImageContainer()
+    let specsView = UIView(frame: .zero)
 
     private let topView = UIView(frame: .zero)
 
@@ -27,6 +28,7 @@ class ProductView: UIView {
         scrollView.alwaysBounceVertical = true
         scrollView.addSubview(topView)
         topView.addSubview(imageContainer)
+        scrollView.addSubview(specsView)
         addSubview(toolbar)
         toolbar.items = [closeButton]
     }
@@ -45,12 +47,17 @@ class ProductView: UIView {
 
         scrollView.layoutFill(self)
 
-        topView.layoutFill(scrollView)
+        topView.layoutPinTop(to: scrollView.topAnchor)
+        topView.layoutFillHorizontally(scrollView)
         topView.layoutPinWidth(to: scrollView.safeAreaLayoutGuide.widthAnchor)
         topView.layoutPinHeight(to: topView.widthAnchor, multiplier: 0.75)
 
         imageContainer.layoutFillHorizontally(topView, leadingMargin: 20, trailingMargin: 20)
         imageContainer.layoutPinBottom(to: topView.bottomAnchor)
+
+        specsView.layoutPinTop(to: topView.bottomAnchor, margin: 20)
+        specsView.layoutFillHorizontally(scrollView, leadingMargin: 20, trailingMargin: 20)
+        specsView.layoutPinBottom(to: scrollView.bottomAnchor, margin: 20)
     }
 
 }
