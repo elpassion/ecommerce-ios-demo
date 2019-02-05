@@ -46,7 +46,7 @@ class AppDelegateSpec: QuickSpec {
 
                     it("should create root view controller with correct products") {
                         expect(viewControllerFactory.didCreateWithProducts?.map { $0.name })
-                            == ([.oculus, .surface, .xbox] as [Product]).map { $0.name }
+                            == Product.demos.map { $0.name }
                     }
 
                     it("should have correct root view controller") {

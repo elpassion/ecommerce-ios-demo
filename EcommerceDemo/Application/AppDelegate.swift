@@ -13,7 +13,7 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = viewControllerFactory.create(with: [.oculus, .surface, .xbox])
+        window?.rootViewController = viewControllerFactory.create(with: Product.demos)
         window?.makeKeyAndVisible()
         return true
     }
