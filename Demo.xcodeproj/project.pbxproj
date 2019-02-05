@@ -32,7 +32,9 @@
 		311E58D1220A310D00F48140 /* ProductSpecsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58D0220A310D00F48140 /* ProductSpecsViewController.swift */; };
 		311E58DA220A345F00F48140 /* ProductSpecsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58D9220A345F00F48140 /* ProductSpecsViewControllerSpec.swift */; };
 		311E58DE220A42F000F48140 /* Product+Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58DD220A42F000F48140 /* Product+Demo.swift */; };
+		311E58E1220A48B000F48140 /* ProductDescriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58E0220A48B000F48140 /* ProductDescriptionsViewController.swift */; };
 		311E58E5220A50F200F48140 /* product_surface_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 311E58E4220A50F200F48140 /* product_surface_photo.png */; };
+		311E58E8220A53EC00F48140 /* ProductDescriptionsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58E7220A53EC00F48140 /* ProductDescriptionsViewControllerSpec.swift */; };
 		3129430D2203AC0200AEE95E /* EcommerceDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = 312942FD2203AC0100AEE95E /* EcommerceDemo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		312943112203AC0200AEE95E /* EcommerceDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942FB2203AC0100AEE95E /* EcommerceDemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3129431C2203AF4C00AEE95E /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 312942EC2203A85100AEE95E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -166,7 +168,9 @@
 		311E58D0220A310D00F48140 /* ProductSpecsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSpecsViewController.swift; sourceTree = "<group>"; };
 		311E58D9220A345F00F48140 /* ProductSpecsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSpecsViewControllerSpec.swift; sourceTree = "<group>"; };
 		311E58DD220A42F000F48140 /* Product+Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+Demo.swift"; sourceTree = "<group>"; };
+		311E58E0220A48B000F48140 /* ProductDescriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDescriptionsViewController.swift; sourceTree = "<group>"; };
 		311E58E4220A50F200F48140 /* product_surface_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_surface_photo.png; sourceTree = "<group>"; };
+		311E58E7220A53EC00F48140 /* ProductDescriptionsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDescriptionsViewControllerSpec.swift; sourceTree = "<group>"; };
 		312942EC2203A85100AEE95E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		312942ED2203A85100AEE95E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
 		312942FB2203AC0100AEE95E /* EcommerceDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EcommerceDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +294,22 @@
 				311E58D9220A345F00F48140 /* ProductSpecsViewControllerSpec.swift */,
 			);
 			path = ProductSpecs;
+			sourceTree = "<group>";
+		};
+		311E58DF220A489D00F48140 /* ProductDescriptions */ = {
+			isa = PBXGroup;
+			children = (
+				311E58E0220A48B000F48140 /* ProductDescriptionsViewController.swift */,
+			);
+			path = ProductDescriptions;
+			sourceTree = "<group>";
+		};
+		311E58E6220A53D800F48140 /* ProductDescriptions */ = {
+			isa = PBXGroup;
+			children = (
+				311E58E7220A53EC00F48140 /* ProductDescriptionsViewControllerSpec.swift */,
+			);
+			path = ProductDescriptions;
 			sourceTree = "<group>";
 		};
 		312942EB2203A82300AEE95E /* Frameworks */ = {
@@ -456,6 +476,7 @@
 				311E58C8220903DF00F48140 /* ImageContainer */,
 				311E58A22208E9E700F48140 /* Product */,
 				315E28CA22045DA500C3BA19 /* ProductCard */,
+				311E58DF220A489D00F48140 /* ProductDescriptions */,
 				311E58CF220A30FC00F48140 /* ProductSpecs */,
 				315E28FD2204C26500C3BA19 /* RoundButton */,
 				315E29022204C30200C3BA19 /* ScrollPage */,
@@ -483,6 +504,7 @@
 				315E29042204C38600C3BA19 /* Gradient */,
 				311E58AB2208EB0600F48140 /* Product */,
 				315E28CE220469E500C3BA19 /* ProductCard */,
+				311E58E6220A53D800F48140 /* ProductDescriptions */,
 				311E58D8220A343F00F48140 /* ProductSpecs */,
 				315E29072204C68000C3BA19 /* RoundButton */,
 				315E29032204C34800C3BA19 /* ScrollPage */,
@@ -847,6 +869,7 @@
 				311E58A42208E9F800F48140 /* ProductViewController.swift in Sources */,
 				315E28DD2204749C00C3BA19 /* DealsViewControllerCreating.swift in Sources */,
 				311E58D1220A310D00F48140 /* ProductSpecsViewController.swift in Sources */,
+				311E58E1220A48B000F48140 /* ProductDescriptionsViewController.swift in Sources */,
 				311E58BB2208F14200F48140 /* ProductCardViewControllerFactory.swift in Sources */,
 				3129432A2203B0C500AEE95E /* DealsView.swift in Sources */,
 				311E58DE220A42F000F48140 /* Product+Demo.swift in Sources */,
@@ -870,6 +893,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				311E58E8220A53EC00F48140 /* ProductDescriptionsViewControllerSpec.swift in Sources */,
 				311E58C32208FC8D00F48140 /* ProductPresentingDouble.swift in Sources */,
 				3129435B2203B2D100AEE95E /* AppDelegateDouble.swift in Sources */,
 				315E28C62203C39C00C3BA19 /* AppDelegateSpec.swift in Sources */,

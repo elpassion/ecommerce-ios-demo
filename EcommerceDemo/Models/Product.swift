@@ -8,7 +8,9 @@ struct Product {
     }
 
     enum Description {
+        case header(String)
         case text(String)
+        case photo(UIImage)
     }
 
     let name: String
@@ -16,5 +18,5 @@ struct Product {
     let color: UIColor
     let photo: UIImage
     let specs: [Spec]
-    let description: [Description]
+    let descriptions: [Description]
 }

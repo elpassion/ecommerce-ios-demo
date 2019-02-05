@@ -2,10 +2,12 @@ import UIKit
 
 class ImageContainer: UIView {
 
-    init() {
+    init(image: UIImage? = nil) {
+        self.image = image
         super.init(frame: .zero)
         setupSubviews()
         setupLayout()
+        updateImage()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -13,10 +15,7 @@ class ImageContainer: UIView {
     }
 
     var image: UIImage? {
-        didSet {
-            imageView.image = image
-            heightConstraint = createHeightConstraint()
-        }
+        didSet { updateImage() }
     }
 
     // MARK: Subviews
@@ -50,6 +49,13 @@ class ImageContainer: UIView {
             equalTo: imageView.widthAnchor,
             multiplier: aspectRatio
         )
+    }
+
+    // MARK: Private
+
+    private func updateImage() {
+        imageView.image = image
+        heightConstraint = createHeightConstraint()
     }
 
 }
