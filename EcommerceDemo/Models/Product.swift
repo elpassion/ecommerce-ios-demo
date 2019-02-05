@@ -21,7 +21,7 @@ extension Product {
         color: .blackProduct,
         image: .productOculus,
         specs: [
-            Spec(name: "diagonal", value: "12.3\"", icon: .iconDiagonal),
+            Spec(name: "diagonal", value: "12.3”", icon: .iconDiagonal),
             Spec(name: "hard drive", value: "1TB", icon: .iconHardDrive),
             Spec(name: "RAM", value: "16GB", icon: .iconRam)
         ]
@@ -32,7 +32,7 @@ extension Product {
         color: .blueProduct,
         image: .productSurface,
         specs: [
-            Spec(name: "diagonal", value: "12.3\"", icon: .iconDiagonal),
+            Spec(name: "diagonal", value: "12.3”", icon: .iconDiagonal),
             Spec(name: "hard drive", value: "1TB", icon: .iconHardDrive),
             Spec(name: "RAM", value: "16GB", icon: .iconRam)
         ]
@@ -43,7 +43,7 @@ extension Product {
         color: .greenProduct,
         image: .productXbox,
         specs: [
-            Spec(name: "diagonal", value: "12.3\"", icon: .iconDiagonal),
+            Spec(name: "diagonal", value: "12.3”", icon: .iconDiagonal),
             Spec(name: "hard drive", value: "1TB", icon: .iconHardDrive),
             Spec(name: "RAM", value: "16GB", icon: .iconRam)
         ]
