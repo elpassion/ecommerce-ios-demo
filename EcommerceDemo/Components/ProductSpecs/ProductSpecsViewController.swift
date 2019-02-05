@@ -16,7 +16,7 @@ class ProductSpecsViewController: UIViewController {
     override func loadView() {
         let stackView = UIStackView(arrangedSubviews: specs.map { spec in loadSpecView(with: spec) })
         stackView.axis = .horizontal
-        stackView.alignment = .center
+        stackView.alignment = .bottom
         stackView.distribution = .equalSpacing
         view = stackView
     }
