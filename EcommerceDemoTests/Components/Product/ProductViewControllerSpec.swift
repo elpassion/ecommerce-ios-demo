@@ -31,7 +31,7 @@ class ProductViewControllerSpec: QuickSpec {
 
                     it("should have correct snapshot") {
                         expectNotNil(sut).then {
-                            assertSnapshot(matching: $0, as: .image(on: .iPhoneX))
+                            assertSnapshot(matching: $0, as: .image(on: .iPhoneX), named: "surface")
                         }
                     }
 

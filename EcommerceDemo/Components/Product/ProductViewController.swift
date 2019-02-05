@@ -20,7 +20,8 @@ class ProductViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        productView.backgroundColor = product.color
+        productView.topBackgroundView.backgroundColor = product.color
+        productView.imageContainer.image = product.image
         productView.closeButton.addTarget(self, action: #selector(closeButtonAction), for: .touchUpInside)
     }
 
