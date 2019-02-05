@@ -7,6 +7,7 @@ struct ProductViewControllerFactory: ProductViewControllerCreating {
         return ProductViewController(
             product: product,
             specsViewController: ProductSpecsViewController(specs: product.specs),
+            descriptionsViewController: ProductDescriptionsViewController(descriptions: product.descriptions),
             dismisser: dismisser
         )
     }

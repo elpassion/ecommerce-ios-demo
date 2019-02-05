@@ -2,9 +2,13 @@ import UIKit
 
 class ProductViewController: UIViewController, UIToolbarDelegate {
 
-    init(product: Product, specsViewController: UIViewController, dismisser: ProductDismissing) {
+    init(product: Product,
+         specsViewController: UIViewController,
+         descriptionsViewController: UIViewController,
+         dismisser: ProductDismissing) {
         self.product = product
         self.specsViewController = specsViewController
+        self.descriptionsViewController = descriptionsViewController
         self.dismisser = dismisser
         super.init(nibName: nil, bundle: nil)
     }
@@ -27,7 +31,8 @@ class ProductViewController: UIViewController, UIToolbarDelegate {
         productView.toolbar.delegate = self
         productView.closeButton.target = self
         productView.closeButton.action = #selector(closeButtonAction)
-        embedSpecsViewController()
+        embed(specsViewController, in: productView.specsView)
+        embed(descriptionsViewController, in: productView.descriptionsView)
     }
 
     private var productView: ProductView! {
@@ -50,12 +55,13 @@ class ProductViewController: UIViewController, UIToolbarDelegate {
     private let product: Product
     private let dismisser: ProductDismissing
     private let specsViewController: UIViewController
+    private let descriptionsViewController: UIViewController
 
-    private func embedSpecsViewController() {
-        addChild(specsViewController)
-        productView.specsView.addSubview(specsViewController.view)
-        specsViewController.view.layoutFill(productView.specsView)
-        specsViewController.didMove(toParent: self)
+    private func embed(_ viewController: UIViewController, in view: UIView) {
+        addChild(viewController)
+        view.addSubview(viewController.view)
+        viewController.view.layoutFill(view)
+        viewController.didMove(toParent: self)
     }
 
 }

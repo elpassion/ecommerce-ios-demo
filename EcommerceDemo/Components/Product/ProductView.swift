@@ -21,6 +21,7 @@ class ProductView: UIView {
     let imageContainer = ImageContainer()
     let nameLabel = UILabel(frame: .zero) |> UILabel.productNameStyle
     let specsView = UIView(frame: .zero)
+    let descriptionsView = UIView(frame: .zero)
 
     private let topView = UIView(frame: .zero)
 
@@ -31,6 +32,7 @@ class ProductView: UIView {
         topView.addSubview(imageContainer)
         scrollView.addSubview(nameLabel)
         scrollView.addSubview(specsView)
+        scrollView.addSubview(descriptionsView)
         addSubview(toolbar)
         toolbar.items = [closeButton]
     }
@@ -62,7 +64,10 @@ class ProductView: UIView {
 
         specsView.layoutPinTop(to: nameLabel.bottomAnchor, margin: 20)
         specsView.layoutFillHorizontally(scrollView, leadingMargin: 20, trailingMargin: 20)
-        specsView.layoutPinBottom(to: scrollView.bottomAnchor, margin: 20)
+
+        descriptionsView.layoutPinTop(to: specsView.bottomAnchor, margin: 30)
+        descriptionsView.layoutFillHorizontally(scrollView)
+        descriptionsView.layoutPinBottom(to: scrollView.bottomAnchor, margin: 30)
     }
 
 }
