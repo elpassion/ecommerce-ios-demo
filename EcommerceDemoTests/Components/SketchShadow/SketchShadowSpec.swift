@@ -33,7 +33,7 @@ class SketchShadowSpec: QuickSpec {
                 }
 
                 it("should have correct snapshot") {
-                    assertSnapshot(matching: aView(with: view, margin: 100), as: .image, named: "without_spread")
+                    assertSnapshot(matching: .view(with: view, margin: 100), as: .image, named: "without_spread")
                 }
             }
 
@@ -53,7 +53,7 @@ class SketchShadowSpec: QuickSpec {
                 }
 
                 it("should have correct snapshot") {
-                    assertSnapshot(matching: aView(with: view, margin: 100), as: .image, named: "with_spread")
+                    assertSnapshot(matching: .view(with: view, margin: 100), as: .image, named: "with_spread")
                 }
             }
         }

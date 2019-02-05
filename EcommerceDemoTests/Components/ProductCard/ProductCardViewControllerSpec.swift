@@ -54,7 +54,7 @@ class ProductCardViewControllerSpec: QuickSpec {
 
                         it("should have correct snapshot") {
                             expectNotNil(productCardView).then {
-                                assertSnapshot(matching: aView(with: $0), as: .image, named: "surface")
+                                assertSnapshot(matching: .view(with: $0), as: .image, named: "surface")
                             }
                         }
 
@@ -65,7 +65,7 @@ class ProductCardViewControllerSpec: QuickSpec {
 
                             it("should have correct snapshot") {
                                 expectNotNil(productCardView).then {
-                                    assertSnapshot(matching: aView(with: $0), as: .image, named: "surface_left")
+                                    assertSnapshot(matching: .view(with: $0), as: .image, named: "surface_left")
                                 }
                             }
                         }
@@ -77,7 +77,7 @@ class ProductCardViewControllerSpec: QuickSpec {
 
                             it("should have correct snapshot") {
                                 expectNotNil(productCardView).then {
-                                    assertSnapshot(matching: aView(with: $0), as: .image, named: "surface_right")
+                                    assertSnapshot(matching: .view(with: $0), as: .image, named: "surface_right")
                                 }
                             }
                         }

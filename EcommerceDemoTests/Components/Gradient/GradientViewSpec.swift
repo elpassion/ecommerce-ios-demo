@@ -25,7 +25,7 @@ class GradientViewSpec: QuickSpec {
             }
 
             it("should have correct snapshot") {
-                assertSnapshot(matching: aView(with: sut), as: .image)
+                assertSnapshot(matching: .view(with: sut), as: .image)
             }
         }
 

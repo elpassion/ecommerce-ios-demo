@@ -14,7 +14,7 @@ class RoundButtonSpec: QuickSpec {
             }
 
             it("should have correct snapshot") {
-                assertSnapshot(matching: aView(with: sut, margin: 100), as: .image)
+                assertSnapshot(matching: .view(with: sut, margin: 100), as: .image)
             }
         }
 
