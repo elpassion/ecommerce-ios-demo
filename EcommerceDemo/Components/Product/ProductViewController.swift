@@ -22,7 +22,7 @@ class ProductViewController: UIViewController, UIToolbarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         productView.toolbar.barTintColor = product.color
-        productView.imageContainer.image = product.image
+        productView.imageContainer.image = product.photo
         productView.nameLabel.text = product.name
         productView.toolbar.delegate = self
         productView.closeButton.target = self

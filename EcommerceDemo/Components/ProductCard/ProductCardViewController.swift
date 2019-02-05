@@ -25,7 +25,7 @@ class ProductCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         productCardView.topBackgroundView.backgroundColor = product.color
-        productCardView.imageContainer.image = product.image
+        productCardView.imageContainer.image = product.photo
         productCardView.nameLabel.text = product.name
         productCardView.priceLabel.text = product.price
         productCardView.button.titleLabel.text = "Show more"

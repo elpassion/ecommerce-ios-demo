@@ -10,7 +10,7 @@ struct Product {
     let name: String
     let price: String
     let color: UIColor
-    let image: UIImage
+    let photo: UIImage
     let specs: [Spec]
 }
 
@@ -19,7 +19,7 @@ extension Product {
         name: "Oculus Rift",
         price: "$1 299",
         color: .blackProduct,
-        image: .productOculus,
+        photo: .productOculus,
         specs: [
             Spec(name: "diagonal", value: "12.3”", icon: .iconDiagonal),
             Spec(name: "hard drive", value: "1TB", icon: .iconHardDrive),
@@ -30,7 +30,7 @@ extension Product {
         name: "Surface Pro 4",
         price: "$1 299",
         color: .blueProduct,
-        image: .productSurface,
+        photo: .productSurface,
         specs: [
             Spec(name: "diagonal", value: "12.3”", icon: .iconDiagonal),
             Spec(name: "hard drive", value: "1TB", icon: .iconHardDrive),
@@ -41,7 +41,7 @@ extension Product {
         name: "xBox One",
         price: "$699",
         color: .greenProduct,
-        image: .productXbox,
+        photo: .productXbox,
         specs: [
             Spec(name: "diagonal", value: "12.3”", icon: .iconDiagonal),
             Spec(name: "hard drive", value: "1TB", icon: .iconHardDrive),
