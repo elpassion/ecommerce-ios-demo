@@ -21,4 +21,17 @@ extension UILabel {
         $0.adjustsFontForContentSizeCategory = true
         $0.textColor = .white
     }
+    static let specNameStyle: (UILabel) -> Void = {
+        $0.font = UIFontMetrics.default.scaledFont(for: .varelaRound(size: 15))
+        $0.adjustsFontForContentSizeCategory = true
+        $0.textColor = .darkText
+    }
+    static let specValueStyle: (UILabel) -> Void = {
+        $0.font = UIFontMetrics.default.scaledFont(for: .varelaRound(size: 24))
+        $0.adjustsFontForContentSizeCategory = true
+        $0.textColor = .darkText
+    }
+    static func setText(_ text: String?) -> (UILabel) -> Void {
+        return { $0.text = text }
+    }
 }
