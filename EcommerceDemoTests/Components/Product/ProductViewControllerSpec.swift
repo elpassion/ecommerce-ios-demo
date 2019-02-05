@@ -30,15 +30,17 @@ class ProductViewControllerSpec: QuickSpec {
                     }
 
                     it("should have correct snapshot") {
-                        expectNotNil(sut).then {
-                            assertSnapshot(matching: $0, as: .image(on: .iPhoneX), named: "surface")
+                        expectNotNil(sut).then { sut in
+                            assertSnapshot(matching: sut, as: .image(on: .iPhoneX), named: "surface")
                         }
                     }
 
                     context("tap close button") {
                         beforeEach {
-                            let view = sut?.view as? ProductView
-                            view?.closeButton.sendActions(for: .touchUpInside)
+                            let button = (sut?.view as? ProductView)?.closeButton
+                            if let target = button?.target, let action = button?.action {
+                                _ = target.perform(action)
+                            }
                         }
 
                         it("should dismiss self") {

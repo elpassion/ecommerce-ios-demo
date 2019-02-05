@@ -1,6 +1,6 @@
 import UIKit
 
-class ProductViewController: UIViewController {
+class ProductViewController: UIViewController, UIToolbarDelegate {
 
     init(product: Product, dismisser: ProductDismissing) {
         self.product = product
@@ -20,9 +20,11 @@ class ProductViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        productView.topBackgroundView.backgroundColor = product.color
+        productView.toolbar.barTintColor = product.color
         productView.imageContainer.image = product.image
-        productView.closeButton.addTarget(self, action: #selector(closeButtonAction), for: .touchUpInside)
+        productView.toolbar.delegate = self
+        productView.closeButton.target = self
+        productView.closeButton.action = #selector(closeButtonAction)
     }
 
     private var productView: ProductView! {
@@ -32,6 +34,12 @@ class ProductViewController: UIViewController {
     @objc
     private func closeButtonAction() {
         dismisser.dismiss(productViewController: self)
+    }
+
+    // MARK: UIToolbarDelegate
+
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
     }
 
     // MARK: Private
