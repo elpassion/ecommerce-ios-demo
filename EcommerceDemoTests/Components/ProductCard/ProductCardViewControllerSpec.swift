@@ -25,17 +25,19 @@ class ProductCardViewControllerSpec: QuickSpec {
                 }
 
                 context("load view") {
+                    var width: CGFloat!
+
                     beforeEach {
-                        sut?.view.frame = CGRect(x: 0, y: 0, width: 375, height: 812)
+                        width = 295
+                        sut?.view.layoutPinWidth(to: width)
+                        sut?.view.layoutPinHeight(to: 427)
                     }
 
                     describe("product card view") {
                         var productCardView: ProductCardView?
-                        var size: CGSize!
 
                         beforeEach {
                             productCardView = sut.view as? ProductCardView
-                            size = CGSize(width: 295, height: 427)
                         }
 
                         it("should not be nil") {
@@ -52,33 +54,30 @@ class ProductCardViewControllerSpec: QuickSpec {
 
                         it("should have correct snapshot") {
                             expectNotNil(productCardView).then {
-                                let view = aView(with: $0).constrained(to: size)
-                                assertSnapshot(matching: view, as: .image, named: "surface")
+                                assertSnapshot(matching: aView(with: $0), as: .image, named: "surface")
                             }
                         }
 
                         context("move left") {
                             beforeEach {
-                                sut.distanceFromCenter = -size.width
+                                sut.distanceFromCenter = -width
                             }
 
                             it("should have correct snapshot") {
                                 expectNotNil(productCardView).then {
-                                    let view = aView(with: $0).constrained(to: size)
-                                    assertSnapshot(matching: view, as: .image, named: "surface_left")
+                                    assertSnapshot(matching: aView(with: $0), as: .image, named: "surface_left")
                                 }
                             }
                         }
 
                         context("move right") {
                             beforeEach {
-                                sut.distanceFromCenter = size.width
+                                sut.distanceFromCenter = width
                             }
 
                             it("should have correct snapshot") {
                                 expectNotNil(productCardView).then {
-                                    let view = aView(with: $0).constrained(to: size)
-                                    assertSnapshot(matching: view, as: .image, named: "surface_right")
+                                    assertSnapshot(matching: aView(with: $0), as: .image, named: "surface_right")
                                 }
                             }
                         }
