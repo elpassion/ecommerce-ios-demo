@@ -1,3 +1,4 @@
+// swiftlint:disable line_length
 import UIKit
 
 extension Product {
@@ -11,6 +12,10 @@ extension Product {
             Spec(name: "diagonal", value: "12.3”", icon: .iconDiagonal),
             Spec(name: "hard drive", value: "1TB", icon: .iconHardDrive),
             Spec(name: "RAM", value: "16GB", icon: .iconRam)
+        ],
+        description: [
+            .text("Surface Pro 4 is light enough to take anywhere and powerful enough to use as a full desktop workstation."),
+            .text("Surface Pro 4 is meticulously crafted to be a powerful, ultrathin laptop — or a beautiful tablet that can stand on its own — all with up to 9 hours of video playback.")
         ]
     )
     static let surface = Product(
@@ -22,6 +27,10 @@ extension Product {
             Spec(name: "diagonal", value: "12.3”", icon: .iconDiagonal),
             Spec(name: "hard drive", value: "1TB", icon: .iconHardDrive),
             Spec(name: "RAM", value: "16GB", icon: .iconRam)
+        ],
+        description: [
+            .text("Surface Pro 4 is light enough to take anywhere and powerful enough to use as a full desktop workstation."),
+            .text("Surface Pro 4 is meticulously crafted to be a powerful, ultrathin laptop — or a beautiful tablet that can stand on its own — all with up to 9 hours of video playback.")
         ]
     )
     static let xbox = Product(
@@ -33,6 +42,10 @@ extension Product {
             Spec(name: "diagonal", value: "12.3”", icon: .iconDiagonal),
             Spec(name: "hard drive", value: "1TB", icon: .iconHardDrive),
             Spec(name: "RAM", value: "16GB", icon: .iconRam)
+        ],
+        description: [
+            .text("Surface Pro 4 is light enough to take anywhere and powerful enough to use as a full desktop workstation."),
+            .text("Surface Pro 4 is meticulously crafted to be a powerful, ultrathin laptop — or a beautiful tablet that can stand on its own — all with up to 9 hours of video playback.")
         ]
     )
 }

@@ -7,9 +7,14 @@ struct Product {
         let icon: UIImage
     }
 
+    enum Description {
+        case text(String)
+    }
+
     let name: String
     let price: String
     let color: UIColor
     let photo: UIImage
     let specs: [Spec]
+    let description: [Description]
 }
