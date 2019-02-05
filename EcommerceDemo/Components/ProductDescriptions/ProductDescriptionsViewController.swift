@@ -19,7 +19,7 @@ class ProductDescriptionsViewController: UIViewController {
         stackView.alignment = .fill
         stackView.distribution = .equalSpacing
         stackView.spacing = 30
-        view = createContainer(with: stackView, verticalMargins: 24)
+        view = stackView
     }
 
     private func loadDescriptionView(with description: Product.Description) -> UIView {
@@ -39,15 +39,11 @@ class ProductDescriptionsViewController: UIViewController {
         }
     }
 
-    private func createContainer(
-        with view: UIView,
-        verticalMargins vertical: CGFloat = 0,
-        horizontalMargins horizontal: CGFloat = 0
-    ) -> UIView {
+    private func createContainer(with view: UIView, horizontalMargins margin: CGFloat = 0) -> UIView {
         let container = UIView(frame: .zero)
         container.addSubview(view)
-        view.layoutFillVerically(container, topMargin: vertical, bottomMargin: vertical)
-        view.layoutFillHorizontally(container, leadingMargin: horizontal, trailingMargin: horizontal)
+        view.layoutFillVerically(container)
+        view.layoutFillHorizontally(container, leadingMargin: margin, trailingMargin: margin)
         return container
     }
 
