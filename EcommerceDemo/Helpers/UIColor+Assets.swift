@@ -12,4 +12,5 @@ extension UIColor {
     static let tabBarItemSelected = UIColor(red: 0.992, green: 0.38, blue: 0.004, alpha: 1)
     static let pageIndicator = UIColor.white
     static let pageIndicatorActive = UIColor(red: 0.992, green: 0.38, blue: 0.004, alpha: 1)
+    static let separator = UIColor(red: 0.592, green: 0.592, blue: 0.592, alpha: 0.3)
 }

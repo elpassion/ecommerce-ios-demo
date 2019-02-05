@@ -24,6 +24,7 @@ class ProductView: UIView {
     let descriptionsView = UIView(frame: .zero)
 
     private let topView = UIView(frame: .zero)
+    private let separatorView = UIView(frame: .zero)
 
     private func setupSubviews() {
         addSubview(scrollView)
@@ -32,6 +33,8 @@ class ProductView: UIView {
         topView.addSubview(imageContainer)
         scrollView.addSubview(nameLabel)
         scrollView.addSubview(specsView)
+        scrollView.addSubview(separatorView)
+        separatorView.backgroundColor = .separator
         scrollView.addSubview(descriptionsView)
         addSubview(toolbar)
         toolbar.items = [closeButton]
@@ -65,7 +68,11 @@ class ProductView: UIView {
         specsView.layoutPinTop(to: nameLabel.bottomAnchor, margin: 20)
         specsView.layoutFillHorizontally(scrollView, leadingMargin: 20, trailingMargin: 20)
 
-        descriptionsView.layoutPinTop(to: specsView.bottomAnchor, margin: 30)
+        separatorView.layoutPinTop(to: specsView.bottomAnchor, margin: 27)
+        separatorView.layoutFillHorizontally(scrollView)
+        separatorView.layoutPinHeight(to: 1)
+
+        descriptionsView.layoutPinTop(to: separatorView.bottomAnchor, margin: 24)
         descriptionsView.layoutFillHorizontally(scrollView)
         descriptionsView.layoutPinBottom(to: scrollView.bottomAnchor, margin: 30)
     }
