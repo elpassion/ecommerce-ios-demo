@@ -23,6 +23,7 @@ class ProductViewController: UIViewController, UIToolbarDelegate {
         super.viewDidLoad()
         productView.toolbar.barTintColor = product.color
         productView.imageContainer.image = product.image
+        productView.nameLabel.text = product.name
         productView.toolbar.delegate = self
         productView.closeButton.target = self
         productView.closeButton.action = #selector(closeButtonAction)

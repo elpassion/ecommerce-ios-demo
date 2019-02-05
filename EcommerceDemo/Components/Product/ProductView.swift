@@ -19,6 +19,7 @@ class ProductView: UIView {
     let closeButton = UIBarButtonItem.close
     let scrollView = UIScrollView(frame: .zero)
     let imageContainer = ImageContainer()
+    let nameLabel = UILabel(frame: .zero) |> UILabel.productNameStyle
     let specsView = UIView(frame: .zero)
 
     private let topView = UIView(frame: .zero)
@@ -28,6 +29,7 @@ class ProductView: UIView {
         scrollView.alwaysBounceVertical = true
         scrollView.addSubview(topView)
         topView.addSubview(imageContainer)
+        scrollView.addSubview(nameLabel)
         scrollView.addSubview(specsView)
         addSubview(toolbar)
         toolbar.items = [closeButton]
@@ -55,7 +57,10 @@ class ProductView: UIView {
         imageContainer.layoutFillHorizontally(topView, leadingMargin: 20, trailingMargin: 20)
         imageContainer.layoutPinBottom(to: topView.bottomAnchor)
 
-        specsView.layoutPinTop(to: topView.bottomAnchor, margin: 20)
+        nameLabel.layoutPinTop(to: topView.bottomAnchor, margin: 18)
+        nameLabel.layoutCenterHorizontally(in: scrollView, margin: 20)
+
+        specsView.layoutPinTop(to: nameLabel.bottomAnchor, margin: 20)
         specsView.layoutFillHorizontally(scrollView, leadingMargin: 20, trailingMargin: 20)
         specsView.layoutPinBottom(to: scrollView.bottomAnchor, margin: 20)
     }
