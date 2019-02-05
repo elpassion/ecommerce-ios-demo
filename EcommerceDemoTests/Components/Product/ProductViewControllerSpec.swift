@@ -26,7 +26,7 @@ class ProductViewControllerSpec: QuickSpec {
 
                 context("load view") {
                     beforeEach {
-                        _ = sut?.view
+                        sut?.view.frame = CGRect(x: 0, y: 0, width: 375, height: 812)
                     }
 
                     it("should have correct snapshot") {
