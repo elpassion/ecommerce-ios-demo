@@ -26,4 +26,13 @@ extension UIImage {
     static var iconX: UIImage {
         return UIImage(named: "icon_x", in: bundle, compatibleWith: nil)!
     }
+    static var iconDiagonal: UIImage {
+        return UIImage(named: "icon_diagonal", in: bundle, compatibleWith: nil)!
+    }
+    static var iconHardDrive: UIImage {
+        return UIImage(named: "icon_hard_drive", in: bundle, compatibleWith: nil)!
+    }
+    static var iconRam: UIImage {
+        return UIImage(named: "icon_ram", in: bundle, compatibleWith: nil)!
+    }
 }
