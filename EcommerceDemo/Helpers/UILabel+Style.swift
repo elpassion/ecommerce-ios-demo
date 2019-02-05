@@ -31,6 +31,7 @@ extension UILabel {
         $0.adjustsFontForContentSizeCategory = true
         $0.textColor = .darkText
     }
+
     static func setText(_ text: String?) -> (UILabel) -> Void {
         return { $0.text = text }
     }
