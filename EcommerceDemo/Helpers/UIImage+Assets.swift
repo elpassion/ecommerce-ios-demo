@@ -8,6 +8,9 @@ extension UIImage {
     static var productSurface: UIImage {
         return UIImage(named: "product_surface", in: bundle, compatibleWith: nil)!
     }
+    static var productSurfacePhoto: UIImage {
+        return UIImage(named: "product_surface_photo", in: bundle, compatibleWith: nil)!
+    }
     static var productXbox: UIImage {
         return UIImage(named: "product_xbox", in: bundle, compatibleWith: nil)!
     }

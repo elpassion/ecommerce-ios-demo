@@ -31,6 +31,18 @@ extension UILabel {
         $0.adjustsFontForContentSizeCategory = true
         $0.textColor = .darkText
     }
+    static let descriptionHeaderStyle: (UILabel) -> Void = {
+        $0.font = UIFontMetrics.default.scaledFont(for: .varelaRound(size: 24))
+        $0.adjustsFontForContentSizeCategory = true
+        $0.textColor = .darkText
+        $0.numberOfLines = 0
+    }
+    static let descriptionTextStyle: (UILabel) -> Void = {
+        $0.font = UIFontMetrics.default.scaledFont(for: .varelaRound(size: 15))
+        $0.adjustsFontForContentSizeCategory = true
+        $0.textColor = .normalText
+        $0.numberOfLines = 0
+    }
 
     static func setText(_ text: String?) -> (UILabel) -> Void {
         return { $0.text = text }
