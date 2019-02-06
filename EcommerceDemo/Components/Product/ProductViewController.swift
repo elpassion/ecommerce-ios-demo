@@ -73,7 +73,7 @@ class ProductViewController: UIViewController, UIToolbarDelegate {
 
     private func setupObservers() {
         let handler: (Any, Any) -> Void = { [weak self] _, _ in
-            self?.productView.layoutTopBackground()
+            self?.productView.updateLayout()
         }
         observers = [
             productView.scrollView.observe(\UIScrollView.contentOffset, changeHandler: handler),

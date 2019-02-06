@@ -60,19 +60,12 @@ class ProductView: UIView {
         super.layoutSubviews()
         scrollView.contentInset.top = toolbar.frame.height
         scrollView.contentInset.bottom = bottomView.frame.height - scrollView.safeAreaInsets.bottom
-        layoutTopBackground()
+        updateLayout()
     }
 
-    func layoutTopBackground() {
-        let minHeight = scrollView.adjustedContentInset.top
-        let maxHeight = minHeight + topView.frame.minY + topView.frame.height * 0.66
-        let height = maxHeight - scrollView.contentOffset.y - scrollView.adjustedContentInset.top
-        topBackgroundView.frame = CGRect(
-            x: -scrollView.adjustedContentInset.left,
-            y: scrollView.contentOffset.y,
-            width: scrollView.frame.width,
-            height: max(minHeight, min(maxHeight, height))
-        )
+    func updateLayout() {
+        layoutTopBackground()
+        layoutNameLabel()
     }
 
     private func setupLayout() {
@@ -111,6 +104,31 @@ class ProductView: UIView {
         addToCartButton.layoutPinTop(to: bottomView.topAnchor, margin: 30)
         addToCartButton.layoutCenterHorizontally(in: safeAreaLayoutGuide)
         addToCartButton.layoutPinBottom(to: bottomView.safeAreaLayoutGuide.bottomAnchor, margin: 30)
+    }
+
+    private func layoutTopBackground() {
+        let minHeight = scrollView.adjustedContentInset.top
+        let maxHeight = minHeight + topView.frame.minY + topView.frame.height * 0.66
+        let height = maxHeight - scrollView.contentOffset.y - scrollView.adjustedContentInset.top
+        topBackgroundView.frame = CGRect(
+            x: -scrollView.adjustedContentInset.left,
+            y: scrollView.contentOffset.y,
+            width: scrollView.frame.width,
+            height: max(minHeight, min(maxHeight, height))
+        )
+    }
+
+    private func layoutNameLabel() {
+        let center = nameLabel.center.y - scrollView.contentOffset.y - scrollView.adjustedContentInset.top
+        let toolbarCenter = toolbar.frame.height / 2
+        let translationY = center <= -toolbarCenter ? -(center + toolbarCenter) : 0
+        let progress = max(0, min(1, (center - toolbarCenter) / -(toolbarCenter + toolbarCenter)))
+        let scale = 0.625 + 0.375 * (1 - progress)
+        nameLabel.transform = CGAffineTransform.identity
+            .translatedBy(x: 0, y: translationY)
+            .scaledBy(x: scale, y: scale)
+        let white = 0.153 + 0.847 * progress
+        nameLabel.textColor = UIColor(white: white, alpha: 1)
     }
 
 }
