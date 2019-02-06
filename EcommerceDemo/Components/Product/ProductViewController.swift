@@ -25,7 +25,7 @@ class ProductViewController: UIViewController, UIToolbarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        productView.toolbar.barTintColor = product.color
+        productView.topBackgroundView.backgroundColor = product.color
         productView.imageContainer.image = product.photo
         productView.nameLabel.text = product.name
         productView.toolbar.delegate = self
@@ -34,6 +34,7 @@ class ProductViewController: UIViewController, UIToolbarDelegate {
         productView.addToCartButton.titleLabel.text = "\(product.price) - Add to cart"
         embed(specsViewController, in: productView.specsView)
         embed(descriptionsViewController, in: productView.descriptionsView)
+        setupObservers()
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -61,12 +62,24 @@ class ProductViewController: UIViewController, UIToolbarDelegate {
     private let dismisser: ProductDismissing
     private let specsViewController: UIViewController
     private let descriptionsViewController: UIViewController
+    private var observers = [NSKeyValueObservation]()
 
     private func embed(_ viewController: UIViewController, in view: UIView) {
         addChild(viewController)
         view.addSubview(viewController.view)
         viewController.view.layoutFill(view)
         viewController.didMove(toParent: self)
+    }
+
+    private func setupObservers() {
+        let handler: (Any, Any) -> Void = { [weak self] _, _ in
+            self?.productView.layoutTopBackground()
+        }
+        observers = [
+            productView.scrollView.observe(\UIScrollView.contentOffset, changeHandler: handler),
+            productView.scrollView.observe(\UIScrollView.contentSize, changeHandler: handler),
+            productView.scrollView.observe(\UIScrollView.adjustedContentInset, changeHandler: handler)
+        ]
     }
 
 }

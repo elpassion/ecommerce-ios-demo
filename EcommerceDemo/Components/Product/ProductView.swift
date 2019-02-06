@@ -18,6 +18,7 @@ class ProductView: UIView {
     let toolbar = UIToolbar(frame: .zero) |> UIToolbar.topStyle
     let closeButton = UIBarButtonItem.close
     let scrollView = UIScrollView(frame: .zero)
+    let topBackgroundView = UIView(frame: .zero)
     let imageContainer = ImageContainer()
     let nameLabel = UILabel(frame: .zero) |> UILabel.productNameStyle
     let specsView = UIView(frame: .zero)
@@ -31,20 +32,26 @@ class ProductView: UIView {
 
     private func setupSubviews() {
         addSubview(scrollView)
+        addSubview(bottomView)
+        addSubview(toolbar)
+
         scrollView.alwaysBounceVertical = true
         scrollView.showsVerticalScrollIndicator = false
-        scrollView.addSubview(topView)
-        topView.addSubview(imageContainer)
-        scrollView.addSubview(nameLabel)
         scrollView.addSubview(specsView)
         scrollView.addSubview(separatorView)
-        separatorView.backgroundColor = .separator
         scrollView.addSubview(descriptionsView)
-        addSubview(toolbar)
-        toolbar.items = [closeButton, .flexibleSpace, .star]
-        addSubview(bottomView)
+        scrollView.addSubview(topBackgroundView)
+        scrollView.addSubview(topView)
+        scrollView.addSubview(nameLabel)
+
+        topView.addSubview(imageContainer)
+
         bottomView.addSubview(bottomGradientView)
         bottomView.addSubview(addToCartButton)
+
+        toolbar.items = [closeButton, .flexibleSpace, .star]
+
+        separatorView.backgroundColor = .separator
     }
 
     // MARK: Layout
@@ -53,6 +60,16 @@ class ProductView: UIView {
         super.layoutSubviews()
         scrollView.contentInset.top = toolbar.frame.height
         scrollView.contentInset.bottom = bottomView.frame.height - scrollView.safeAreaInsets.bottom
+        layoutTopBackground()
+    }
+
+    func layoutTopBackground() {
+        topBackgroundView.frame = CGRect(
+            x: -scrollView.adjustedContentInset.left,
+            y: scrollView.contentOffset.y,
+            width: scrollView.frame.width,
+            height: scrollView.adjustedContentInset.top
+        )
     }
 
     private func setupLayout() {
