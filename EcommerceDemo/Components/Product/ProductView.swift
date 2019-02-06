@@ -32,6 +32,7 @@ class ProductView: UIView {
     private func setupSubviews() {
         addSubview(scrollView)
         scrollView.alwaysBounceVertical = true
+        scrollView.showsVerticalScrollIndicator = false
         scrollView.addSubview(topView)
         topView.addSubview(imageContainer)
         scrollView.addSubview(nameLabel)
@@ -51,9 +52,7 @@ class ProductView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         scrollView.contentInset.top = toolbar.frame.height
-        scrollView.scrollIndicatorInsets.top = toolbar.frame.height
         scrollView.contentInset.bottom = bottomView.frame.height - scrollView.safeAreaInsets.bottom
-        scrollView.scrollIndicatorInsets.bottom = bottomView.frame.height - scrollView.safeAreaInsets.bottom
     }
 
     private func setupLayout() {
