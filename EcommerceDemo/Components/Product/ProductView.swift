@@ -41,7 +41,7 @@ class ProductView: UIView {
         separatorView.backgroundColor = .separator
         scrollView.addSubview(descriptionsView)
         addSubview(toolbar)
-        toolbar.items = [closeButton]
+        toolbar.items = [closeButton, .flexibleSpace, .star]
         addSubview(bottomView)
         bottomView.addSubview(bottomGradientView)
         bottomView.addSubview(addToCartButton)

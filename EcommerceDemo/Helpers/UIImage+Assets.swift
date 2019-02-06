@@ -29,6 +29,9 @@ extension UIImage {
     static var iconX: UIImage {
         return UIImage(named: "icon_x", in: bundle, compatibleWith: nil)!
     }
+    static var iconStar: UIImage {
+        return UIImage(named: "icon_star", in: bundle, compatibleWith: nil)!
+    }
     static var iconDiagonal: UIImage {
         return UIImage(named: "icon_diagonal", in: bundle, compatibleWith: nil)!
     }
