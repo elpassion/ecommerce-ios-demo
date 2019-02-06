@@ -64,11 +64,14 @@ class ProductView: UIView {
     }
 
     func layoutTopBackground() {
+        let minHeight = scrollView.adjustedContentInset.top
+        let maxHeight = minHeight + topView.frame.minY + topView.frame.height * 0.66
+        let height = maxHeight - scrollView.contentOffset.y - scrollView.adjustedContentInset.top
         topBackgroundView.frame = CGRect(
             x: -scrollView.adjustedContentInset.left,
             y: scrollView.contentOffset.y,
             width: scrollView.frame.width,
-            height: scrollView.adjustedContentInset.top + topView.frame.height * 0.66
+            height: max(minHeight, min(maxHeight, height))
         )
     }
 
