@@ -35,6 +35,12 @@ class ProductViewControllerSpec: QuickSpec {
                         }
                     }
 
+                    it("should have correct full snapshot") {
+                        expectNotNil(sut).then { sut in
+                            assertSnapshot(matching: sut.fullSnapshotView(), as: .image, named: "surface_full")
+                        }
+                    }
+
                     context("tap close button") {
                         beforeEach {
                             let button = (sut?.view as? ProductView)?.closeButton
@@ -56,5 +62,20 @@ class ProductViewControllerSpec: QuickSpec {
                 expect(ProductViewController(coder: NSCoder())).to(beNil())
             }
         }
+    }
+}
+
+private extension ProductViewController {
+    func fullSnapshotView() -> UIView {
+        view.layoutPinWidth(to: 375)
+        view.setNeedsLayout()
+        view.layoutIfNeeded()
+        if let scrollView = (view as? ProductView)?.scrollView {
+            let height = scrollView.contentSize.height + scrollView.adjustedContentInset.vertical
+            scrollView.layoutPinHeight(to: height)
+        }
+        view.setNeedsLayout()
+        view.layoutIfNeeded()
+        return .view(with: view)
     }
 }
