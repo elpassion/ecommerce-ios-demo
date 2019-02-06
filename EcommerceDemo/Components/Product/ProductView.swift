@@ -68,7 +68,7 @@ class ProductView: UIView {
             x: -scrollView.adjustedContentInset.left,
             y: scrollView.contentOffset.y,
             width: scrollView.frame.width,
-            height: scrollView.adjustedContentInset.top
+            height: scrollView.adjustedContentInset.top + topView.frame.height * 0.66
         )
     }
 
@@ -81,7 +81,7 @@ class ProductView: UIView {
         topView.layoutPinTop(to: scrollView.topAnchor)
         topView.layoutFillHorizontally(scrollView)
         topView.layoutPinWidth(to: scrollView.safeAreaLayoutGuide.widthAnchor)
-        topView.layoutPinHeight(to: topView.widthAnchor, multiplier: 0.75)
+        topView.layoutPinHeight(to: topView.widthAnchor, multiplier: 0.6)
 
         imageContainer.layoutFillHorizontally(topView, leadingMargin: 20, trailingMargin: 20)
         imageContainer.layoutPinBottom(to: topView.bottomAnchor)
