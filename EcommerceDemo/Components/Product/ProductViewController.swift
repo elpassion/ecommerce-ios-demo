@@ -36,6 +36,10 @@ class ProductViewController: UIViewController, UIToolbarDelegate {
         embed(descriptionsViewController, in: productView.descriptionsView)
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     private var productView: ProductView! {
         return view as? ProductView
     }
