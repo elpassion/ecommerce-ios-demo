@@ -11,4 +11,13 @@ extension GradientStyle {
             direction: .horizontal
         )
     }
+    static var bottomWhiteShade: GradientStyle {
+        return GradientStyle(
+            colors: [
+                GradientColor(location: 0, color: UIColor.white.withAlphaComponent(0)),
+                GradientColor(location: 1, color: .white)
+            ],
+            direction: .vertical
+        )
+    }
 }
