@@ -31,6 +31,7 @@ class ProductViewController: UIViewController, UIToolbarDelegate {
         productView.toolbar.delegate = self
         productView.closeButton.target = self
         productView.closeButton.action = #selector(closeButtonAction)
+        productView.addToCartButton.titleLabel.text = "\(product.price) - Add to cart"
         embed(specsViewController, in: productView.specsView)
         embed(descriptionsViewController, in: productView.descriptionsView)
     }

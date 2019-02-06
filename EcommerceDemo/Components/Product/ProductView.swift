@@ -22,9 +22,12 @@ class ProductView: UIView {
     let nameLabel = UILabel(frame: .zero) |> UILabel.productNameStyle
     let specsView = UIView(frame: .zero)
     let descriptionsView = UIView(frame: .zero)
+    let addToCartButton = RoundButton()
 
     private let topView = UIView(frame: .zero)
     private let separatorView = UIView(frame: .zero)
+    private let bottomView = UIView(frame: .zero)
+    private let bottomGradientView = GradientView(style: .bottomWhiteShade)
 
     private func setupSubviews() {
         addSubview(scrollView)
@@ -38,6 +41,9 @@ class ProductView: UIView {
         scrollView.addSubview(descriptionsView)
         addSubview(toolbar)
         toolbar.items = [closeButton]
+        addSubview(bottomView)
+        bottomView.addSubview(bottomGradientView)
+        bottomView.addSubview(addToCartButton)
     }
 
     // MARK: Layout
@@ -46,6 +52,8 @@ class ProductView: UIView {
         super.layoutSubviews()
         scrollView.contentInset.top = toolbar.frame.height
         scrollView.scrollIndicatorInsets.top = toolbar.frame.height
+        scrollView.contentInset.bottom = bottomView.frame.height - scrollView.safeAreaInsets.bottom
+        scrollView.scrollIndicatorInsets.bottom = bottomView.frame.height - scrollView.safeAreaInsets.bottom
     }
 
     private func setupLayout() {
@@ -74,7 +82,16 @@ class ProductView: UIView {
 
         descriptionsView.layoutPinTop(to: separatorView.bottomAnchor, margin: 24)
         descriptionsView.layoutFillHorizontally(scrollView)
-        descriptionsView.layoutPinBottom(to: scrollView.bottomAnchor, margin: 30)
+        descriptionsView.layoutPinBottom(to: scrollView.bottomAnchor)
+
+        bottomView.layoutFillHorizontally(self)
+        bottomView.layoutPinBottom(to: bottomAnchor)
+
+        bottomGradientView.layoutFill(bottomView)
+
+        addToCartButton.layoutPinTop(to: bottomView.topAnchor, margin: 30)
+        addToCartButton.layoutCenterHorizontally(in: safeAreaLayoutGuide)
+        addToCartButton.layoutPinBottom(to: bottomView.safeAreaLayoutGuide.bottomAnchor, margin: 30)
     }
 
 }
