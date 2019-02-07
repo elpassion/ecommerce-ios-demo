@@ -13,6 +13,17 @@ class ProductPresenterSpec: QuickSpec {
                 sut = ProductPresenter(factory: factory)
             }
 
+            it("should return nil animation controllers") {
+                expect(sut.animationController(
+                    forPresented: UIViewController(),
+                    presenting: UIViewController(),
+                    source: UIViewController()
+                )).to(beNil())
+                expect(sut.animationController(
+                    forDismissed: UIViewController()
+                )).to(beNil())
+            }
+
             context("present") {
                 var product: Product!
                 var presenting: PresentingViewControllerDouble!
@@ -25,6 +36,14 @@ class ProductPresenterSpec: QuickSpec {
 
                 it("should create view controller with correct product") {
                     expect(factory.didCreateWithProduct?.name) == product.name
+                }
+
+                it("should set over full screen presentation style") {
+                    expect(factory.createdViewController.modalPresentationStyle) == .overFullScreen
+                }
+
+                it("should be transitioning delegate") {
+                    expect(factory.createdViewController.transitioningDelegate) === sut
                 }
 
                 it("should present created view controller from presenting") {
