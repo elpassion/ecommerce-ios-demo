@@ -58,12 +58,12 @@ class ProductView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        scrollView.contentInset.top = toolbar.frame.height
-        scrollView.contentInset.bottom = bottomView.frame.height - scrollView.safeAreaInsets.bottom
         updateLayout()
     }
 
     func updateLayout() {
+        scrollView.contentInset.top = toolbar.frame.height
+        scrollView.contentInset.bottom = bottomView.frame.height - scrollView.safeAreaInsets.bottom
         layoutTopBackground()
         layoutNameLabel()
     }
