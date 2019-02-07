@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3114D7C9220C7E7300BDEA95 /* ProductPresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3114D7C8220C7E7300BDEA95 /* ProductPresentTransition.swift */; };
+		3114D7CB220CDC9400BDEA95 /* ProductPresentTransitionProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3114D7CA220CDC9400BDEA95 /* ProductPresentTransitionProperties.swift */; };
+		3114D7CD220CE17800BDEA95 /* ProductPresentTransitionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3114D7CC220CE17800BDEA95 /* ProductPresentTransitionSpec.swift */; };
 		311E58A12208702C00F48140 /* UIPageControl+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58A02208702C00F48140 /* UIPageControl+Style.swift */; };
 		311E58A42208E9F800F48140 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58A32208E9F800F48140 /* ProductViewController.swift */; };
 		311E58A62208EA0300F48140 /* ProductViewControllerCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58A52208EA0300F48140 /* ProductViewControllerCreating.swift */; };
@@ -143,6 +146,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3114D7C8220C7E7300BDEA95 /* ProductPresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresentTransition.swift; sourceTree = "<group>"; };
+		3114D7CA220CDC9400BDEA95 /* ProductPresentTransitionProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresentTransitionProperties.swift; sourceTree = "<group>"; };
+		3114D7CC220CE17800BDEA95 /* ProductPresentTransitionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresentTransitionSpec.swift; sourceTree = "<group>"; };
 		311E58A02208702C00F48140 /* UIPageControl+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPageControl+Style.swift"; sourceTree = "<group>"; };
 		311E58A32208E9F800F48140 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		311E58A52208EA0300F48140 /* ProductViewControllerCreating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewControllerCreating.swift; sourceTree = "<group>"; };
@@ -250,6 +256,8 @@
 				311E58B42208F0A500F48140 /* ProductDismissing.swift */,
 				311E58B22208F02500F48140 /* ProductPresenter.swift */,
 				311E58B02208EFE300F48140 /* ProductPresenting.swift */,
+				3114D7C8220C7E7300BDEA95 /* ProductPresentTransition.swift */,
+				3114D7CA220CDC9400BDEA95 /* ProductPresentTransitionProperties.swift */,
 				311E58A92208EA7500F48140 /* ProductView.swift */,
 				311E58A32208E9F800F48140 /* ProductViewController.swift */,
 				311E58A52208EA0300F48140 /* ProductViewControllerCreating.swift */,
@@ -265,6 +273,7 @@
 				311E58C42208FDA700F48140 /* ProductDismissingDouble.swift */,
 				311E58BC2208F82100F48140 /* ProductPresenterSpec.swift */,
 				311E58C22208FC8D00F48140 /* ProductPresentingDouble.swift */,
+				3114D7CC220CE17800BDEA95 /* ProductPresentTransitionSpec.swift */,
 				311E58C02208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift */,
 				311E58AE2208EB4300F48140 /* ProductViewControllerSpec.swift */,
 				311E58AC2208EB1500F48140 /* ProductViewSpec.swift */,
@@ -871,11 +880,13 @@
 				311E58D1220A310D00F48140 /* ProductSpecsViewController.swift in Sources */,
 				311E58E1220A48B000F48140 /* ProductDescriptionsViewController.swift in Sources */,
 				311E58BB2208F14200F48140 /* ProductCardViewControllerFactory.swift in Sources */,
+				3114D7C9220C7E7300BDEA95 /* ProductPresentTransition.swift in Sources */,
 				3129432A2203B0C500AEE95E /* DealsView.swift in Sources */,
 				311E58DE220A42F000F48140 /* Product+Demo.swift in Sources */,
 				312943382203B0E600AEE95E /* SketchShadow.swift in Sources */,
 				311E58B72208F0B000F48140 /* ProductDismisser.swift in Sources */,
 				311E58CC2209FF9D00F48140 /* UIToolbar+Style.swift in Sources */,
+				3114D7CB220CDC9400BDEA95 /* ProductPresentTransitionProperties.swift in Sources */,
 				315E28F022049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift in Sources */,
 				312943612203BD7400AEE95E /* Bundle.swift in Sources */,
 				311E58A62208EA0300F48140 /* ProductViewControllerCreating.swift in Sources */,
@@ -912,6 +923,7 @@
 				315E28F62204B07F00C3BA19 /* TabBarViewSpec.swift in Sources */,
 				315E28D0220469F200C3BA19 /* ProductCardViewControllerSpec.swift in Sources */,
 				311E58AF2208EB4300F48140 /* ProductViewControllerSpec.swift in Sources */,
+				3114D7CD220CE17800BDEA95 /* ProductPresentTransitionSpec.swift in Sources */,
 				315E28E62204791E00C3BA19 /* NotNilExpectation.swift in Sources */,
 				311E58DA220A345F00F48140 /* ProductSpecsViewControllerSpec.swift in Sources */,
 				315E29092204C69000C3BA19 /* RoundButtonSpec.swift in Sources */,

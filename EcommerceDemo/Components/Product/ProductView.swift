@@ -22,11 +22,11 @@ class ProductView: UIView {
     let imageContainer = ImageContainer()
     let nameLabel = UILabel(frame: .zero) |> UILabel.productNameStyle
     let specsView = UIView(frame: .zero)
+    let separatorView = UIView(frame: .zero)
     let descriptionsView = UIView(frame: .zero)
     let addToCartButton = RoundButton()
 
     private let topView = UIView(frame: .zero)
-    private let separatorView = UIView(frame: .zero)
     private let bottomView = UIView(frame: .zero)
     private let bottomGradientView = GradientView(style: .bottomWhiteShade)
 

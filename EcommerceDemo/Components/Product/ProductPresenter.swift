@@ -22,17 +22,22 @@ class ProductPresenter: NSObject, ProductPresenting, UIViewControllerTransitioni
         presenting: UIViewController,
         source: UIViewController
     ) -> UIViewControllerAnimatedTransitioning? {
-        return nil
+        transition.direction = .present
+        transition.cardView = (source as? ProductCardViewController)?.view as? ProductCardView
+        transition.productView = (presented as? ProductViewController)?.view as? ProductView
+        return transition
     }
 
     func animationController(
         forDismissed dismissed: UIViewController
     ) -> UIViewControllerAnimatedTransitioning? {
-        return nil
+        transition.direction = .dismiss
+        return transition
     }
 
     // MARK: Private
 
     private let factory: ProductViewControllerCreating
+    private let transition = ProductPresentTransition()
 
 }

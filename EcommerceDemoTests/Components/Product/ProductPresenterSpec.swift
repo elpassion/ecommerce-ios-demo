@@ -13,15 +13,40 @@ class ProductPresenterSpec: QuickSpec {
                 sut = ProductPresenter(factory: factory)
             }
 
-            it("should return nil animation controllers") {
-                expect(sut.animationController(
-                    forPresented: UIViewController(),
-                    presenting: UIViewController(),
-                    source: UIViewController()
-                )).to(beNil())
-                expect(sut.animationController(
-                    forDismissed: UIViewController()
-                )).to(beNil())
+            context("animation controller for presenting") {
+                var cardViewController: UIViewController!
+                var productViewController: UIViewController!
+                var transition: ProductPresentTransition?
+
+                beforeEach {
+                    cardViewController = ProductCardViewControllerFactory().create(with: .surface)
+                    productViewController = ProductViewControllerFactory().create(with: .surface)
+                    transition = sut.animationController(
+                        forPresented: productViewController,
+                        presenting: UIViewController(),
+                        source: cardViewController
+                    ) as? ProductPresentTransition
+                }
+
+                it("should be correct") {
+                    expect(transition?.direction) == .present
+                    expect(transition?.cardView) === cardViewController.view
+                    expect(transition?.productView) === productViewController.view
+                }
+            }
+
+            context("animation controller for dismissing") {
+                var transition: ProductPresentTransition?
+
+                beforeEach {
+                    transition = sut.animationController(
+                        forDismissed: UIViewController()
+                    ) as? ProductPresentTransition
+                }
+
+                it("should be correct") {
+                    expect(transition?.direction) == .dismiss
+                }
             }
 
             context("present") {
