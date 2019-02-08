@@ -10,6 +10,7 @@ struct ProductPresentTransitionProperties {
     let specsAlpha: CGFloat
     let separatorAlpha: CGFloat
     let descriptionsAlpha: CGFloat
+    let buttonTransform: CGAffineTransform
 
     static func from(_ productView: ProductView) -> ProductPresentTransitionProperties {
         return ProductPresentTransitionProperties(
@@ -21,7 +22,8 @@ struct ProductPresentTransitionProperties {
             nameFrame: productView.nameLabel.frame,
             specsAlpha: productView.specsView.alpha,
             separatorAlpha: productView.separatorView.alpha,
-            descriptionsAlpha: productView.descriptionsView.alpha
+            descriptionsAlpha: productView.descriptionsView.alpha,
+            buttonTransform: .identity
         )
     }
 
@@ -61,7 +63,13 @@ struct ProductPresentTransitionProperties {
             ),
             specsAlpha: 0,
             separatorAlpha: 0,
-            descriptionsAlpha: 0
+            descriptionsAlpha: 0,
+            buttonTransform: CGAffineTransform.identity
+                .translatedBy(
+                    x: 0,
+                    y: cardView.button.convert(cardView.button.center, to: productView.addToCartButton.superview).y
+                        - productView.addToCartButton.center.y
+                )
         )
     }
 
@@ -77,5 +85,6 @@ struct ProductPresentTransitionProperties {
         view.specsView.alpha = specsAlpha
         view.separatorView.alpha = separatorAlpha
         view.descriptionsView.alpha = descriptionsAlpha
+        view.addToCartButton.transform = buttonTransform
     }
 }
