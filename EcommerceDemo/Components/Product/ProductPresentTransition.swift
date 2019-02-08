@@ -37,30 +37,67 @@ class ProductPresentTransition: NSObject, UIViewControllerAnimatedTransitioning 
 
         switch direction {
         case .present:
-            if let snapshot = productView.snapshotView(afterScreenUpdates: true) {
-                transitionContext.containerView.addSubview(snapshot)
-                snapshot.frame = cardView.convert(cardView.bounds, to: snapshot.superview)
+            if let cardSnapshot = cardView.snapshotView(afterScreenUpdates: true) {
+                transitionContext.containerView.addSubview(cardSnapshot)
+                cardSnapshot.frame = cardView.convert(cardView.bounds, to: cardSnapshot.superview)
+                cardSnapshot.alpha = 1
                 animations.append {
-                    snapshot.frame = productView.convert(productView.bounds, to: snapshot.superview)
+                    cardSnapshot.alpha = 0
+                    cardSnapshot.frame = productView.convert(productView.bounds, to: cardSnapshot.superview)
                 }
                 completions.append {
-                    snapshot.removeFromSuperview()
+                    cardSnapshot.removeFromSuperview()
                 }
             }
-            productView.isHidden = true
-            completions.append { productView.isHidden = false }
+            if let productSnapshot = productView.snapshotView(afterScreenUpdates: true) {
+                transitionContext.containerView.addSubview(productSnapshot)
+                productSnapshot.frame = cardView.convert(cardView.bounds, to: productSnapshot.superview)
+                productSnapshot.alpha = 0
+                animations.append {
+                    productSnapshot.alpha = 1
+                    productSnapshot.frame = productView.convert(productView.bounds, to: productSnapshot.superview)
+                }
+                completions.append {
+                    productSnapshot.removeFromSuperview()
+                }
+            }
+            productView.alpha = 0
+            cardView.alpha = 0
+            completions.append {
+                productView.alpha = 1
+                cardView.alpha = 1
+            }
         case .dismiss:
-            if let snapshot = productView.snapshotView(afterScreenUpdates: true) {
-                transitionContext.containerView.addSubview(snapshot)
-                snapshot.frame = productView.convert(productView.bounds, to: snapshot.superview)
+            if let cardSnapshot = cardView.snapshotView(afterScreenUpdates: true) {
+                transitionContext.containerView.addSubview(cardSnapshot)
+                cardSnapshot.frame = productView.convert(productView.bounds, to: cardSnapshot.superview)
+                cardSnapshot.alpha = 0
                 animations.append {
-                    snapshot.frame = cardView.convert(cardView.bounds, to: snapshot.superview)
+                    cardSnapshot.alpha = 1
+                    cardSnapshot.frame = cardView.convert(cardView.bounds, to: cardSnapshot.superview)
                 }
                 completions.append {
-                    snapshot.removeFromSuperview()
+                    cardSnapshot.removeFromSuperview()
                 }
             }
-            productView.isHidden = true
+            if let productSnapshot = productView.snapshotView(afterScreenUpdates: true) {
+                transitionContext.containerView.addSubview(productSnapshot)
+                productSnapshot.frame = productView.convert(productView.bounds, to: productSnapshot.superview)
+                productSnapshot.alpha = 1
+                animations.append {
+                    productSnapshot.alpha = 0
+                    productSnapshot.frame = cardView.convert(cardView.bounds, to: productSnapshot.superview)
+                }
+                completions.append {
+                    productSnapshot.removeFromSuperview()
+                }
+            }
+            productView.alpha = 0
+            cardView.alpha = 0
+            completions.append {
+                productView.alpha = 1
+                cardView.alpha = 1
+            }
         }
 
         let duration = transitionDuration(using: transitionContext)
