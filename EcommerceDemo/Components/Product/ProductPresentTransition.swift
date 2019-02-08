@@ -29,26 +29,12 @@ class ProductPresentTransition: NSObject, UIViewControllerAnimatedTransitioning 
             transitionContext.containerView.addSubview(productView)
             productView.clipsToBounds = true
         }
-        let presented = ProductPresentTransitionProperties.presented(
-            productView: productView,
-            container: transitionContext.containerView
-        )
-        let dismissed = ProductPresentTransitionProperties.dismissed(
-            productView: productView,
-            cardView: cardView,
-            container: transitionContext.containerView
-        )
-        let properties: (start: ProductPresentTransitionProperties, end: ProductPresentTransitionProperties) = {
-            switch direction {
-            case .present:
-                return (dismissed, presented)
-            case .dismiss:
-                return (presented, dismissed)
-            }
-        }()
-        properties.start.apply(to: productView)
+
+        // TODO: animate transition
+        productView.frame = transitionContext.containerView.bounds
+
         let duration = transitionDuration(using: transitionContext)
-        let animations = { properties.end.apply(to: productView) }
+        let animations = {}
         let completion = { transitionContext.completeTransition(!(!$0 || transitionContext.transitionWasCancelled)) }
         animator(duration, animations, completion)
     }
