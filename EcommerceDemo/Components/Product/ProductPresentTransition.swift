@@ -27,16 +27,50 @@ class ProductPresentTransition: NSObject, UIViewControllerAnimatedTransitioning 
         }
         if productView.superview == nil {
             transitionContext.containerView.addSubview(productView)
-            productView.clipsToBounds = true
+            productView.frame = transitionContext.containerView.bounds
         }
 
-        // TODO: animate transition
-        productView.frame = transitionContext.containerView.bounds
+        // TODO: Spike
+
+        var animations: [() -> Void] = []
+        var completions: [() -> Void] = []
+
+        switch direction {
+        case .present:
+            if let snapshot = productView.snapshotView(afterScreenUpdates: true) {
+                transitionContext.containerView.addSubview(snapshot)
+                snapshot.frame = cardView.convert(cardView.bounds, to: snapshot.superview)
+                animations.append {
+                    snapshot.frame = productView.convert(productView.bounds, to: snapshot.superview)
+                }
+                completions.append {
+                    snapshot.removeFromSuperview()
+                }
+            }
+            productView.isHidden = true
+            completions.append { productView.isHidden = false }
+        case .dismiss:
+            if let snapshot = productView.snapshotView(afterScreenUpdates: true) {
+                transitionContext.containerView.addSubview(snapshot)
+                snapshot.frame = productView.convert(productView.bounds, to: snapshot.superview)
+                animations.append {
+                    snapshot.frame = cardView.convert(cardView.bounds, to: snapshot.superview)
+                }
+                completions.append {
+                    snapshot.removeFromSuperview()
+                }
+            }
+            productView.isHidden = true
+        }
 
         let duration = transitionDuration(using: transitionContext)
-        let animations = {}
-        let completion = { transitionContext.completeTransition(!(!$0 || transitionContext.transitionWasCancelled)) }
-        animator(duration, animations, completion)
+        let allAnimations = { animations.forEach { $0() } }
+        let completion: (Bool) -> Void = { finished in
+            completions.forEach { $0() }
+            let completed = finished && !transitionContext.transitionWasCancelled
+            transitionContext.completeTransition(completed)
+        }
+        animator(duration, allAnimations, completion)
     }
 
 }
