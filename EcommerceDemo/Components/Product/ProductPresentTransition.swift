@@ -7,7 +7,7 @@ class ProductPresentTransition: NSObject, UIViewControllerAnimatedTransitioning 
         case dismiss
     }
 
-    var animate: (@escaping () -> Void) -> Void = DispatchQueue.main.sync
+    var animate: (@escaping () -> Void) -> Void = { $0() }
     var direction = Direction.present
     weak var cardView: ProductCardView?
     weak var productView: ProductView?

@@ -16,6 +16,18 @@ class ProductPresentTransitionSpec: QuickSpec {
                 expect(sut.transitionDuration(using: nil)) == 0.25
             }
 
+            context("animate") {
+                var didAnimate: Bool!
+
+                beforeEach {
+                    sut.animate { didAnimate = true }
+                }
+
+                it("should animate") {
+                    expect(didAnimate) == true
+                }
+            }
+
             context("animate transition without views") {
                 var transitionContext: ContextDouble!
 
