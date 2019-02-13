@@ -7,24 +7,28 @@ class ProductPresentTransitionSpec: QuickSpec {
     override func spec() {
         describe("ProductPresentTransition") {
             var sut: ProductPresentTransition!
-            var didAnimateWithDuration: TimeInterval?
-            var animations: (() -> Void)?
-            var completion: ((Bool) -> Void)?
 
             beforeEach {
                 sut = ProductPresentTransition()
-                sut.animator = {
-                    didAnimateWithDuration = $0
-                    animations = $1
-                    completion = $2
-                }
             }
 
             it("should return correct transition duration") {
                 expect(sut.transitionDuration(using: nil)) == 0.25
             }
 
-            context("animate without views") {
+            context("animate") {
+                var didAnimate: Bool!
+
+                beforeEach {
+                    sut.animate { didAnimate = true }
+                }
+
+                it("should animate") {
+                    expect(didAnimate) == true
+                }
+            }
+
+            context("animate transition without views") {
                 var transitionContext: ContextDouble!
 
                 beforeEach {
@@ -40,154 +44,116 @@ class ProductPresentTransitionSpec: QuickSpec {
             }
 
             describe("scene") {
-                var scene: UIView!
+                var window: UIWindow!
                 var dealsViewController: UIViewController!
                 var cardViewController: UIViewController!
 
                 beforeEach {
-                    scene = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
-                    scene.layoutPinWidth(to: scene.frame.width)
-                    scene.layoutPinHeight(to: scene.frame.height)
+                    window = UIWindow(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
                     dealsViewController = DealsViewControllerFactory().create(with: [.surface])
-                    scene.addSubview(dealsViewController.view)
-                    dealsViewController.view.frame = scene.bounds
-                    scene.setNeedsLayout()
-                    scene.layoutIfNeeded()
+                    window.rootViewController = dealsViewController
+                    window.isHidden = false
                     cardViewController = dealsViewController.children.first!
                 }
 
-                context("present") {
+                afterEach {
+                    window.isHidden = true
+                    window = nil
+                }
+
+                context("animate present transition") {
                     var productViewController: UIViewController!
                     var transitionContext: ContextDouble!
+                    var animator: UIViewPropertyAnimator!
 
                     beforeEach {
                         productViewController = ProductViewControllerFactory().create(with: .surface)
                         transitionContext = ContextDouble()
-                        scene.addSubview(transitionContext.containerView)
-                        transitionContext.containerView.frame = scene.bounds
+                        window.addSubview(transitionContext.containerView)
+                        transitionContext.containerView.frame = window.bounds
+
+                        animator = UIViewPropertyAnimator(duration: 1, curve: .linear)
+                        animator.pauseAnimation()
 
                         sut.direction = .present
                         sut.cardView = cardViewController.view as? ProductCardView
                         sut.productView = productViewController.view as? ProductView
+                        sut.animate = { animator.addAnimations($0) }
                         sut.animateTransition(using: transitionContext)
                     }
 
                     afterEach {
-                        didAnimateWithDuration = nil
-                        animations = nil
-                        completion = nil
+                        animator.pauseAnimation()
+                        animator.stopAnimation(false)
+                        animator.finishAnimation(at: .current)
                     }
 
                     it("should add product view to container view") {
                         expect(productViewController.view.superview) === transitionContext.containerView
                     }
 
-                    it("should enable clipping in product view") {
-                        expect(productViewController.view.clipsToBounds) == true
-                    }
-
-                    it("should scene have correct snapshot") {
-                        assertSnapshot(
-                            matching: .view(with: scene),
-                            as: .image,
-                            named: "present_start",
-                            timeout: 0
-                        )
-                    }
-
-                    it("should animate with correct duration") {
-                        expect(didAnimateWithDuration) == sut.transitionDuration(using: transitionContext)
-                    }
-
-                    context("when animating") {
-                        beforeEach {
-                            animations?()
-                        }
-
-                        it("should scene have correct snapshot") {
+                    it("should animation have correct snapshots") {
+                        (0...10).map { CGFloat($0) / 10.0 }.forEach { percentage in
+                            animator.fractionComplete = percentage
                             assertSnapshot(
-                                matching: .view(with: scene),
+                                matching: window.snapshotImage(),
                                 as: .image,
-                                named: "present_end",
-                                timeout: 0
+                                named: "present_\(String(format: "%02.0f", percentage * 10))"
                             )
                         }
+                    }
 
-                        context("when animation completes with false") {
+                    context("when animation completes without finishing") {
+                        beforeEach {
+                            animator.pauseAnimation()
+                            animator.fractionComplete = 0.5
+                            animator.stopAnimation(true)
+                            animator.finishAnimation(at: .current)
+                        }
+
+                        it("should complete context with false") {
+                            expect(transitionContext.didComplete) == false
+                        }
+                    }
+
+                    context("when animation completes") {
+                        beforeEach {
+                            animator.pauseAnimation()
+                            animator.fractionComplete = 1
+                            animator.stopAnimation(false)
+                            animator.finishAnimation(at: .end)
+                        }
+
+                        it("should complete context with true") {
+                            expect(transitionContext.didComplete) == true
+                        }
+
+                        context("animate dismiss transition") {
+                            var animator: UIViewPropertyAnimator!
+
                             beforeEach {
-                                completion?(false)
+                                animator = UIViewPropertyAnimator(duration: 1, curve: .linear)
+                                animator.pauseAnimation()
+
+                                sut.direction = .dismiss
+                                sut.animate = { animator.addAnimations($0) }
+                                sut.animateTransition(using: transitionContext)
                             }
 
                             afterEach {
-                                transitionContext.didComplete = nil
+                                animator.pauseAnimation()
+                                animator.stopAnimation(false)
+                                animator.finishAnimation(at: .current)
                             }
 
-                            it("should complete context with false") {
-                                expect(transitionContext.didComplete) == false
-                            }
-                        }
-
-                        context("when animation completes with true") {
-                            beforeEach {
-                                completion?(true)
-                            }
-
-                            it("should complete context with true") {
-                                expect(transitionContext.didComplete) == true
-                            }
-
-                            context("dismiss") {
-                                beforeEach {
-                                    sut.direction = .dismiss
-                                    sut.animateTransition(using: transitionContext)
-                                }
-
-                                afterEach {
-                                    didAnimateWithDuration = nil
-                                    animations = nil
-                                    completion = nil
-                                }
-
-                                it("should scene have correct snapshot") {
+                            it("should animation have correct snapshots") {
+                                (0...10).map { CGFloat($0) / 10.0 }.forEach { percentage in
+                                    animator.fractionComplete = percentage
                                     assertSnapshot(
-                                        matching: .view(with: scene),
+                                        matching: window.snapshotImage(),
                                         as: .image,
-                                        named: "dismiss_start",
-                                        timeout: 0
+                                        named: "dismiss_\(String(format: "%02.0f", percentage * 10))"
                                     )
-                                }
-
-                                it("should animate with correct duration") {
-                                    expect(didAnimateWithDuration) == sut.transitionDuration(using: transitionContext)
-                                }
-
-                                context("when animating") {
-                                    beforeEach {
-                                        animations?()
-                                    }
-
-                                    it("should scene have correct snapshot") {
-                                        assertSnapshot(
-                                            matching: .view(with: scene),
-                                            as: .image,
-                                            named: "dismiss_end",
-                                            timeout: 0
-                                        )
-                                    }
-
-                                    context("when animation completes with false") {
-                                        beforeEach {
-                                            completion?(false)
-                                        }
-
-                                        afterEach {
-                                            transitionContext.didComplete = nil
-                                        }
-
-                                        it("should complete context with false") {
-                                            expect(transitionContext.didComplete) == false
-                                        }
-                                    }
                                 }
                             }
                         }

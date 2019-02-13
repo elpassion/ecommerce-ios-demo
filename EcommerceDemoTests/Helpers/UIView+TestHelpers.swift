@@ -16,4 +16,10 @@ extension UIView {
         view.layoutIfNeeded()
         return view
     }
+
+    func snapshotImage(afterScreenUpdates: Bool = true) -> UIImage {
+        return UIGraphicsImageRenderer(bounds: bounds).image { _ in
+            drawHierarchy(in: bounds, afterScreenUpdates: afterScreenUpdates)
+        }
+    }
 }

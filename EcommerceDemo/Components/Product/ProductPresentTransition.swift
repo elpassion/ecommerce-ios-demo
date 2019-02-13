@@ -2,14 +2,12 @@ import UIKit
 
 class ProductPresentTransition: NSObject, UIViewControllerAnimatedTransitioning {
 
-    typealias Animator = (TimeInterval, @escaping () -> Void, ((Bool) -> Void)?) -> Void
-
     enum Direction {
         case present
         case dismiss
     }
 
-    var animator: Animator = UIView.animate(withDuration:animations:completion:)
+    var animate: (@escaping () -> Void) -> Void = { $0() }
     var direction = Direction.present
     weak var cardView: ProductCardView?
     weak var productView: ProductView?
@@ -27,30 +25,52 @@ class ProductPresentTransition: NSObject, UIViewControllerAnimatedTransitioning 
         }
         if productView.superview == nil {
             transitionContext.containerView.addSubview(productView)
-            productView.clipsToBounds = true
+            productView.frame = transitionContext.containerView.bounds
         }
-        let presented = ProductPresentTransitionProperties.presented(
-            productView: productView,
-            container: transitionContext.containerView
-        )
-        let dismissed = ProductPresentTransitionProperties.dismissed(
-            productView: productView,
-            cardView: cardView,
-            container: transitionContext.containerView
-        )
-        let properties: (start: ProductPresentTransitionProperties, end: ProductPresentTransitionProperties) = {
-            switch direction {
-            case .present:
-                return (dismissed, presented)
-            case .dismiss:
-                return (presented, dismissed)
-            }
-        }()
-        properties.start.apply(to: productView)
+
         let duration = transitionDuration(using: transitionContext)
-        let animations = { properties.end.apply(to: productView) }
-        let completion = { transitionContext.completeTransition(!(!$0 || transitionContext.transitionWasCancelled)) }
-        animator(duration, animations, completion)
+        let transition: SnapshotTransition
+        switch direction {
+        case .present:
+            transition = SnapshotTransition(
+                from: cardView,
+                to: productView,
+                in: transitionContext.containerView,
+                childTransitions: [
+                    (from: cardView.topBackgroundView, to: productView.topBackgroundView),
+                    (from: cardView.imageContainer, to: productView.imageContainer),
+                    (from: cardView.nameLabel, to: productView.nameLabel),
+                    (from: cardView.button, to: productView.addToCartButton)
+                ]
+            )
+        case .dismiss:
+            transition = SnapshotTransition(
+                from: productView,
+                to: cardView,
+                in: transitionContext.containerView,
+                childTransitions: [
+                    (from: productView.topBackgroundView, to: cardView.topBackgroundView),
+                    (from: productView.imageContainer, to: cardView.imageContainer),
+                    (from: productView.nameLabel, to: cardView.nameLabel),
+                    (from: productView.addToCartButton, to: cardView.button)
+                ]
+            )
+        }
+        transition.prepare()
+
+        animate {
+            UIView.animateKeyframes(
+                withDuration: duration,
+                delay: 0,
+                options: [],
+                animations: { transition.addKeyframes() },
+                completion: { finished in
+                    transition.cleanUp()
+                    let completed = finished && !transitionContext.transitionWasCancelled
+                    transitionContext.completeTransition(completed)
+                }
+            )
+        }
     }
 
 }
