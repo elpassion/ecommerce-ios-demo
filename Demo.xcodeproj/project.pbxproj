@@ -63,6 +63,8 @@
 		3129435B2203B2D100AEE95E /* AppDelegateDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129435A2203B2D100AEE95E /* AppDelegateDouble.swift */; };
 		312943612203BD7400AEE95E /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943602203BD7400AEE95E /* Bundle.swift */; };
 		312943642203BFA000AEE95E /* RegisterFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943632203BFA000AEE95E /* RegisterFonts.swift */; };
+		313DBA572213B565008E9FC5 /* DealsViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313DBA562213B565008E9FC5 /* DealsViewSpec.swift */; };
+		313DBA5A2213B5BE008E9FC5 /* ImageContainerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313DBA592213B5BE008E9FC5 /* ImageContainerSpec.swift */; };
 		31442A0D2200F99F00C8BEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0C2200F99F00C8BEBE /* Assets.xcassets */; };
 		31442A102200F99F00C8BEBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0E2200F99F00C8BEBE /* LaunchScreen.storyboard */; };
 		315CAAED221371AD005A6C7A /* SnapshotTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315CAAEC221371AD005A6C7A /* SnapshotTransition.swift */; };
@@ -204,6 +206,8 @@
 		3129435A2203B2D100AEE95E /* AppDelegateDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateDouble.swift; sourceTree = "<group>"; };
 		312943602203BD7400AEE95E /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		312943632203BFA000AEE95E /* RegisterFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFonts.swift; sourceTree = "<group>"; };
+		313DBA562213B565008E9FC5 /* DealsViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewSpec.swift; sourceTree = "<group>"; };
+		313DBA592213B5BE008E9FC5 /* ImageContainerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainerSpec.swift; sourceTree = "<group>"; };
 		31442A022200F99E00C8BEBE /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31442A0C2200F99F00C8BEBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31442A0F2200F99F00C8BEBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -441,6 +445,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		313DBA582213B5AD008E9FC5 /* ImageContainer */ = {
+			isa = PBXGroup;
+			children = (
+				313DBA592213B5BE008E9FC5 /* ImageContainerSpec.swift */,
+			);
+			path = ImageContainer;
+			sourceTree = "<group>";
+		};
 		314429F92200F99E00C8BEBE = {
 			isa = PBXGroup;
 			children = (
@@ -516,6 +528,7 @@
 			children = (
 				315E28DE2204751000C3BA19 /* Deals */,
 				315E29042204C38600C3BA19 /* Gradient */,
+				313DBA582213B5AD008E9FC5 /* ImageContainer */,
 				311E58AB2208EB0600F48140 /* Product */,
 				315E28CE220469E500C3BA19 /* ProductCard */,
 				311E58E6220A53D800F48140 /* ProductDescriptions */,
@@ -551,6 +564,7 @@
 			children = (
 				315E28DF2204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift */,
 				315E28E1220476AB00C3BA19 /* DealsViewControllerSpec.swift */,
+				313DBA562213B565008E9FC5 /* DealsViewSpec.swift */,
 			);
 			path = Deals;
 			sourceTree = "<group>";
@@ -923,12 +937,14 @@
 				311E58C12208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift in Sources */,
 				315E28E8220479A600C3BA19 /* UIView+TestHelpers.swift in Sources */,
 				311E58BF2208F82C00F48140 /* ProductDismisserSpec.swift in Sources */,
+				313DBA5A2213B5BE008E9FC5 /* ImageContainerSpec.swift in Sources */,
 				311E58C52208FDA700F48140 /* ProductDismissingDouble.swift in Sources */,
 				311E58AD2208EB1500F48140 /* ProductViewSpec.swift in Sources */,
 				315E28E2220476AB00C3BA19 /* DealsViewControllerSpec.swift in Sources */,
 				315E28E02204751F00C3BA19 /* DealsViewControllerCreatingDouble.swift in Sources */,
 				315E28EA22047FE900C3BA19 /* ProductCardViewSpec.swift in Sources */,
 				315E29062204C39000C3BA19 /* GradientViewSpec.swift in Sources */,
+				313DBA572213B565008E9FC5 /* DealsViewSpec.swift in Sources */,
 				315E290C2204C7A200C3BA19 /* SketchShadowSpec.swift in Sources */,
 				311E58BD2208F82100F48140 /* ProductPresenterSpec.swift in Sources */,
 				315E28C82203C58900C3BA19 /* ScrollPageControllerSpec.swift in Sources */,
