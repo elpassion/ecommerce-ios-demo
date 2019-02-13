@@ -27,7 +27,6 @@
 		311E58C12208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C02208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift */; };
 		311E58C32208FC8D00F48140 /* ProductPresentingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C22208FC8D00F48140 /* ProductPresentingDouble.swift */; };
 		311E58C52208FDA700F48140 /* ProductDismissingDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C42208FDA700F48140 /* ProductDismissingDouble.swift */; };
-		311E58C7220902EB00F48140 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C6220902EB00F48140 /* UIButton+Style.swift */; };
 		311E58CA220903EA00F48140 /* ImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58C9220903EA00F48140 /* ImageContainer.swift */; };
 		311E58CC2209FF9D00F48140 /* UIToolbar+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58CB2209FF9D00F48140 /* UIToolbar+Style.swift */; };
 		311E58CE2209FFEC00F48140 /* UIBarButtonItem+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311E58CD2209FFEC00F48140 /* UIBarButtonItem+Style.swift */; };
@@ -49,7 +48,6 @@
 		312943392203B0E600AEE95E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943302203B0E500AEE95E /* RoundButton.swift */; };
 		3129433A2203B0E600AEE95E /* UIEdgeInsets+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943312203B0E500AEE95E /* UIEdgeInsets+Helpers.swift */; };
 		3129433B2203B0E600AEE95E /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943322203B0E500AEE95E /* UILabel+Style.swift */; };
-		3129433D2203B0E600AEE95E /* UIScrollView+Viewport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943342203B0E500AEE95E /* UIScrollView+Viewport.swift */; };
 		3129433E2203B0E600AEE95E /* FuncUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943352203B0E500AEE95E /* FuncUtils.swift */; };
 		3129433F2203B0E600AEE95E /* ScrollPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943362203B0E600AEE95E /* ScrollPageController.swift */; };
 		312943402203B0E600AEE95E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943372203B0E600AEE95E /* GradientView.swift */; };
@@ -167,7 +165,6 @@
 		311E58C02208FA3B00F48140 /* ProductViewControllerCreatingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewControllerCreatingDouble.swift; sourceTree = "<group>"; };
 		311E58C22208FC8D00F48140 /* ProductPresentingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresentingDouble.swift; sourceTree = "<group>"; };
 		311E58C42208FDA700F48140 /* ProductDismissingDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDismissingDouble.swift; sourceTree = "<group>"; };
-		311E58C6220902EB00F48140 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		311E58C9220903EA00F48140 /* ImageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainer.swift; sourceTree = "<group>"; };
 		311E58CB2209FF9D00F48140 /* UIToolbar+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIToolbar+Style.swift"; sourceTree = "<group>"; };
 		311E58CD2209FFEC00F48140 /* UIBarButtonItem+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Style.swift"; sourceTree = "<group>"; };
@@ -192,7 +189,6 @@
 		312943302203B0E500AEE95E /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		312943312203B0E500AEE95E /* UIEdgeInsets+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Helpers.swift"; sourceTree = "<group>"; };
 		312943322203B0E500AEE95E /* UILabel+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
-		312943342203B0E500AEE95E /* UIScrollView+Viewport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Viewport.swift"; sourceTree = "<group>"; };
 		312943352203B0E500AEE95E /* FuncUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncUtils.swift; sourceTree = "<group>"; };
 		312943362203B0E600AEE95E /* ScrollPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollPageController.swift; sourceTree = "<group>"; };
 		312943372203B0E600AEE95E /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -402,14 +398,12 @@
 				315E28EF22049B3800C3BA19 /* LayoutGuideCompatible+Layout.swift */,
 				312943462203B13E00AEE95E /* SketchShadow+Assets.swift */,
 				311E58CD2209FFEC00F48140 /* UIBarButtonItem+Style.swift */,
-				311E58C6220902EB00F48140 /* UIButton+Style.swift */,
 				312943492203B13E00AEE95E /* UIColor+Assets.swift */,
 				312943312203B0E500AEE95E /* UIEdgeInsets+Helpers.swift */,
 				312943432203B13E00AEE95E /* UIFont+Assets.swift */,
 				312943472203B13E00AEE95E /* UIImage+Assets.swift */,
 				312943322203B0E500AEE95E /* UILabel+Style.swift */,
 				311E58A02208702C00F48140 /* UIPageControl+Style.swift */,
-				312943342203B0E500AEE95E /* UIScrollView+Viewport.swift */,
 				311E58CB2209FF9D00F48140 /* UIToolbar+Style.swift */,
 				315E28EB2204803E00C3BA19 /* UIView+Layout.swift */,
 			);
@@ -885,9 +879,7 @@
 				311E58A82208EA0E00F48140 /* ProductViewControllerFactory.swift in Sources */,
 				315CAAED221371AD005A6C7A /* SnapshotTransition.swift in Sources */,
 				315E28EC2204803E00C3BA19 /* UIView+Layout.swift in Sources */,
-				311E58C7220902EB00F48140 /* UIButton+Style.swift in Sources */,
 				311E58B92208F13400F48140 /* ProductCardViewControllerCreating.swift in Sources */,
-				3129433D2203B0E600AEE95E /* UIScrollView+Viewport.swift in Sources */,
 				3129434F2203B13E00AEE95E /* SketchShadow+Assets.swift in Sources */,
 				315E28EE220494F600C3BA19 /* LayoutGuideCompatible.swift in Sources */,
 				3129433E2203B0E600AEE95E /* FuncUtils.swift in Sources */,

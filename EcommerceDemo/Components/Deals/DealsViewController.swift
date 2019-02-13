@@ -76,7 +76,10 @@ class DealsViewController: UIViewController, UIScrollViewDelegate {
 
     private func adjustScrollContent() {
         guard dealsView.scrollView.contentSize != .zero else { return }
-        let viewportCenterX = dealsView.scrollView.viewport.midX
+        let scrollView = dealsView.scrollView
+        let viewportCenterX = scrollView.contentOffset.x
+            + scrollView.adjustedContentInset.left
+            + (scrollView.frame.width - scrollView.adjustedContentInset.horizontal) / 2
         cardViewControllers.forEach {
             $0.distanceFromCenter = $0.view.frame.midX - viewportCenterX
         }
