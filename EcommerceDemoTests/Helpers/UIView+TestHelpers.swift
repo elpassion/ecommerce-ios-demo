@@ -17,8 +17,8 @@ extension UIView {
         return view
     }
 
-    func snapshotImage(of rect: CGRect? = nil, afterScreenUpdates: Bool = true) -> UIImage {
-        return UIGraphicsImageRenderer(bounds: rect ?? bounds).image { _ in
+    func snapshotImage(afterScreenUpdates: Bool = true) -> UIImage {
+        return UIGraphicsImageRenderer(bounds: bounds).image { _ in
             drawHierarchy(in: bounds, afterScreenUpdates: afterScreenUpdates)
         }
     }

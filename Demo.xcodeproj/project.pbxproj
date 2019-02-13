@@ -67,6 +67,7 @@
 		312943642203BFA000AEE95E /* RegisterFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312943632203BFA000AEE95E /* RegisterFonts.swift */; };
 		31442A0D2200F99F00C8BEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0C2200F99F00C8BEBE /* Assets.xcassets */; };
 		31442A102200F99F00C8BEBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31442A0E2200F99F00C8BEBE /* LaunchScreen.storyboard */; };
+		315CAAED221371AD005A6C7A /* SnapshotTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315CAAEC221371AD005A6C7A /* SnapshotTransition.swift */; };
 		315E28C62203C39C00C3BA19 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28C52203C39C00C3BA19 /* AppDelegateSpec.swift */; };
 		315E28C82203C58900C3BA19 /* ScrollPageControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28C72203C58900C3BA19 /* ScrollPageControllerSpec.swift */; };
 		315E28CC220469BB00C3BA19 /* ProductCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E28CB220469BB00C3BA19 /* ProductCardViewController.swift */; };
@@ -211,6 +212,7 @@
 		31442A0C2200F99F00C8BEBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31442A0F2200F99F00C8BEBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31442A112200F99F00C8BEBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		315CAAEC221371AD005A6C7A /* SnapshotTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTransition.swift; sourceTree = "<group>"; };
 		315E28C52203C39C00C3BA19 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		315E28C72203C58900C3BA19 /* ScrollPageControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPageControllerSpec.swift; sourceTree = "<group>"; };
 		315E28CB220469BB00C3BA19 /* ProductCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardViewController.swift; sourceTree = "<group>"; };
@@ -476,6 +478,14 @@
 			path = DemoApp;
 			sourceTree = "<group>";
 		};
+		315CAAEB22137197005A6C7A /* SnapshotTransition */ = {
+			isa = PBXGroup;
+			children = (
+				315CAAEC221371AD005A6C7A /* SnapshotTransition.swift */,
+			);
+			path = SnapshotTransition;
+			sourceTree = "<group>";
+		};
 		315E28C922045D8000C3BA19 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +500,7 @@
 				315E28FD2204C26500C3BA19 /* RoundButton */,
 				315E29022204C30200C3BA19 /* ScrollPage */,
 				315E29012204C2D400C3BA19 /* SketchShadow */,
+				315CAAEB22137197005A6C7A /* SnapshotTransition */,
 				315E28F12204B03200C3BA19 /* TabBar */,
 			);
 			path = Components;
@@ -872,6 +883,7 @@
 				311E58B52208F0A500F48140 /* ProductDismissing.swift in Sources */,
 				3129434D2203B13E00AEE95E /* GradientStyle+Assets.swift in Sources */,
 				311E58A82208EA0E00F48140 /* ProductViewControllerFactory.swift in Sources */,
+				315CAAED221371AD005A6C7A /* SnapshotTransition.swift in Sources */,
 				315E28EC2204803E00C3BA19 /* UIView+Layout.swift in Sources */,
 				311E58C7220902EB00F48140 /* UIButton+Style.swift in Sources */,
 				311E58B92208F13400F48140 /* ProductCardViewControllerCreating.swift in Sources */,

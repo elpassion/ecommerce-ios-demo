@@ -44,20 +44,21 @@ class ProductPresentTransitionSpec: QuickSpec {
             }
 
             describe("scene") {
-                var scene: UIView!
+                var window: UIWindow!
                 var dealsViewController: UIViewController!
                 var cardViewController: UIViewController!
 
                 beforeEach {
-                    scene = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
-                    scene.layoutPinWidth(to: scene.frame.width)
-                    scene.layoutPinHeight(to: scene.frame.height)
+                    window = UIWindow(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
                     dealsViewController = DealsViewControllerFactory().create(with: [.surface])
-                    scene.addSubview(dealsViewController.view)
-                    dealsViewController.view.frame = scene.bounds
-                    scene.setNeedsLayout()
-                    scene.layoutIfNeeded()
+                    window.rootViewController = dealsViewController
+                    window.isHidden = false
                     cardViewController = dealsViewController.children.first!
+                }
+
+                afterEach {
+                    window.isHidden = true
+                    window = nil
                 }
 
                 context("animate present transition") {
@@ -68,8 +69,8 @@ class ProductPresentTransitionSpec: QuickSpec {
                     beforeEach {
                         productViewController = ProductViewControllerFactory().create(with: .surface)
                         transitionContext = ContextDouble()
-                        scene.addSubview(transitionContext.containerView)
-                        transitionContext.containerView.frame = scene.bounds
+                        window.addSubview(transitionContext.containerView)
+                        transitionContext.containerView.frame = window.bounds
 
                         animator = UIViewPropertyAnimator(duration: 1, curve: .linear)
                         animator.pauseAnimation()
@@ -92,14 +93,14 @@ class ProductPresentTransitionSpec: QuickSpec {
                     }
 
                     it("should animation have correct snapshots") {
-                        [CGFloat]([0, 0.25, 0.5, 0.75, 1]).forEach({ percentage in
+                        [CGFloat]([0, 0.25, 0.5, 0.75, 1]).forEach { percentage in
                             animator.fractionComplete = percentage
                             assertSnapshot(
-                                matching: UIView.view(with: scene).snapshotImage(),
+                                matching: window.snapshotImage(),
                                 as: .image,
                                 named: "present_\(String(format: "%03.0f", percentage * 100))"
                             )
-                        })
+                        }
                     }
 
                     context("when animation completes without finishing") {
@@ -146,14 +147,14 @@ class ProductPresentTransitionSpec: QuickSpec {
                             }
 
                             it("should animation have correct snapshots") {
-                                [CGFloat]([0, 0.25, 0.5, 0.75, 1]).forEach({ percentage in
+                                [CGFloat]([0, 0.25, 0.5, 0.75, 1]).forEach { percentage in
                                     animator.fractionComplete = percentage
                                     assertSnapshot(
-                                        matching: UIView.view(with: scene).snapshotImage(),
+                                        matching: window.snapshotImage(),
                                         as: .image,
                                         named: "dismiss_\(String(format: "%03.0f", percentage * 100))"
                                     )
-                                })
+                                }
                             }
                         }
                     }

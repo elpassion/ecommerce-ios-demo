@@ -19,7 +19,7 @@ class ProductPresentTransition: NSObject, UIViewControllerAnimatedTransitioning 
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        guard cardView != nil, let productView = productView else {
+        guard let cardView = cardView, let productView = productView else {
             transitionContext.completeTransition(false)
             return
         }
@@ -28,25 +28,24 @@ class ProductPresentTransition: NSObject, UIViewControllerAnimatedTransitioning 
             productView.frame = transitionContext.containerView.bounds
         }
 
-        productView.alpha = direction == .present ? 0 : 1
-
         let duration = transitionDuration(using: transitionContext)
+        let transition: SnapshotTransition
+        switch direction {
+        case .present:
+            transition = SnapshotTransition(from: cardView, to: productView, in: transitionContext.containerView)
+        case .dismiss:
+            transition = SnapshotTransition(from: productView, to: cardView, in: transitionContext.containerView)
+        }
+        transition.prepare()
 
-        animate { [weak self] in
+        animate {
             UIView.animateKeyframes(
                 withDuration: duration,
                 delay: 0,
                 options: [],
-                animations: {
-                    UIView.addKeyframe(
-                        withRelativeStartTime: 0,
-                        relativeDuration: 1,
-                        animations: {
-                            productView.alpha = self?.direction == .present ? 1 : 0
-                        }
-                    )
-                },
+                animations: { transition.addKeyframes() },
                 completion: { finished in
+                    transition.cleanUp()
                     let completed = finished && !transitionContext.transitionWasCancelled
                     transitionContext.completeTransition(completed)
                 }
