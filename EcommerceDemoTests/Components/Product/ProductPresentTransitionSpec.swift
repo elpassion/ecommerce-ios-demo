@@ -53,6 +53,9 @@ class ProductPresentTransitionSpec: QuickSpec {
                     dealsViewController = DealsViewControllerFactory().create(with: [.surface])
                     window.rootViewController = dealsViewController
                     window.isHidden = false
+                    window.frame.size.width += window.safeAreaInsets.left + window.safeAreaInsets.right
+                    window.frame.size.height += window.safeAreaInsets.top + window.safeAreaInsets.bottom
+                    dealsViewController.view.frame = window.frame.inset(by: window.safeAreaInsets)
                     cardViewController = dealsViewController.children.first!
                 }
 
@@ -70,7 +73,7 @@ class ProductPresentTransitionSpec: QuickSpec {
                         productViewController = ProductViewControllerFactory().create(with: .surface)
                         transitionContext = ContextDouble()
                         window.addSubview(transitionContext.containerView)
-                        transitionContext.containerView.frame = window.bounds
+                        transitionContext.containerView.frame = window.bounds.inset(by: window.safeAreaInsets)
 
                         animator = UIViewPropertyAnimator(duration: 1, curve: .linear)
                         animator.pauseAnimation()
@@ -95,8 +98,9 @@ class ProductPresentTransitionSpec: QuickSpec {
                     it("should animation have correct snapshots") {
                         (0...10).map { CGFloat($0) / 10.0 }.forEach { percentage in
                             animator.fractionComplete = percentage
+                            let size = window.bounds.inset(by: window.safeAreaInsets)
                             assertSnapshot(
-                                matching: window.snapshotImage(),
+                                matching: window.snapshotImage(of: size),
                                 as: .image,
                                 named: "present_\(String(format: "%02.0f", percentage * 10))"
                             )
@@ -149,8 +153,9 @@ class ProductPresentTransitionSpec: QuickSpec {
                             it("should animation have correct snapshots") {
                                 (0...10).map { CGFloat($0) / 10.0 }.forEach { percentage in
                                     animator.fractionComplete = percentage
+                                    let size = window.bounds.inset(by: window.safeAreaInsets)
                                     assertSnapshot(
-                                        matching: window.snapshotImage(),
+                                        matching: window.snapshotImage(of: size),
                                         as: .image,
                                         named: "dismiss_\(String(format: "%02.0f", percentage * 10))"
                                     )
