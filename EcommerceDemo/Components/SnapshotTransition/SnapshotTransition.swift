@@ -41,7 +41,9 @@ class SnapshotTransition {
 
         fromSnapshot?.alpha = 1
         toSnapshot?.alpha = 0
+        fromViewAlpha = fromView.alpha
         fromView.alpha = 0
+        toViewAlpha = toView.alpha
         toView.alpha = 0
 
         transitionView.layer.cornerRadius = fromView.layer.cornerRadius
@@ -69,8 +71,8 @@ class SnapshotTransition {
     }
 
     func cleanUp() {
-        toView.alpha = 1
-        fromView.alpha = 1
+        toView.alpha = toViewAlpha
+        fromView.alpha = fromViewAlpha
         transitionView.removeFromSuperview()
         fromSnapshot?.removeFromSuperview()
         toSnapshot?.removeFromSuperview()
@@ -87,6 +89,8 @@ class SnapshotTransition {
     private let containerView: UIView
     private let transitionView: UIView
     private let childTransitions: [SnapshotTransition]
+    private var fromViewAlpha: CGFloat = 1
+    private var toViewAlpha: CGFloat = 1
     private var fromSnapshot: UIView?
     private var toSnapshot: UIView?
 
