@@ -8,7 +8,7 @@
 
 |Dribbble shot|Implementation|
 |:-:|:-:|
-|[![Shot](shot.gif)](https://dribbble.com/shots/3116611-E-commerce-Today-s-deals-interaction)|![Preview](preview.gif)|
+|[![Shot](Misc/shot.gif)](https://dribbble.com/shots/3116611-E-commerce-Today-s-deals-interaction)|![Preview](Misc/preview.gif)|
 
 ## Setup
 
@@ -26,25 +26,19 @@ Open `Demo.xcodeproj` and run `EcommerceDemo` scheme in a chosen simulator. If y
 
 ## Implementation details
 
-- Demo is covered by unit & snapshot tests, coverage is 100%
+- Demo is covered by unit & snapshot tests, coverage is 100%.
 - There are no "production" dependencies, external frameworks are used to make testing easier
 - Data are mocked up in [Product+Demo.swift](EcommerceDemo/Models/Product+Demo.swift) file
-- Product card pagination is implemented in [DealsViewController](EcommerceDemo/Components/Deals/DealsViewController.swift) using [ScrollPageController](EcommerceDemo/Components/ScrollPage/ScrollPageController.swift)
-- Product card images parallax effect is implemented in [ProductCardViewController](EcommerceDemo/Components/ProductCard/ProductCardViewController.swift)
-- Product present/dismiss transition is implemented in [ProductPresenter](EcommerceDemo/Components/Product/ProductPresenter.swift) and  [ProductPresentTransition](EcommerceDemo/Components/Product/ProductPresentTransition.swift) using [SnapshotTransition](EcommerceDemo/Components/SnapshotTransition/SnapshotTransition.swift)
-- Custom scroll behaviour on product screen (scrolling top background and floating title label) is implemented in [ProductView](EcommerceDemo/Components/Product/ProductView.swift)
+- Product card pagination is implemented in [DealsViewController](EcommerceDemo/Components/Deals/DealsViewController.swift) using [ScrollPageController](EcommerceDemo/Components/ScrollPage/ScrollPageController.swift).
+- Product card images parallax effect is implemented in [ProductCardViewController](EcommerceDemo/Components/ProductCard/ProductCardViewController.swift).
+- Product present / dismiss transition is implemented in [ProductPresenter](EcommerceDemo/Components/Product/ProductPresenter.swift) and  [ProductPresentTransition](EcommerceDemo/Components/Product/ProductPresentTransition.swift) using [SnapshotTransition](EcommerceDemo/Components/SnapshotTransition/SnapshotTransition.swift).
+- The transition is covered by snapshot tests. You can see reference images composed into gif below.
+- Custom scroll behaviour on product screen (scrolling top background and floating title label) is implemented in [ProductView](EcommerceDemo/Components/Product/ProductView.swift).
 
-### Present transition - test snapshots
+|Present & Dismiss Transition|
+|:-:|
+|[![snapshot](Misc/transition_snapshots.gif)](EcommerceDemoTests/Components/Product/__Snapshots__/ProductPresentTransitionSpec)|
 
-|0%|20%|40%|60%|80%|100%|
-|:-:|:-:|:-:|:-:|:-:|:-:|
-|![present-00](EcommerceDemoTests/Components/Product/__Snapshots__/ProductPresentTransitionSpec/spec.present_00.png)|![present-02](EcommerceDemoTests/Components/Product/__Snapshots__/ProductPresentTransitionSpec/spec.present_02.png)|![present-04](EcommerceDemoTests/Components/Product/__Snapshots__/ProductPresentTransitionSpec/spec.present_04.png)|![present-06](EcommerceDemoTests/Components/Product/__Snapshots__/ProductPresentTransitionSpec/spec.present_06.png)|![present-08](EcommerceDemoTests/Components/Product/__Snapshots__/ProductPresentTransitionSpec/spec.present_08.png)|![present-10](EcommerceDemoTests/Components/Product/__Snapshots__/ProductPresentTransitionSpec/spec.present_10.png)|
-
-### Dismiss transition - test snapshots
-
-|0%|20%|40%|60%|80%|100%|
-|:-:|:-:|:-:|:-:|:-:|:-:|
-|![dismiss-00](EcommerceDemoTests/Components/Product/__Snapshots__/ProductPresentTransitionSpec/spec.dismiss_00.png)|![dismiss-02](EcommerceDemoTests/Components/Product/__Snapshots__/ProductPresentTransitionSpec/spec.dismiss_02.png)|![dismiss-04](EcommerceDemoTests/Components/Product/__Snapshots__/ProductPresentTransitionSpec/spec.dismiss_04.png)|![dismiss-06](EcommerceDemoTests/Components/Product/__Snapshots__/ProductPresentTransitionSpec/spec.dismiss_06.png)|![dismiss-08](EcommerceDemoTests/Components/Product/__Snapshots__/ProductPresentTransitionSpec/spec.dismiss_08.png)|![dismiss-10](EcommerceDemoTests/Components/Product/__Snapshots__/ProductPresentTransitionSpec/spec.dismiss_10.png)|
 
 ## License
 
