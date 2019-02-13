@@ -30,6 +30,7 @@ Open `Demo.xcodeproj` and run `EcommerceDemo` scheme in a chosen simulator. If y
 - There are no "production" dependencies, external frameworks are used to make testing easier
 - Data are mocked up in [Product+Demo.swift](EcommerceDemo/Models/Product+Demo.swift) file
 - Product card pagination is implemented in [DealsViewController](EcommerceDemo/Components/Deals/DealsViewController.swift) using [ScrollPageController](EcommerceDemo/Components/ScrollPage/ScrollPageController.swift)
+- Product card images parallax effect is implemented in [ProductCardViewController](EcommerceDemo/Components/ProductCard/ProductCardViewController.swift)
 - Product present/dismiss transition is implemented in [ProductPresenter](EcommerceDemo/Components/Product/ProductPresenter.swift) and  [ProductPresentTransition](EcommerceDemo/Components/Product/ProductPresentTransition.swift) using [SnapshotTransition](EcommerceDemo/Components/SnapshotTransition/SnapshotTransition.swift)
 - Custom scroll behaviour on product screen (scrolling top background and floating title label) is implemented in [ProductView](EcommerceDemo/Components/Product/ProductView.swift)
 
