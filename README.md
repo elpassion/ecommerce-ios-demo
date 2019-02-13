@@ -4,9 +4,9 @@
 ![platform iOS](https://img.shields.io/badge/platform-iOS-blue.svg)
 ![100% code coverage](https://img.shields.io/badge/covergage-100%25-success.svg)
 
-> Based on [Dribbble shot by Matt Koziorowski](https://dribbble.com/shots/3116611-E-commerce-Today-s-deals-interaction) for [EL Passion](https://www.elpassion.com)
+> Based on [Dribbble shot by Matt Koziorowski](https://dribbble.com/shots/3116611-E-commerce-Today-s-deals-interaction), implemented by [Dariusz Rybicki](https://github.com/darrarski) for [EL Passion](https://www.elpassion.com)
 
-|Dribbble shot|Implementation|
+|Dribbble shot|Demo app|
 |:-:|:-:|
 |[![Shot](Misc/shot.gif)](https://dribbble.com/shots/3116611-E-commerce-Today-s-deals-interaction)|![Preview](Misc/preview.gif)|
 
