@@ -93,12 +93,12 @@ class ProductPresentTransitionSpec: QuickSpec {
                     }
 
                     it("should animation have correct snapshots") {
-                        [CGFloat]([0, 0.25, 0.5, 0.75, 1]).forEach { percentage in
+                        (0...10).map { CGFloat($0) / 10.0 }.forEach { percentage in
                             animator.fractionComplete = percentage
                             assertSnapshot(
                                 matching: window.snapshotImage(),
                                 as: .image,
-                                named: "present_\(String(format: "%03.0f", percentage * 100))"
+                                named: "present_\(String(format: "%02.0f", percentage * 10))"
                             )
                         }
                     }
@@ -147,12 +147,12 @@ class ProductPresentTransitionSpec: QuickSpec {
                             }
 
                             it("should animation have correct snapshots") {
-                                [CGFloat]([0, 0.25, 0.5, 0.75, 1]).forEach { percentage in
+                                (0...10).map { CGFloat($0) / 10.0 }.forEach { percentage in
                                     animator.fractionComplete = percentage
                                     assertSnapshot(
                                         matching: window.snapshotImage(),
                                         as: .image,
-                                        named: "dismiss_\(String(format: "%03.0f", percentage * 100))"
+                                        named: "dismiss_\(String(format: "%02.0f", percentage * 10))"
                                     )
                                 }
                             }

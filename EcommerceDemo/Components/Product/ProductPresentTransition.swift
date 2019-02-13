@@ -32,9 +32,29 @@ class ProductPresentTransition: NSObject, UIViewControllerAnimatedTransitioning 
         let transition: SnapshotTransition
         switch direction {
         case .present:
-            transition = SnapshotTransition(from: cardView, to: productView, in: transitionContext.containerView)
+            transition = SnapshotTransition(
+                from: cardView,
+                to: productView,
+                in: transitionContext.containerView,
+                childTransitions: [
+                    (from: cardView.topBackgroundView, to: productView.topBackgroundView),
+                    (from: cardView.imageContainer, to: productView.imageContainer),
+                    (from: cardView.nameLabel, to: productView.nameLabel),
+                    (from: cardView.button, to: productView.addToCartButton)
+                ]
+            )
         case .dismiss:
-            transition = SnapshotTransition(from: productView, to: cardView, in: transitionContext.containerView)
+            transition = SnapshotTransition(
+                from: productView,
+                to: cardView,
+                in: transitionContext.containerView,
+                childTransitions: [
+                    (from: productView.topBackgroundView, to: cardView.topBackgroundView),
+                    (from: productView.imageContainer, to: cardView.imageContainer),
+                    (from: productView.nameLabel, to: cardView.nameLabel),
+                    (from: productView.addToCartButton, to: cardView.button)
+                ]
+            )
         }
         transition.prepare()
 
