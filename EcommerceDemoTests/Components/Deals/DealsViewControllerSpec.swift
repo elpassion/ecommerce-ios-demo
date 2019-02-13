@@ -26,6 +26,9 @@ class DealsViewControllerSpec: QuickSpec {
                 context("load view") {
                     beforeEach {
                         sut?.view.frame = CGRect(x: 0, y: 0, width: 375, height: 812)
+                        sut?.view.setNeedsLayout()
+                        sut?.view.layoutIfNeeded()
+                        sut?.viewDidAppear(false)
                     }
 
                     it("should have correct snapshot") {
