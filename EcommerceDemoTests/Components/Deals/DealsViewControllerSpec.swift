@@ -36,6 +36,30 @@ class DealsViewControllerSpec: QuickSpec {
                             assertSnapshot(matching: $0, as: .image(on: .iPhoneX))
                         }
                     }
+
+                    context("scroll view will end dragging") {
+                        var targetContentOffset: UnsafeMutablePointer<CGPoint>!
+
+                        beforeEach {
+                            targetContentOffset = UnsafeMutablePointer.allocate(capacity: 1)
+                            targetContentOffset.pointee = .zero
+                            let scrollView = UIScrollView(frame: .zero)
+                            scrollView.contentOffset.x = 10
+                            sut?.scrollViewWillEndDragging(
+                                scrollView,
+                                withVelocity: CGPoint(x: 2, y: 0),
+                                targetContentOffset: targetContentOffset
+                            )
+                        }
+
+                        it("should set correct target content offset") {
+                            expectNotNil(sut?.view as? DealsView).then {
+                                let secondCardOffset = $0.productViews[1].frame.minX
+                                let leftInset = $0.scrollView.adjustedContentInset.left
+                                expect(targetContentOffset.pointee.x) == secondCardOffset - leftInset
+                            }
+                        }
+                    }
                 }
             }
         }
