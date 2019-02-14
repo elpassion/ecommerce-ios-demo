@@ -20,18 +20,19 @@ class SnapshotTransition {
 
     func prepare() {
         let layerCornerRadiuses = [fromView, toView].map { ($0.layer, $0.layer.cornerRadius) }
-        layerCornerRadiuses.forEach { $0.0.cornerRadius = 0 }
         let layerShadows = [fromView, toView].map { $0.layer }.map { ($0, LayerShadow.from($0)) }
-        layerShadows.forEach { $0.0.apply(LayerShadow.none) }
         let childAlphas = childTransitions.flatMap { [$0.fromView, $0.toView] }.map { ($0, $0.alpha) }
-        childAlphas.forEach { $0.0.alpha = 0 }
+
+        layerCornerRadiuses.forEach { layer, _ in layer.cornerRadius = 0 }
+        layerShadows.forEach { layer, _ in layer.apply(LayerShadow.none) }
+        childAlphas.forEach { view, _ in view.alpha = 0 }
 
         toSnapshot = toView.snapshotView(afterScreenUpdates: true)
         fromSnapshot = fromView.snapshotView(afterScreenUpdates: true)
 
-        layerCornerRadiuses.forEach { $0.0.cornerRadius = $0.1 }
-        layerShadows.forEach { $0.0.apply($0.1) }
-        childAlphas.forEach { $0.0.alpha = $0.1 }
+        layerCornerRadiuses.forEach { layer, radius in layer.cornerRadius = radius }
+        layerShadows.forEach { layer, shadow in layer.apply(shadow) }
+        childAlphas.forEach { view, alpha in view.alpha = alpha }
 
         [fromSnapshot, toSnapshot].compactMap { $0 }.forEach {
             transitionView.addSubview($0)
@@ -39,11 +40,12 @@ class SnapshotTransition {
             $0.frame = transitionView.bounds
         }
 
+        fromViewAlpha = fromView.alpha
+        toViewAlpha = toView.alpha
+
         fromSnapshot?.alpha = 1
         toSnapshot?.alpha = 0
-        fromViewAlpha = fromView.alpha
         fromView.alpha = 0
-        toViewAlpha = toView.alpha
         toView.alpha = 0
 
         transitionView.layer.cornerRadius = fromView.layer.cornerRadius
