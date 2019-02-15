@@ -44,4 +44,4 @@ Open `Demo.xcodeproj` and run `EcommerceDemo` scheme in a chosen simulator. If y
 
 Copyright © 2019 [EL Passion](https://www.elpassion.com)
 
-License: **TBD**
+License: [GNU GPLv3](LICENSE)
